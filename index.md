@@ -1,3 +1,5 @@
 # Pretenst
 
-Welcome to the site.
+Welcome to the site.!
+
+[try it out!](/app)
