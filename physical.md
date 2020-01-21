@@ -1,36 +1,6 @@
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+# Physical Pretenst Structure
 
-# Pretenst
-
-## Dynamic Shape
-
-Every structure is to some degree dynamic, since they all exist in time and can be deformed, however slightly. We can imagine this if we zoom in. Tapping on one side of a piece of diamond causes a shockwave of atomic scale forces which make their way across the crystal lattice of the diamond over to the other side where the tap can be felt, but the effect inevitably takes time to get from one side to the other. When we don't see this, we are simply not looking closely enough.
-
-The pretenst structures that we explore here expose the dynamic nature of structure by making it explicit. A disturbance in one part of a pretenst structure shakes the next element, which shakes the next, until the entire shape is chaotically jittering. The wave of disturbance are there for us to observe, and it should trigger our imagination to picture how this is actually happening always and everywhere.
-
-## Playing with Physics
-
-The pretenst model lets us "play god" and toy with physics, since we're able to change all the physics features freely on the fly while modeling. The real world is far too restricted when you want to really explore this design space. In the real world we experience constant gravity, and our building materials have unchanging features like their elasticity and density. While designing, we need to be free!
-
-Ultimately, of course, when we get to the stage of building the actual physical structures, we must dial back the reckless carefree physics and bring it back to the actual challenges that face us here on Earth (or on the Moon, or in outer space, depending on the goals). The pretenst software is built to take us gradually from the unreal into the real, the objective being always to find ways to build **physical things**.
-
-## Visualizing the Pretension
-
-Pushing elements (bars) are being compressed to be slightly shorter than they would be without the tension, and pulling elements (cables) are being stretched slightly longer than they would be without the bars. In a pretenst tensegrity, everything is strained a bit, because otherwise the structure wouldn't be stiff. This is the heart of the matter!
-
-In the real world such strains are certainly measurable, sometimes visible, but builders need to understand them intimately so that they can do the numbers and make sure things are built to last and carry loads without collapsing.
-
-The pretenst software is all about fostering a deeper understanding of this very thing, so the visualization is set up to allow users to greatly exaggerate the effects of strain. This is very useful in exposing to the designer where the strain is intense and where it is weak or absent altogether.
-
-What the visualization does, almost paradoxically, is that it shows the pushing and pulling elements at the length that they would be if each of them indidually were not strained at all! Compressed bars appear a little bit longer, and stretched cables appear a little bit shorter, so in this visualizztion the two actually do not touch each other (unless the strain happens to be zero).
-
-Depending on the physics parameters, the effect may be so small that you cannot even see it, so pretenst has a feature which multiplies the effect to bring it unambiguously into view.
-
-## Bending, Shaping, Sculpting, then Freezing
-
-## The "Zen" State
-
-
+It is one thing to play with these structures in the virtual domain with the pretenst app, but experience has taught us that it's another thing entirely when you give yourself the challenge of building physical versions. It's a lot harder!
 
 ## Not Stacking Bricks
 
