@@ -4,7 +4,7 @@
 
 Pretenst software is tool for designing four-dimensional physical structures made from elements of pure compression (bars) and tension (cables) and exploring how they behave over time and under stress.
 
-<video width="500" loop autoPlay>
+<video width="500" loop="true" autoPlay="true">
     <source src="movies/zero-pretenst.mp4" type="video/mp4"/>
     Your browser does not support the video tag.
 </video>
