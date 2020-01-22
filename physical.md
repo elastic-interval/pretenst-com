@@ -1,12 +1,12 @@
 # Physical Pretenst Structure
 
-Anyone who has ever built or tried to build a tensegrity structure can tell you how difficult it can be. This comes from the fact that it's minimal, and it gets its integrity from the tension, so that means that only when the tension is "finished" does it actually hold together.
+Anyone who has ever built or tried to build a tensegrity structure can tell you how difficult it can be. This comes from the fact that it's structurally minimal, avoiding redundant parts, and it gets its integrity from the tension. That means that only when the tension is "finished" does it actually hold together.
 
 The main goal for this project is to find ways to make the process much easier, so that many more people can do it and we end up seeing a whole lot more tensegrity structures in the world around us.
 
-The software was built to open up the design space so that anyone can dream up more complicated and interesting pretenst structures. The challenge to actually build them gets much bigger as a consequence.
+The software was built to open up the design space so that anyone can dream up more complicated and interesting pretenst structures. But the challenge to actually build them gets much bigger as a consequence.
 
-## We're not Stacking Bricks
+## Not Stacking Bricks
 
 When we think of building a house, we think of are made of stacking solid bricks on top of one another, maybe with something like cement trowelled in between to stick them together. Gravity holds the bricks down as we build the walls, and we lay down some thick beams horizontally when we need to support a floor. It all seems more or less like an exercise in stacking solid things. There are pushing and pulling forces throughout, but they're hidden to us.
 
@@ -56,7 +56,7 @@ Braided rope (made often from extremely strong synthetic material like Dyneema) 
 
 Also interesting is that braided rope can display a kind of muscle behavior if somehow the hollow center of the rope is forced outwards. Just like the muscles in our bodies, they pull by shortening while they thicken in radius. The thickening acts like a kind of lever, multiplying the force which pushes outwards perpendicular to the length of the muscle. 
 
-Perhaps this bulge effect could also be used to introduce the last critical bit of pretension in a tensegrity structure, which could then have compression members which are nothing but solid bars. Instead of lengthening bars, we would see cables bulge somewhat.
+Perhaps this bulge effect could also be used to introduce the last critical bit of pretension in a tensegrity structure, which could then have the great advantage that compression members could be nothing but solid bars. Instead of lengthening bars, we would see cables bulge somewhat. It's an option worth exploring.
 
 Either way, we will be able to create the entire network of cables or ropes while in a slack state, because they only later have to bear the pretension.
 

@@ -2,6 +2,12 @@
 
 The only way to effectively explore something that you don't already know really well is to play, so the pretenst app gives us a very flexible world where we can  quickly learn by trial and error. The idea is to start with all the options open and gradually refine towards and end result.
 
+The pretenst design software starts playfully but it isn't just for play, it goes further than that. Ultimately we intend this end result to be a beautiful physical tensegrity structure that you can display in the living room, or maybe a larger one that can be mounted as a sculpture in the lobby, or even a huge one in a city park or mounted on a building.
+
+Beyond a decorative function, we intend to explore more practical applications of tensegrity in any domain where we can show it to be useful.
+
+Whether the scale is large or small, this project is about developing and spreading the understanding and technology that will be needed to make **real physical structures**.
+
 ## Generate, Shape, Zen Freeze, Realize
 
 After generating the pretenst structure, the app gives you ways of turning it into the shape that you want. Everything starts under heavy pretension with very elastic elements, so you can bend and squeeze as much as you like.
