@@ -22,6 +22,5 @@ Pretenst structure, otherwise known as **tensegrity**, is minimalistic. It is st
 * [Physical](physical.md) - it's all about building things we can feel in our hands
 * [Dynamic](dynamic.md) - when the structure starts to move
 
-### Try the [app](/app).
 
 

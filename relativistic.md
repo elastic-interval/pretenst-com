@@ -23,7 +23,7 @@ As we have known for more than a century now, there is an inherent speed in the 
 
 Here things start to get very strange and uncomfortable. As mentioned above, intervals express themselves as the difference between the length they want to be, or maybe we can say the length that they think they are, as compared to the length that they are forced to be due to the circumstances of being caught inside of a tensegrity structure under pretension.
 
-What would that mean in terms of time? To grasp this idea we have to imagine a kind of light-signal being sent from one end to the other of an interval. If the interval is 30cm long, for example, the signal has a nanosecond to get across. Suppose that the frequency of the light is 1 gigaherz, because that would result in a wavelength of this very same 30cm.
+What would that mean in terms of time? To grasp this idea we have to imagine a kind of light-signal being sent from one end to the other of an interval. If the interval is 30cm long, for example, the signal has a nanosecond to get across. Suppose that the frequency of the light is 1 gigahertz, because that would result in a wavelength of this very same 30cm.
 
 What we then might imagine is a standing wave of light that has frequency 1Ghz which somehow creates an interval of 30cm. Let's say that the frequency of the interval is 1Ghz because it wants to be 30cm long.
 
@@ -45,11 +45,11 @@ Picture game of throw and catch happening inside every interval. Since we've see
 
 The corresponding game of catch in the tension interval is a little bit stranger, because we can't hold the ball for a negative amount of time and send it back before we caught it. This is no ordinary game of catch! It's more like a juggler with multiple balls going back and forth.
 
-For the jugglers in the tension intervals to be able to express themselves properly, they will have to hold on to the previous ball and throw it back after a time which corresponds to
+For the jugglers in the tension intervals to be able to express themselves properly, they will have to hold on to the previous ball and throw it back after a time which corresponds to the length that they want to be. 
 
 ## Timing relative to what?
 
-We now know how long should the joints hold on to the balls of the game of catch going on in each interval? But we still don't know exactly when to throw the balls. Since balls will be arriving early and late, we can't just send a ball back at a moment a certain length of time after that ball arrived, because that would all just happen at light speed and we could no longer properly express the desire of each interval.
+We now know how long the joints have to hold on to the balls of the game of catch going on in each interval? But we still don't know exactly when to throw the balls. Since balls will be arriving early and late, we can't just send a ball back at a moment a certain length of time after that ball arrived, because that would all just happen at light speed and we could no longer properly express the desire of each interval.
 
 The amount of time that an interval end has to hold the ball will be relative to the aggregate "event" that can be registered at a joint based on all the intervals that meet there. So let's imagine one cycle of this game.
 
