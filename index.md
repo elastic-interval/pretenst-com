@@ -17,10 +17,11 @@ Pretenst structure, otherwise known as **tensegrity**, is minimalistic. It is st
 
 (work in progress...)
 
-* [Design Play](design-play.md) - going from idea to design by playful trial and error
+* [Process](process.md) - playful trial and error towards refinement and realization
 * [Tenscript](tenscript.md) - a minimal language for generating pretenst structures
-* [Physical](physical.md) - it's all about building things we can feel in our hands
+* [Physical](physical.md) - all about building things we can feel in our hands
 * [Dynamic](dynamic.md) - when the structure starts to move
+* [Relativistic](relativistic.md) - do not read this, here be dragons
 
 
 
