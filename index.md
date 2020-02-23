@@ -21,7 +21,5 @@ Pretenst structure, otherwise known as **tensegrity**, is minimalistic. It is st
 * [Tenscript](tenscript.md) - a minimal language for generating pretenst structures
 * [Physical](physical.md) - all about building things we can feel in our hands
 * [Dynamic](dynamic.md) - when the structure starts to move
-* [Relativistic](relativistic.md) - do not read this, here be dragons
-
 
 
