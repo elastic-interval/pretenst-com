@@ -6,7 +6,7 @@
 
 Pretenst software is tool for designing four-dimensional physical structures made from elements of pure compression (bars) and tension (cables) and exploring how they behave over time and under stress.
 
-<div class="glider-contain" style="text-align: center;">
+<div class="glider-contain" style="text-align: center; margin-bottom: 15px;">
   <div class="glider">
     <div><a href="images/ray/a.jpg" target="_BLANK"><img src="images/ray/a_.jpg"></a></div>
     <div><a href="images/ray/b.png" target="_BLANK"><img src="images/ray/b_.png"></a></div>
@@ -24,6 +24,10 @@ Pretenst software is tool for designing four-dimensional physical structures mad
 ## The Essence of Physical Structure
 
 Pretenst structure, otherwise known as **tensegrity**, is minimalistic. It is structure distilled down to the basics of push and pull. It's because of this that these structures appear to be lighter than air, defying gravity, and that gives them their elegant beauty. The defining feature of tensegrity is that the pushing elements or bars are **floating**, separated from each other and only held together by a **network of tension**. The shape maintains its integrity because of the tension, and the compression pushing outwards is only localized.
+
+## Contact
+
+You can reach us by email at [**pretenst@gmail.com**](mailto:pretenst@gmail.com?subject=Pretenst%20Tensegrity%20Design) if you want to know more.
 
 ## Documentation
 
