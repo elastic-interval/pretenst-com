@@ -136,7 +136,7 @@ Bricks connect together by melting triangles of opposing chirality together, tur
 
 This trivial program shows only the melting together of two bricks:
 
-    (1)
+    (0) vs (1)
 
 ![0](images/brick-0.png)
 ![0](images/brick-1.png)
@@ -145,3 +145,30 @@ The new tensegrity then consists of 12 bars, where the new brick has been added 
 
 Something else also takes place when two bricks are melted together, because the new column structure has a very different shape. 
 
+## Multiple Sections
+
+Tenscript is encoded as a string of characters, and as you've seen, often with many brackets. The character string can be subdivided into sections using the colon character ":". For example, you can give a name by adding a section with quotes:
+
+    'Axoneme':(16,S90)
+
+Other sections can be added as well, which allows for both composition and for specifying what the marks are to be used for. Other sections are therefore prefixed with "0=", "1=", "2=", etc which indicates the mark number.
+
+## Composition with "subtree"
+
+In tenscript, you can create subroutines and effectively compose construction programs using marks which substitute subtrees.
+
+    'Composed':(3,b(2,MA0),c(2,MA0),d(2,MA0)):0=subtree(b2,c2,d2)
+
+![composed](images/composed.png)
+
+Here you can see that the 3-column fanout is defined in the subtree and built at the end of three different branches. This makes the whole program much shorter since there is less repetition.
+
+## Face Distancing
+
+Another feature which uses the special mark sections is "face-distance-N" which instructs the builder to create intervals between all of the marked faces and change them to "N %" of their original length.  So for example this program chooses the final faces on its three legs and pulls them until they are at a 35% distance from where they started.
+
+    'Thick Tripod':(A1,B(3,MA1),C(3,MA1),D(3,MA1)):1=face-distance-35
+
+As a result, the legs are pulled inwards so that the structure grows thinner and taller.
+
+![distancing](images/distancing.png)
