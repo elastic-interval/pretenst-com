@@ -10,6 +10,8 @@ The smallest tenscript program is this one, generating only the brick unit:
 
     (0)
 
+![0](images/brick-0.png)
+
 Each of the brick's 8 triangles is given a name which allows us to specify exactly how bricks are to be connected to each other, and the names are arranged  according to their relationships, and the uppercase/lowercase of the names indicate a kind of polarity.
 
 The top triangle is called "A" and the bottom triangle is called "a". The three triangles adjacent to "A" near the top are called "b", "c", and "d", and the bottom triangles adjacent to "a" are called "B", "C" and "D". Lowercase names are on the opposite side their uppercase counterparts, so "c" is opposite "C", and so on.
@@ -28,6 +30,10 @@ Bricks are by default extended in the top "A" direction to make tensegrity colum
     (5) - build five bricks on top, column of 6
     (27) - a column of 28 bricks
 
+![1](images/brick-1.png)
+![5](images/brick-5.png)
+![27](images/brick-27.png)
+
 ## Branching
 
 The other triangle names are used when the structure is to branch off in the different directions, and later on when a program has to point out the triangles which are to be joined together.
@@ -42,11 +48,15 @@ The following program will build a column and then branch off in the "b" directi
 
     (3,b3)
 
+![3b3](images/branch-3b3.png)
+
 Just as easily, tenscript allows for branching in more than one direction at the same connection point, and when more than one branch is specified, they actually grow out at the same time as well. Here are some simple branching programs to illustrate:
 
     (2,b2,c2) - two bricks in the "A" direction, then two branches of two bricks each
     (3,c3,d13) - three bricks, then branching in a short and a long column
     (1,b1,c1,d1) - one brick up, then all possible branches outwards
+
+![1b1c1d1](images/nexus-1b1c1d1.png)
 
 Note that programs like this can also create messy structures that you may not want. For example, these programs build a column of 3 bricks and then double back in the direction it came from, overlapping the original:
 
@@ -63,6 +73,8 @@ This is where things get much more interesting since we can now imagine putting 
 
     (3,b(3,c3))
 
+![zzi](images/zig-zag-initial.png)
+
 The instructions here is to start by adding three bricks on top of the "A" triangle, turning in the "b" direction to build three more, and then once again at the end of the second column branching in the "c" direction to build a third column.
 
 If this is starting to look complicated, fasten your seatbelts, because once you have the ability to nest code inside of code, things get very weird indeed and we've just gotten started. As you may have guessed, we will be swimming in brackets.
@@ -70,6 +82,8 @@ If this is starting to look complicated, fasten your seatbelts, because once you
 For example, here is a program which keeps building like the one above, column after column, every time in exactly the right branch direction so that it eventually returns to almost where it started. It builds what we call a "zig-zag ring":
 
     (a1,c(3,b(3,d(3,c(3,b(3,d1))))))
+
+![zzincomplete](images/zig-zag-incomplete.png)
 
 The first brick is however not connected to the last one so it doesn't actually complete the ring. For that we need another feature: marking.
 
@@ -86,6 +100,8 @@ To illustrate this, it's easiest to see an unmarked program beside a marked prog
     (a1,      c(3,b(3,d(3,c(3,b(3,d1      ))))))
     (a(1,MA7),c(3,b(3,d(3,c(3,b(3,d(1,MA7)))))))
 
+![zzcomplete](images/zig-zag-complete.png)
+
 As you can see, in both cases the "1" is replaced with its equivalent "(1)" and then the brick's "A" triangle is marked by the "MA7" to make "(1,MA7)".
 
 ## Scaling
@@ -98,9 +114,13 @@ A seventeen brick Snelson Needle Tower column turns out to be a tiny simple prog
 
     (16,S90)
 
+![tower-s90](images/tower-s90.png)
+
 Combining scaling with branching and marking starts to give us some very pretty and interesting structures indeed, such as the "bulge ring":
 
     (A(8,S85,MA1),a(8,S85,MA1))
+
+![bulge-ring](images/bulge-ring.png)
 
 Here, there are two eight-brick tapering columns extending in opposite directions "A" and "a", which then have their end triangles marked so that the are drawn together and welded, resulting into a ring.
 
@@ -118,6 +138,10 @@ This trivial program shows only the melting together of two bricks:
 
     (1)
 
+![0](images/brick-0.png)
+![0](images/brick-1.png)
+
 The new tensegrity then consists of 12 bars, where the new brick has been added to replace the "A" triangle and it is melted into the next brick's opposing "a" triangle.
 
 Something else also takes place when two bricks are melted together, because the new column structure has a very different shape. 
+
