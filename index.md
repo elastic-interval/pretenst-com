@@ -1,13 +1,25 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-# Pretenst Design
+# Pretenst Tensegrity Design
 
 Pretenst software is tool for designing four-dimensional physical structures made from elements of pure compression (bars) and tension (cables) and exploring how they behave over time and under stress.
 
-<video width="500" loop="true" autoPlay="true">
-    <source src="movies/zero-pretenst.mp4" type="video/mp4"/>
-    Your browser does not support the video tag.
-</video>
+<div class="glider-contain" style="text-align: center;">
+  <div class="glider">
+    <div><a href="images/ray/a.jpg" target="_BLANK"><img src="images/ray/a_.jpg"></a></div>
+    <div><a href="images/ray/b.png" target="_BLANK"><img src="images/ray/b_.png"></a></div>
+    <div><a href="images/ray/c.png" target="_BLANK"><img src="images/ray/c_.png"></a></div>
+    <div><a href="images/ray/d.png" target="_BLANK"><img src="images/ray/d_.png"></a></div>
+    <div><a href="images/ray/e.png" target="_BLANK"><img src="images/ray/e_.png"></a></div>
+    <div><a href="images/ray/f.png" target="_BLANK"><img src="images/ray/f_.png"></a></div>
+    <div><a href="images/ray/g.png" target="_BLANK"><img src="images/ray/g_.png"></a></div>
+  </div>
+  <button role="button" aria-label="Previous" class="glider-prev">«</button>
+  <button role="button" aria-label="Next" class="glider-next">»</button>
+  <div role="tablist" class="dots"></div>
+</div>
 
 ## The Essence of Physical Structure
 
@@ -22,4 +34,5 @@ Pretenst structure, otherwise known as **tensegrity**, is minimalistic. It is st
 * [Physical](physical.md) - all about building things we can feel in our hands
 * [Dynamic](dynamic.md) - when the structure starts to move
 
+<script>window.addEventListener('load', function(){ new Glider(document.querySelector('.glider'), { dots: '.dots', arrows: {prev: '.glider-prev',    next: '.glider-next'  }})})</script>
 
