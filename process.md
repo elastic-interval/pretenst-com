@@ -27,7 +27,7 @@ When in malleable mode, you can adjust lengths of the cables and bars, growing e
 
 ## Zen Mode
 
-When the shaping is done and you have arrived at the form that you want, the next step is to leave malleable mode behind. All of the extreme pretension and elasticity has to be removed so that the structure can be turned into something that can practically built and will hold this shape when it is finished.
+When the shaping is done and you have arrived at the form that you want, the next step is to leave malleable mode behind. All of the extreme pretension and elasticity has to be removed so that the structure can be turned into something that can essentially be built and will hold this shape when it is finished. It is totally at peace, but only if there is also no gravity to contend with.
 
 Shifting to zen mode involves a very simple sweep across all cables and bars where each one is made to adopt its current length rather than continue striving for the ideal length that it had in malleable mode. All of the tension and compression disappear, and since the structure is still in zero gravity it no longer has any forces to make it move. It is not fozen in the sense of being rigid, but only that it stays put because it has no reason to do otherwise.
 
