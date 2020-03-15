@@ -16,6 +16,7 @@ Pretenst software is tool for designing four-dimensional physical structures mad
     <div><a href="images/ray/f.png" target="_BLANK"><img src="images/ray/f_.png"></a></div>
     <div><a href="images/ray/g.png" target="_BLANK"><img src="images/ray/g_.png"></a></div>
     <div><a href="images/ray/h.png" target="_BLANK"><img src="images/ray/h_.png"></a></div>
+    <div><a href="images/ray/i.png" target="_BLANK"><img src="images/ray/i_.png"></a></div>
   </div>
   <button role="button" aria-label="Previous" class="glider-prev">«</button>
   <button role="button" aria-label="Next" class="glider-next">»</button>
