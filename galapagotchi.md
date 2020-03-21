@@ -16,4 +16,4 @@ When a gotchi body is born, it knows nothing about how to coordinate its muscles
 
 You the player cannot control the muscle contractions directly. Gotchis discover this coordination by natural selection. Evolution by trial and error is the only way to survive.
 
-Satoshi trees grow very slowly from ambient light, rising from the surface and branching outwards. 
+Satoshi trees grow very slowly from satoshi rain, rising from the surface and branching outwards as they grow to collect it.
