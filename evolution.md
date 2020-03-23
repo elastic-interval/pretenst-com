@@ -38,9 +38,9 @@ Twitches can be quick or slow, so the next two dice determine the attack and dec
 
 The surface acts soft and rough in that there is friction, and a limb can penetrate but not very deeply. When the limb is submerged, it can grasp to its current location for a time.
 
-### Which limb: **( ⚀ ) ⮕ ( ⚃ ), ( ⚄ ) ( ⚅ )**
+### Which limb: **( ⚀ ) ⮕ ( ⚅ )**
 
-There are four limbs which can grasp, so one die determines either which limb, or in the case of **( ⚄ )** and **( ⚅ )** 
+There are four limbs which can grasp, so one die is used to choose from the six different combinations of two. For example **( ⚀ )** grasps back-left and back-right, and **( ⚄ )** grasps front-left and back-right.
 
 ### When: **( ⚀ ⚀ ) ⮕ ( ⚅ ⚅ )**
 
