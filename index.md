@@ -8,7 +8,6 @@ Pretenst software is tool for designing four-dimensional physical structures mad
 
 <div class="glider-contain" style="text-align: center; margin-bottom: 15px;">
   <div class="glider">
-    <div><a href="images/ray/n.png" target="_BLANK"><img src="images/ray/n_.png"></a></div>
     <div><a href="images/ray/a.jpg" target="_BLANK"><img src="images/ray/a_.jpg"></a></div>
     <div><a href="images/ray/b.png" target="_BLANK"><img src="images/ray/b_.png"></a></div>
     <div><a href="images/ray/c.png" target="_BLANK"><img src="images/ray/c_.png"></a></div>
@@ -20,8 +19,9 @@ Pretenst software is tool for designing four-dimensional physical structures mad
     <div><a href="images/ray/i.png" target="_BLANK"><img src="images/ray/i_.png"></a></div>
     <div><a href="images/ray/j.png" target="_BLANK"><img src="images/ray/j_.png"></a></div>
     <div><a href="images/ray/k.png" target="_BLANK"><img src="images/ray/k_.png"></a></div>
-    <div><a href="images/ray/l.png" target="_BLANK"><img src="images/ray/l_.png"></a></div>
+    <div><a href="images/ray/l.jpg" target="_BLANK"><img src="images/ray/l_.jpg"></a></div>
     <div><a href="images/ray/m.png" target="_BLANK"><img src="images/ray/m_.png"></a></div>
+    <div><a href="images/ray/n.png" target="_BLANK"><img src="images/ray/n_.png"></a></div>
   </div>
   <button role="button" aria-label="Previous" class="glider-prev">«</button>
   <button role="button" aria-label="Next" class="glider-next">»</button>
