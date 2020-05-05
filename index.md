@@ -4,7 +4,7 @@
 
 # Pretenst Tensegrity Design
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SIyi6v5fbaA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="600" height="340" src="https://www.youtube.com/embed/SIyi6v5fbaA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Pretenst software is tool for designing four-dimensional physical structures made from elements of pure compression (bars) and tension (cables) and exploring how they behave over time and under stress.
 
