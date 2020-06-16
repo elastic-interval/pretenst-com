@@ -20,6 +20,8 @@
 
       {{ content }}
 
+        <hr/>
+        <h4>Constructions:</h4>
       {% for page in site.categories.construction %}
         <h5 class="title">{{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>"</h5>
         <p>{{ page.description }}</p>

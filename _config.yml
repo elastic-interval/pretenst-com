@@ -4,8 +4,7 @@ plugins:
   - jekyll-feed
 title: Pretenst Tensegrity Design
 description: >
-  This project brings together tensegrity design software built with Rust/WASM/WebGL and projects to
-  construct physical tensegrity objects.
+  Four dimensional open source tensegrity design software, together with real world construction experiments.
 email: pretenst@gmail.com
 app_url: https://pretenst.com/app/
 github:
