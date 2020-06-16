@@ -113,7 +113,7 @@ Each strut consisted of a 30cm segment of threaded rod, with a long connector nu
 
 ![connect][connect-0]
 
-It turned out to be easier once I hung the tension network from a cord so that I could insert the rods one by one. The rods are not connected to the balls so it was a beautiful thing to observe the tensegrity taking shape with each rods only pushing on a pair of balls.
+It turned out to be easier once I hung the tension network from a cord so that I could insert the rods one by one. The rods are not connected to the balls so it was a beautiful thing to observe the tensegrity taking shape with each of the rods only pushing on a pair of balls.
 
 ![hang][hang-1]
 
@@ -164,3 +164,4 @@ In your hands the structure feels a bit like magic because it's so tight, so mis
 [marked-2]: https://pretenst.com/images/2020-06/marked-2.jpg
 [measure-1]: https://pretenst.com/images/2020-06/measure-1.jpg
 [measure-3]: https://pretenst.com/images/2020-06/measure-3.jpg
+``
