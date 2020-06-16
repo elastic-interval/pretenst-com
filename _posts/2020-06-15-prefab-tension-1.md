@@ -135,7 +135,7 @@ Every ball is ever so slightly captured by its spherical surface being nested in
 
 ## Conclusion
 
-In your hands the structure feels a bit like magic because it's so tight, so mission accomplished! The process was a bit too tricky, though. Several aspects may lend themselves to simplification, so that will have to be the focus of a future construction.
+In your hands the structure feels a bit like magic because it's remarkably tight, so I have to say: mission accomplished! The process was a bit too tricky, though. Several aspects may lend themselves to simplification, so that will have to be the focus of a future construction.
 
 
 
