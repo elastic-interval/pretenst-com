@@ -12,7 +12,7 @@ It was not easy, but this exploration with a prototype is supposed to lead to co
 
 ## Model
 
-I started by making a virtual model using the **pretenst** app, focusing on the joints where the tension cords come together. If the struts are to ony push on the tension network, they must have something to push on, so I decided to make them spherical. This is an image of it ray traced by **blender**:
+I started by making a virtual model using the **pretenst** app, focusing on the joints where the tension cords come together. If the struts are to only push on the tension network, they must have something to push on, so I decided to make them spherical. This is an image of it ray traced by **blender**:
 
 ![virtual][virtual]
 
