@@ -137,8 +137,6 @@ Every ball is ever so slightly captured by its spherical surface being nested in
 
 In your hands the structure feels a bit like magic because it's remarkably tight, so I have to say: mission accomplished! The process was a bit too tricky, though. Several aspects may lend themselves to simplification, so that will have to be the focus of a future construction.
 
-
-
 [virtual]: https://pretenst.com/images/2020-06/joint-sphere-detail-gradient.png
 [start]: https://pretenst.com/images/2020-06/start.jpg
 [aluminum-0]: https://pretenst.com/images/2020-06/aluminum-0.jpg
@@ -164,4 +162,3 @@ In your hands the structure feels a bit like magic because it's remarkably tight
 [marked-2]: https://pretenst.com/images/2020-06/marked-2.jpg
 [measure-1]: https://pretenst.com/images/2020-06/measure-1.jpg
 [measure-3]: https://pretenst.com/images/2020-06/measure-3.jpg
-``
