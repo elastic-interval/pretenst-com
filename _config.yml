@@ -1,1 +1,13 @@
-theme: jekyll-theme-midnight
+theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-feed
+title: Pretenst Tensegrity Design
+description: >
+  This project brings together tensegrity design software built with Rust/WASM/WebGL and projects to
+  construct physical tensegrity objects.
+email: pretenst@gmail.com
+app_url: https://pretenst.com/app/
+github:
+  repository_url: https://github.com/elastic-interval/pretenst
+  repository_name: pretenst
