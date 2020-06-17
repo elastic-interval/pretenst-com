@@ -1,5 +1,5 @@
 ---
-title: "Triangle of Tension"
+title: "Radial Tension"
 date: 2020-06-27
 categories: construction
 ---
