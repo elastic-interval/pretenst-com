@@ -8,15 +8,15 @@ categories: construction
 
 In this project I'm setting out to commit a heinous violation of my tightly held tensegrity principles. I believe that there are certain foundational ideas in tensegrity structures, and one of them is that any element relationships which introduce shear, bending, or torque are forbidden. 
 
-That is not to say that you can't just do it, but I argue that a crisp definition is best for establishing the category. A useful taxonomy of tensegrity structures should, for example, clearly separate structures that require gravity for their tension to act. These are lovely structures which behave in interesting ways, but they should be distinguished from tensegrity structures which are "pretenst" (actually "pretensioned") such that they are stiff in the absence of gravity.
+That is not to say that you can't just do it, but I argue that a crisp definition is best for establishing the category. A useful taxonomy of tensegrity structures should, for example, clearly separate structures that require gravity for their tension to act. These are lovely structures which behave in interesting ways, but they should be distinguished from tensegrity structures which are "pretensioned" such that they are stiff in the absence of gravity.
 
-It's an other violation that I am going to commit here, but it's for a noble cause: to illustrate a point and help me think through potential innovations which make building these structures easier.
+It's a different violation that I am going to commit here, but it's for a noble cause: to illustrate a point and help me think through potential innovations which make building these structures easier. This tensegrity will exert a force which would tend to bend its struts, which is **not done**.
 
 ## Scaffolding
 
 The basic structure is the same six-strut "brick" as [last time](/construction/2020/06/15/prefab-tension-1), but this time I'm not interested in tightness or the separation of tension from compression.
 
-This will be a quick and dirty build, and I will use this nice scaffolding element that I once made with my friend [Graham Smith](https://grahamthomassmith.com/curriculum-vitae/) at his "Harbour Hut" workshop across the river in Amsterdam (the Hut has since been bulldozed to make room for fancy homes).
+This will be a quick and dirty build, and I will use this nice "nucleus" scaffolding element that I once made with my friend [Graham Smith](https://grahamthomassmith.com/curriculum-vitae/) at his "Harbour Hut" workshop across the river in Amsterdam (the Hut has since been bulldozed to make room for fancy homes).
 
 ![phi24][phi24-0]
 
@@ -30,9 +30,43 @@ With a little tape it was easy to prepare the compression in more or less the ri
 
 The struts I'm using were found many years ago in a surplus shop in Toronto (Active Surplus, back in the day), and they are probably the stainless steel axes of some kind of factory roller system, because they have precisely machined grooves at two positions near their ends. It was these grooves that **suggested this experiment** to me, because each bar had 4 of them.
 
+## Wire Toy-Tension
+
+I really took the easy way out for this model by using a stiff thin wire which I was able to wrap around the bars such that the wire settled comfortably in the existing grooves.
+
+![phi24][phi24-a]
+
+The amount of tension is not impressive at all, and you can see that the wires are not even particularly straight. But like I said, this time it's not the point.
+
+## Dissolving the Nucleus
+
+With the tension hooked up and more or less strong enough to hold things together, the next step is to remove the bolts holding the nucleus together.
+
+![phi24][phi24-b]
+
+With no bolts, the parts of the nucleus fall away like Jenga bricks.
+
+![phi24][phi24-c]
+
+![phi24][phi24-d]
+
+What we are left with is six bars suspended within six interconnected diamond-shaped tension.
+
+![phi24][phi24-e]
+
+It's not hard to imagine these connections being rigged to slide to different positions along the bar (rather than in grooves).
+
+## More clearly
+
+Since it can be a little hard to pick out the way that the diamond tension is working here, I added a loop of cord to highlight the nearest one.
+
+![phi24][phi24-z]
+
 ## Conclusion
 
-Displacing the joints such that there are 24 connections of 2 rather than 12 connections of 4 helps me think about about an optimization where there is a "diamond of tension" associated with each strut. This is something that should not prevent building with [prefab tension](/construction/2020/06/15/prefab-tension-1) since the tension can just as easily be pre-measured **while slack** and later tensed.
+Displacing the joints into separate connections such that there are 24 of 2 rather than 12 of 4 helps me think about about a potential optimization where there is a "diamond of [prefab tension](/construction/2020/06/15/prefab-tension-1)" prepared with each strut. The diamonds can just as well be pre-measured **while slack** and later tensed when struts lengthen.
+
+My apologies for violating a fundamental tensegrity principle for illustrative purposes, but with the cheesy wire tension it should be clear that nobody is supposed to take this tensegrity seriously anyway.
 
 [phi24-0]: https://pretenst.com/images/2020-06/phi24-0.jpg
 [phi24-1]: https://pretenst.com/images/2020-06/phi24-1.jpg
