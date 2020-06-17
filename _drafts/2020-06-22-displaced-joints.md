@@ -1,0 +1,44 @@
+---
+title: "Diamond of Tension"
+date: 2020-06-22
+categories: construction
+---
+
+## Tensegrity Violation!
+
+In this project I'm setting out to commit a heinous violation of my tightly held tensegrity principles. I believe that there are certain foundational ideas in tensegrity structures, and one of them is that any element relationships which introduce shear, bending, or torque are forbidden. 
+
+That is not to say that you can't just do it, but I argue that a crisp definition is best for establishing the category. A useful taxonomy of tensegrity structures should, for example, clearly separate structures that require gravity for their tension to act. These are lovely structures which behave in interesting ways, but they should be distinguished from tensegrity structures which are "pretenst" (actually "pretensioned") such that they are stiff in the absence of gravity.
+
+It's an other violation that I am going to commit here, but it's for a noble cause: to illustrate a point and help me think through potential innovations which make building these structures easier.
+
+## Scaffolding
+
+The basic structure is the same six-strut "brick" as [last time](/construction/2020/06/15/prefab-tension-1), but this time I'm not interested in tightness or the separation of tension from compression.
+
+This will be a quick and dirty build, and I will use this nice scaffolding element that I once made with my friend [Graham Smith](https://grahamthomassmith.com/curriculum-vitae/) at his "Harbour Hut" workshop across the river in Amsterdam (the Hut has since been bulldozed to make room for fancy homes).
+
+![phi24][phi24-0]
+
+The key feature of this scaffold is that it forms a temporary nucleus for holding the brick's struts so we can worry about the tension, but more importantly that you can disassemble it later.
+
+## Prepare for Tension
+
+With a little tape it was easy to prepare the compression in more or less the right positions, so that I could wrap tension around it.
+
+![phi24][phi24-1]
+
+The struts I'm using were found many years ago in a surplus shop in Toronto (Active Surplus, back in the day), and they are probably the stainless steel axes of some kind of factory roller system, because they have precisely machined grooves at two positions near their ends. It was these grooves that **suggested this experiment** to me, because each bar had 4 of them.
+
+## Conclusion
+
+Displacing the joints such that there are 24 connections of 2 rather than 12 connections of 4 helps me think about about an optimization where there is a "diamond of tension" associated with each strut. This is something that should not prevent building with [prefab tension](/construction/2020/06/15/prefab-tension-1) since the tension can just as easily be pre-measured **while slack** and later tensed.
+
+[phi24-0]: https://pretenst.com/images/2020-06/phi24-0.jpg
+[phi24-1]: https://pretenst.com/images/2020-06/phi24-1.jpg
+[phi24-a]: https://pretenst.com/images/2020-06/phi24-a.jpg
+[phi24-b]: https://pretenst.com/images/2020-06/phi24-b.jpg
+[phi24-c]: https://pretenst.com/images/2020-06/phi24-c.jpg
+[phi24-d]: https://pretenst.com/images/2020-06/phi24-d.jpg
+[phi24-e]: https://pretenst.com/images/2020-06/phi24-e.jpg
+[phi24-z]: https://pretenst.com/images/2020-06/phi24-z.jpg
