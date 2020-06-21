@@ -8,9 +8,9 @@ categories: construction
 
 In this project I'm setting out to commit a heinous violation of my tightly held tensegrity principles. I believe that there are certain foundational ideas in tensegrity structures, and one of them is that any element relationships which introduce shear, bending, or torque are forbidden. 
 
-That is not to say that you can't just do it, but I argue that a crisp definition is best for establishing the category. A useful taxonomy of tensegrity structures should, for example, clearly separate structures that require gravity for their tension to act. These are lovely structures which behave in interesting ways, but they should be distinguished from tensegrity structures which are "pretensioned" such that they are stiff in the absence of gravity.
+That is not to say that you can't just do it, but I argue that a crisp mathematical definition is best for establishing the category "tensegrity". There's more to be said about this, but I'll save it for another post.
 
-It's a different violation that I am going to commit here, but it's for a noble cause: to illustrate a point and help me think through potential innovations which make building these structures easier. This tensegrity will exert a force which would tend to bend its struts, which is **not done**.
+The violation in this project is for a noble cause: to illustrate a point and help me think through potential innovations which make building these structures easier. This tensegrity will exert a force which would tend to **bend** its struts.
 
 ## Scaffolding
 
@@ -50,11 +50,11 @@ With no bolts, the parts of the nucleus fall away like Jenga bricks.
 
 ![phi24][phi24-d]
 
-What we are left with is six bars suspended within six interconnected diamond-shaped tension.
+What we are left with is six bars suspended within six diamond-shaped tension loops. The loops join the inner grooves to other outer grooves.
 
 ![phi24][phi24-e]
 
-It's not hard to imagine these connections being rigged to slide to different positions along the bar (rather than in grooves).
+It's not hard to imagine these connections being rigged to slide to different positions along the bar (rather than in grooves). I wonder how it would behave.
 
 ## More clearly
 
@@ -64,7 +64,9 @@ Since it can be a little hard to pick out the way that the diamond tension is wo
 
 ## Conclusion
 
-Displacing the joints into separate connections such that there are 24 of 2 rather than 12 of 4 helps me think about about a potential optimization where there is a "diamond of [prefab tension](/construction/2020/06/15/prefab-tension-1)" prepared with each strut. The diamonds can just as well be pre-measured **while slack** and later tensed when struts lengthen.
+Displacing the joints into separate connections helps me think about about a potential optimization where there is a "diamond of tension" prepared together with each strut.
+
+The diamonds can just as well be pre-measured **while slack** and later tensed when the whole is constructed and the struts lengthened, so that would achieve [prefab tension](/construction/2020/06/15/prefab-tension-1).
 
 My apologies for violating a fundamental tensegrity principle for illustrative purposes, but with the cheesy wire tension it should be clear that nobody is supposed to take this tensegrity seriously anyway.
 
