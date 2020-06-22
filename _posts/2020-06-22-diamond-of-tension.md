@@ -29,7 +29,11 @@ With a little tape it was easy to prepare the compression in more or less the ri
 
 ![phi24][phi24-1]
 
-The struts I'm using were found many years ago in a surplus shop in Toronto (Active Surplus, back in the day), and they are probably the stainless steel axes of some kind of factory roller system, because they have precisely machined grooves at two positions near their ends. It was these grooves that **suggested this experiment** to me, because each bar had 4 of them.
+The struts I'm using were found many years ago in a surplus shop in Toronto (Active Surplus, back in the day), and they are probably the stainless steel axes of some kind of factory roller system, because they have precisely machined grooves at two positions near their ends. 
+
+![phi24][phi24-2]
+
+It was these grooves that **suggested this experiment** to me, because each bar had 4 of them.
 
 ## Wire Toy-Tension
 
