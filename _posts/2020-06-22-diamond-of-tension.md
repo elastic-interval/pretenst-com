@@ -77,6 +77,7 @@ My apologies for violating a fundamental tensegrity principle for illustrative p
 
 [phi24-0]: https://pretenst.com/images/2020-06/phi24-0.jpg
 [phi24-1]: https://pretenst.com/images/2020-06/phi24-1.jpg
+[phi24-2]: https://pretenst.com/images/2020-06/phi24-2.jpg
 [phi24-a]: https://pretenst.com/images/2020-06/phi24-a.jpg
 [phi24-b]: https://pretenst.com/images/2020-06/phi24-b.jpg
 [phi24-c]: https://pretenst.com/images/2020-06/phi24-c.jpg
