@@ -2,9 +2,9 @@ theme: jekyll-theme-cayman
 
 plugins:
   - jekyll-feed
-title: Pretenst Tensegrity Design
+title: Pretenst
 description: >
-  Four dimensional open source tensegrity design software, together with real world construction experiments.
+  Tensegrity design software with real world construction experiments
 email: pretenst@gmail.com
 app_url: https://pretenst.com/app/
 github:

@@ -1,5 +1,6 @@
 ---
 title: "Diamond of Tension"
+description: Four pulls for every push
 date: 2020-06-22
 categories: construction
 ---

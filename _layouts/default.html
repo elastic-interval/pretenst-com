@@ -7,24 +7,30 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  	<style>
+	.center {text-align: center;}
+	body { background-color: #eddbd7; }
+	</style>
   </head>
   <body>
       <header class="page-header" role="banner">
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      <h1 class="project-name">{{ site.title }}</h1>
+      <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
       <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
       <a href="{{ site.app_url }}" class="btn">Try the App</a>
     </header>
 
     <main id="content" class="main-content" role="main">
 
+      <h1 class="project-name center">{{ page.title |  default: "" }}</h1>
+      <h2 class="project-tagline center">{{ page.description  |  default: "" }}</h2>
+
       {{ content }}
 
         <hr/>
         <h4>Constructions:</h4>
       {% for page in site.categories.construction %}
-        <h5 class="title">{{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>"</h5>
-        <p>{{ page.description }}</p>
+        <h5 class="title">{{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>": {{ page.description }}</h5>
       {% endfor %}
 
       <footer class="site-footer">
