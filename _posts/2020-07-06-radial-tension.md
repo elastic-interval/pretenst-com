@@ -58,6 +58,8 @@ Putting it all together, we once again get the six-bar tensegrity but this time 
 
 The triangular tension model, when stressed, exhibits a rotating action which Bucky Fuller talked about at length. Every triangle rotates together or none of them rotate.
 
+Not this one!
+
 ![radial][radial-y]
 
 So, as expected, with radial tension the bars are suspended in space the same way as with triangular tension, but the **behavior** is very different! 
