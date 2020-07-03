@@ -1,6 +1,7 @@
 ---
 title: "Radial Tension"
 date: 2020-07-06
+description: "Pulling towards the middle"
 categories: construction
 ---
 
@@ -65,6 +66,8 @@ Not this one!
 So, as expected, with radial tension the bars are suspended in space the same way as with triangular tension, but the **behavior** is very different! 
 
 When stressed, this version of the 6-strut tensegrity can be easily flattened. The omni-rotation that you get used to with these 6-strut tensegrities is **completely absent!**.
+
+Sometimes we might think of replacing the tension triangles with something, perhaps with a fabric triangle. This experiment makes me realize that a fabric triangle would behave very differently, because it would be a middle ground between the original and this one.
 
 [triangle]: https://pretenst.com/images/2020-06/final-3.jpg
 [radial-1]: https://pretenst.com/images/2020-07/radial-1.jpg
