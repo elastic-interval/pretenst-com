@@ -2,7 +2,9 @@
 title: "Radial Tension"
 date: 2020-07-06
 description: "Pulling towards the middle"
+header-img: /images/2020-07/radial-h.jpg
 categories: construction
+tags: [tensegrity]
 ---
 
 ## The Tension Triangle
