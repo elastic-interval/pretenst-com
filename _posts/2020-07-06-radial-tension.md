@@ -9,7 +9,7 @@ tags: [tensegrity]
 
 ## The Tension Triangle
 
-These structures, like the [one](http://localhost:4000/construction/2020/06/15/prefab-tension-1) I made a few weeks ago are made up of triangles of tension. 
+These structures, like the [prefab tension one](http://localhost:4000/construction/2020/06/15/prefab-tension-1) I made a few weeks ago are made up of triangles of tension. 
 
 ![triangle][triangle]
 
