@@ -16,6 +16,7 @@ A bridge or a really tall building with some kind of skeleton structure goes a b
 
 Civil engineers don't just use concrete, because they know that concrete on its own will just crumble and fall apart. As we've all seen when we peek through the fence at a building site, the first thing they do is lay down a lattice of steel rods, and only later do they pour the concrete. It's only the combination of the concrete and the pre-tensed steel rods that actually makes it last. Pre-tension is everywhere! It's just mostly hidden.
 
+
 ## The Connection Problem
 
 Building tensegrity structures is generally quite difficult, because the end of every bar has to be connected to four or more cables which converge there. 

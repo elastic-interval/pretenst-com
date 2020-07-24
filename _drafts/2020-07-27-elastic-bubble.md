@@ -10,11 +10,13 @@ tags: [tensegrity]
 
 ## Elastic Bubble
 
-I had nice 3mm elastic cord, and I bought a bunch of 10mm transparent PVC pipes.
+I had nice 3mm [elastic cord](https://www.lijnenspecialist.nl/elastic), and I bought a bunch of 10mm transparent [PVC pipes](https://www.pvc24.nl/kopen/transparante-pvc-buizen/). My goal was to build a bubble.
 
 ![bubble][bubble-a]
 
-The goal is to build a [small tensegrity sphere](https://pretenst.com/app/#sphere-1), which should be a bit bouncy and behave like a bubble.
+With some cutting, drilling, and knotting, I built a [small tensegrity sphere](https://pretenst.com/app/#sphere-1), which should be a bit bouncy and behave like a bubble.
+
+![bubble][bubble-0]
 
 The thing to keep in mind for this kind of project is that you will be doing the same thing many many times. Drill a hole?.. 60 of them, for example.
 
@@ -93,7 +95,7 @@ Here is a time-lapse movie:
 
 ![bubble][bubble-z]
 
-
+[bubble-0]: https://pretenst.com/images/2020-07/bubble-0.jpg
 [bubble-a]: https://pretenst.com/images/2020-07/bubble-a.jpg
 [bubble-b]: https://pretenst.com/images/2020-07/bubble-b.jpg
 [bubble-c]: https://pretenst.com/images/2020-07/bubble-c.jpg
