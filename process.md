@@ -1,6 +1,6 @@
 # Design Process
 
-The only way to effectively explore something that you don't already know really well is to play with it. The pretenst app gives us a very flexible world where we can learn by trial and error. The idea is to start with all the options open and gradually refine towards and end result. For example, design starts in the freedom of zero-gravity, and only later is gravity introduced.
+The only way to effectively explore something that you don't already know well is to play with it. The pretenst app gives us a very flexible world where we can learn by trial and error. The idea is to start with all the options open and gradually refine towards and end result. For example, design starts in the freedom of zero-gravity, and only later is gravity introduced.
 
 The process could be sketched like this:
 
