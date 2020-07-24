@@ -20,6 +20,7 @@ For more examples and high resolution images, please visit the [Gallery](gallery
 
 This project is about developing open source exploration tools for designing and experimenting with **pretenst** tensegrity structures, as well as finding ways to build these things in real life.
 
+
 * [Process](process.md) - playful trial and error towards refinement and realization
 * [Tenscript](tenscript.md) - a minimal language for generating pretenst structures
 * [Physical](physical.md) - all about building things we can feel in our hands
