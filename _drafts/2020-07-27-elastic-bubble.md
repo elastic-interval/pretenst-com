@@ -1,7 +1,7 @@
 ---
-title: "Thirty Bar Bubble"
+title: "Elastic Bubble"
 date: 2020-07-27
-description: "elastic cruise-mode"
+description: "building with elastic ease"
 categories: construction
 header-img: /images/2020-07/bubble-z.png
 categories: construction
@@ -10,17 +10,19 @@ tags: [tensegrity]
 
 ## Elastic Bubble
 
-I had nice 3mm [elastic cord](https://www.lijnenspecialist.nl/elastic), and I bought a bunch of 10mm transparent [PVC pipes](https://www.pvc24.nl/kopen/transparante-pvc-buizen/). My goal was to build a bubble.
+I had nice 3mm [elastic cord](https://www.lijnenspecialist.nl/elastic), and I bought a bunch of 10mm diameter transparent [PVC pipes](https://www.pvc24.nl/kopen/transparante-pvc-buizen/). My goal was to build a bubble.
 
 ![bubble][bubble-a]
 
-With some cutting, drilling, and knotting, I wanted to build a [small tensegrity sphere](https://pretenst.com/app/#sphere-1), which should be a bit bouncy and behave like a bubble. The pretenst app shows the behavior, and gives this picture:
+With some cutting, drilling, and knotting, I wanted to build a small tensegrity sphere, which should be a bit bouncy and behave like a bubble as it does in the [pretenst app](https://pretenst.com/app/#sphere-1).
+
+The app gives this picture:
 
 ![bubble][bubble-0]
 
 The thing to keep in mind for this kind of project is that you end up doing the same thing many many times. Drill a hole?.. 60 of them, for example. That's why you cannot help develop tricks to save time and make it easier.
 
-## Between the Holes
+## Hole to Hole
 
 I sawed the 1m PVC pipes into roughly 33cm each, and I needed 30 of them, so cut up 10 pipes. I decided to let the holes be highest priority for length, so I would drill the holes first and then cut them to length later.
 
@@ -48,6 +50,8 @@ So now there are 3.5mm holes at the ends of the pipes, and I cut and sand the pi
 
 ![bubble][bubble-g]
 
+## Perpendicular Slit
+
 Now comes a tricky part. We need a slit which is to be perpendicular to the two holes.
 
 I came up with a trick that made the alignment a lot easier. I stuck a thin rod through the hole so I could grab it and be very conscious of the axis of the holes.
@@ -74,15 +78,23 @@ The hole is for attaching the elastic cord, because you can just tie a knot and 
 
 ![bubble][bubble-m]
 
-## Stretch to pre-tense!
+## Stretch and Measure!
 
 The cord goes from one hole to the other in the pipe, and you can pull it tighter until it feels nice and solid, and then make another knot in the other side.
 
+Then through the other hole and pull it as tight as you think it should be, and make a knot to hold it stretched. 
+
+Cut the cord and then **undo the knots**. We need to know how long it is.
+
 ![bubble][bubble-n]
+
+All the pipes have holes at the same length, so now we need 30 cords of exactly this length. They are easy to cut with a scissors but it's good to hold a lighter flame to them for a half second and smooth the ends.
 
 ## Assembly
 
-The slits come into play when the bubble is assembled.
+The slits come into play when the bubble is assembled. They fit quite tightly, and actually you first have to stretch them before the cords can get into the slits, since the slits are less than the cord's 3mm width.
+
+That's a good thing, though, because then they pinch nice and tight.
 
 ![bubble][bubble-s]
 
