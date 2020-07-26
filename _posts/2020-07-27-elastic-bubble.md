@@ -10,7 +10,9 @@ tags: [tensegrity]
 
 ## Elastic Bubble
 
-I had nice 3mm [elastic cord](https://www.lijnenspecialist.nl/elastic), and I bought a bunch of 10mm diameter transparent [PVC pipes](https://www.pvc24.nl/kopen/transparante-pvc-buizen/). My goal was to build a bubble.
+I had found some nice 3mm [elastic cord](https://www.lijnenspecialist.nl/elastic) a while ago, and I bought a bunch of 10mm diameter transparent [PVC pipes](https://www.pvc24.nl/kopen/transparante-pvc-buizen/).
+
+My goal was to build a bubble!
 
 ![bubble][bubble-a]
 
