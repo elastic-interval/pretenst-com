@@ -8,6 +8,9 @@ categories: construction
 tags: [tensegrity]
 ---
 
+<meta property="og:image" content="https://pretenst.com/images/2020-07/bubble-z.jpg" />
+
+
 ## Elastic Bubble
 
 I had found some nice 3mm [elastic cord](https://www.lijnenspecialist.nl/elastic) a while ago, and I bought a bunch of 10mm diameter transparent [PVC pipes](https://www.pvc24.nl/kopen/transparante-pvc-buizen/).
