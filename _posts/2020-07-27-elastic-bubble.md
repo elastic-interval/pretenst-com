@@ -11,11 +11,11 @@ tags: [tensegrity]
 <meta property="og:image" content="https://pretenst.com/images/2020-07/bubble-z.jpg" />
 
 
-## Elastic Bubble
+## An Empty Bubble
 
 I had found some nice 3mm [elastic cord](https://www.lijnenspecialist.nl/elastic) a while ago, and I bought a bunch of 10mm diameter transparent [PVC pipes](https://www.pvc24.nl/kopen/transparante-pvc-buizen/).
 
-My goal was to build a bubble!
+My goal was to build an empty bubble!
 
 ![bubble][bubble-a]
 
@@ -120,6 +120,16 @@ At least, I was able to dribble and roll it around.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xV6QYsce42I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Addendum: Its Sister
+
+Just as with the [twist sisters](/construction/2020/07/13/twist) this bubble has a **chirality**, and this one, all of its twists are right-handed (and pentagons twist left).
+
+Now since I do so love the left-right symmetry, I had to build the other one of the **Bubble Sisters**.
+
+![bubble][bubble-zz]
+
+With everything in place, and the experience of the first one, I was able to build its sister in about 2.5 hours from start to finish.
+
 [bubble-0]: https://pretenst.com/images/2020-07/bubble-0.jpg
 [bubble-a]: https://pretenst.com/images/2020-07/bubble-a.jpg
 [bubble-b]: https://pretenst.com/images/2020-07/bubble-b.jpg
@@ -137,3 +147,4 @@ At least, I was able to dribble and roll it around.
 [bubble-n]: https://pretenst.com/images/2020-07/bubble-n.jpg
 [bubble-s]: https://pretenst.com/images/2020-07/bubble-s.jpg
 [bubble-z]: https://pretenst.com/images/2020-07/bubble-z.jpg
+[bubble-zz]: https://pretenst.com/images/2020-07/bubble-zz.jpg
