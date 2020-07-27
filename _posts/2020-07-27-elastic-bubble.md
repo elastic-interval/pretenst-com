@@ -47,7 +47,9 @@ With the first hole drilled, in the center but with not a very specific location
 
 ![bubble][bubble-e]
 
-This is a superb setup because you never have to do any measurements! Believe me, you need these kinds of efficiencies because you end up having to do a lot of repeated holes, and they should all be pretty accurate to make the result good.
+This is a superb setup because you never have to do any measurements! Also, you're assured that the hole orientations are the same, which could otherwise be tricky.
+
+Believe me, you need these kinds of efficiencies because you end up having to do a lot of repeated holes, and they should all be pretty accurate to make the result good.
 
 ![bubble][bubble-f]
 
