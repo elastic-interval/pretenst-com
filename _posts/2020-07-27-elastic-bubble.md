@@ -120,7 +120,7 @@ At least, I was able to dribble and roll it around.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xV6QYsce42I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Addendum: Its Sister
+## Addendum: Sister Bubble
 
 Just as with the [twist sisters](/construction/2020/07/13/twist) bubbles have **chirality**, and this one, all of its twists are right-handed (and pentagons twist left).
 
