@@ -2,6 +2,7 @@
 
 This page is not for the faint of heart, since it will probably come across as somewhere between very speculative and quite insane. On the other hand, this kind of extreme challenge to the imagination might lead to a very new and interesting insights into the nature of pretenst structure.
 
+
 ## The Virtual Model
 
 There's something about building a virtual model which is very educational, since the software builder is challenged to make the model behave in plausible and natural-seeming ways, while knowing that behind the scenes there are only numbers to represent everything.
