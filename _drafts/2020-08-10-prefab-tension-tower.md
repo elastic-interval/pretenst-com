@@ -11,13 +11,13 @@ tags: [tensegrity]
 
 Ever since the first [prefab tension](/construction/2020/06/15/prefab-tension-1) project I've wondered what it would be like to tighten an entire tensegrity tower by a screwing action. How tight could I get a tower to be?
 
-In the software it's easy because the model is abstract, the mechanics of the connection is just there and just perfect.
+In the software it's too easy because the model is abstract, the mechanics of all the many connections are just there, and they're just perfect by definition.
 
 ![tower][tower-0]
 
 Real life can be a bit more challenging.
 
-I ordered some 20cm M6 nylon threaded rods and nuts, and got some more 1mm Dyneema cord.  The idea is to make bars that I can extend, and prefabricate the tension.
+I ordered some 20cm M6 nylon threaded rods and nuts, and got some more 1mm Dyneema cord to go with my PVC pipes.  The idea is to make bars that I can extend, and prefabricate the tension.
 
 ![tower][tower-a]
 
@@ -51,11 +51,11 @@ I cut a slit from the end down to the hole. Needless to say this had to be done 
 
 ![tower][tower-c3]
 
-So now there is a hole with an access slit. It's not perfect, but it's pretty good. Actually I found the nylon material to be too weak to do this well at this scale, but it worked. I'm risking thin walls with the hole in the rod.
+So now there is a hole with an access slit. It's not perfect, but it's pretty good. Actually I found the nylon material to be too weak to do this well at this scale, but it worked.
 
 ![tower][tower-d0]
 
-But when you put the nut back on, it all seems a lot stronger.
+I'm risking thin walls with the hole in the rod, but when you put the nut back on, it all seems a lot stronger.
 
 ![tower][tower-d1]
 
@@ -69,13 +69,13 @@ And the inner nut can push the rod outwards to effectively lengthen the bar.
 
 Now the tricky work of putting the tower together, twist by twist.
 
-I needed things held in place while I attach the parts together, so I came up with a little helper tool.
+I needed things held in place while I attach the parts together, so I came up with a little helper tool I call a perp-clamp.
 
 ![tower][tower-f1]
 
 I bought super-cheap metal clamps from the dollar store and sawed a slit into their handles, and then tie wrapped them together.
 
-This way I could hold two bars perpendicular to each other, and by extension...
+This way I could hold two bars **perpendicular** to each other, and by extension...
 
 ![tower][tower-f2]
 
@@ -87,17 +87,17 @@ I've always thought that the tower's ability to withstand compression depended o
 
 ![tower][tower-f3]
 
-Melting the ends ever so slightly and making a square knot was extremely strong. I could hang my whole weight on one of these rings. This cord is unreal.
+Melting the ends ever so slightly and making a square knot was extremely strong. I could hang my whole weight on one of these rings! This cord is unreal.
 
 ![tower][tower-f4]
 
 Then the scaffolded twist gets its two tension rings on bottom and top, but of course everything is still completely slack. 
 
-The cord went through the slits and then got pinched in the hole by the outer nut, but I didn't make it tight yet because there is some manipulation to be done.
+The cord went through the slits and then got pinched in the hole by the outer nut, but it isn't yet time to tighten everything up by lengthening the bars. Nice and slack for now, thanks.
 
-## The Zig-Zag
+## The Z
 
-First I needed the remaining tension, aside from the rings already made. I stared at the tower segment rotating on screen for a few minutes until I decided that the best way to build the remaining tension was in groups of three.
+First I needed the remaining tension, aside from the rings already made. I stared at the tower segment rotating on screen for a few minutes until I decided that the best way to build the remaining tension was to make **Z-shapes**.
 
 ![tower][tower-h0]
 
@@ -105,13 +105,13 @@ So I set out to prepare those tension segments. To cut them, I came up with a tr
 
 ![tower][tower-h1]
 
-Since I ended up cutting this difficult cord many times, I opted to go the luxury route and buy an official cord cutter hot knife. Few things have been as immensely useful as this tool, given the stuff I'm doing.
+Since I ended up cutting this difficult cord many times, I opted to go the luxury route and buy an official [cord cutter hot knife](https://www.survival-outdoor-shop.nl/a-39049297/touwbrander/touwbrander-60w-incl-snijmes-en-lampjes/). Few things have been as useful as this tool, given all the segmenting of cord I have to do.
 
 I marked the length with a bit of tape so I could get them all the same.
 
 ![tower][tower-h2]
 
-The zig-zag needs to be divided into three segments so I marked another spot, and used a little glass tube to help me put a knot in the right place.
+The Z needs to be divided into three segments so I marked another spot, and used a little glass tube to help me put a knot in the right place.
 
 ![tower][tower-h3]
 
@@ -123,7 +123,7 @@ Pull the knot tight.
 
 ![tower][tower-h5]
 
-So the zig-zag looks like this when you fold it so all the four knots are close:
+So the Z looks like this when you fold it so all the four knots are close:
 
 ![tower][tower-h6]
 
@@ -169,43 +169,51 @@ Keep in mind, you **always** have ends, no matter how tall the tower, so it's im
 
 ## Twists Meet
 
-Now that we can pinch the ring and the zig-zag together, such that the bars can be lengthened afterwards, we can start the real assembly.
+Now that we can pinch the ring and the Z's together, such that the bars can be lengthened afterwards, we can start the real assembly.
 
 ![tower][tower-t1]
 
 When it's partially hooked up we basically have two [twist sisters](https://pretenst.com/construction/2020/07/13/twist) joined by a hexagon of tension.
 
+Notice that the way you first connect a Z to a twist is to have its middle segment pull almost vertically between bar-ends, leaving the two end segments (top and bottom) **loose**.
+
 ![tower][tower-t2]
 
-Fortunately, you have quite a bit of freedom to attach and remove the ends from the bars themselves, and since you can make bars shorter at any time, it's easy to slacken things up temporarily to make a correction if you've done something wrong (I did, many times).
+The loose ends of the Z's are there to make connections which melt one twist into the next. Each loose end reaches either up or down, in search of the next twist's bar ends.
+
+## Slack and a Peculiar Milestone
+
+Fortunately, you have quite a bit of freedom to attach and remove the ends from the bars themselves, and since you can make bars shorter at any time, it's easy to **slacken** things up temporarily to make a correction if you've done something wrong (I did, many many times).
 
 ![tower][tower-t3]
 
-## Peculiar Milestone
-
-Just for fun, I decided that the first milestone would be for my tower to be tight and strong enough to hold up **both volumes** of Bucky Fuller's **Synergetics**.
+Just for fun, I decided that the first milestone would be for my tower to be tight and strong enough to hold up **both volumes** of Bucky Fuller's **Synergetics**. (Fuller fans unite and chant "More! With! Less! - More! With! Less!" until we have given all of humanity an adequate lifestyle on spaceship earth)
 
 ![tower][tower-x1]
 
-If you look closely you can see that one of the bars is curving under the stress.
+If you look closely you can see that one of the bars is curving under the stress. These are not yet serious materials.
 
 ## Become a Robot
 
 Then begins the step-by-step process of adding twists. 
 
-* clamp three bars of the new twist with the perpendicular clamps to hold them in place
-* attach a top tension ring to the upper bar ends
-* connect the ends of zig-zags to complete the new twist (with still the bottom ring absent)
-* gather the twist's top ring together with the aluminum connector into radial tension
-* remove the radial tension from the top tower ring (pull out the tie wraps)
-* place the new twist on the top of the tower, settling to make a tension hexagon that you then connect.
-* connect the tower's loose zig-zag ends to the new twist's loose ends and vice versa
-* pinch all cords tightly enough with the outer nuts
-* extend the bars using the inner nuts until it's all tight.
+* new twist
+    * clamp three bars together into a twist with three perp-clamps
+    * attach a top tension ring to the upper bar ends
+    * connect the ends of zig-zags to complete the new twist (with still the bottom ring absent)
+    * gather the twist's top ring together with the aluminum connector into radial tension
+* link tower top
+    * remove the radial tension from the top tower triangle (pull out the tie wraps, releasing ring)
+    * place the new twist on the top of the tower, settling to make a tension hexagon that you then connect.
+    * connect the tower's loose zig-zag ends to the new twist's loose ends and vice versa
+* tightening
+    * pinch all cords tightly enough with the outer nuts so that nothing slips around
+    * extend the bars using the inner nuts until the compression is tightly held back by the tension
+* **repeat!**
 
 ![tower][tower-x3]
 
-At a certain point, with some good music playing, you get into the flow and learn to avoid mistakes better and better until it almost becomes automatic.
+At a certain point, with some ambient music playing, you get into the flow and learn to avoid mistakes better and better until it almost becomes automatic.
 
 ## Conclusion
 
