@@ -11,6 +11,12 @@ tags: [tensegrity]
 
 Ever since the first [prefab tension](/construction/2020/06/15/prefab-tension-1) project I've wondered what it would be like to tighten an entire tensegrity tower by a screwing action. How tight could I get a tower to be?
 
+In the software it's easy because the model is abstract, the mechanics of the connection is just there and just perfect.
+
+![tower][tower-0]
+
+Real life can be a bit more challenging.
+
 I ordered some 20cm M6 nylon threaded rods and nuts, and got some more 1mm Dyneema cord.  The idea is to make bars that I can extend, and prefabricate the tension.
 
 ![tower][tower-a]
@@ -59,7 +65,7 @@ So we pinch cord with the outer nut.
 
 And the inner nut can push the rod outwards to effectively lengthen the bar.
 
-## Assembly
+## Assembly Scaffold
 
 Now the tricky work of putting the tower together, twist by twist.
 
@@ -67,23 +73,34 @@ I needed things held in place while I attach the parts together, so I came up wi
 
 ![tower][tower-f1]
 
-I bought super-cheap metal clamps from the dollar store and sawed a slit into their handles. This way I could hold two bars perpendicular to each other.
+I bought super-cheap metal clamps from the dollar store and sawed a slit into their handles, and then tie wrapped them together.
+
+This way I could hold two bars perpendicular to each other, and by extension...
 
 ![tower][tower-f2]
 
 Three perp-clamps and you can hold an entire twist together without any tension, which is extremely handy while finding your way to making all the connections.
 
+## Rings
+
+I've always thought that the tower's ability to withstand compression depended on the bars and the **rings** between each pair of twists, so I made tension rings first.
+
 ![tower][tower-f3]
 
-I've always thought that the tower's ability to withstand compression depended on the bars and the **rings** around each, so I made tension rings first. Melting the ends ever so slightly and making a square not was extremely strong.
+Melting the ends ever so slightly and making a square knot was extremely strong. I could hang my whole weight on one of these rings. This cord is unreal.
 
 ![tower][tower-f4]
 
-Then the scaffolded twist gets its two tension rings, but of course everything is still completely slack. 
+Then the scaffolded twist gets its two tension rings on bottom and top, but of course everything is still completely slack. 
 
 The cord went through the slits and then got pinched in the hole by the outer nut, but I didn't make it tight yet because there is some manipulation to be done.
 
+## The Letter N
+
 First I needed the remaining tension, aside from the rings already made. I stared at the
+
+![tower][tower-h0]
+
 
 ![tower][tower-h1]
 
@@ -125,6 +142,7 @@ First I needed the remaining tension, aside from the rings already made. I stare
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jRm4F8auGDI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+[tower-0]: https://pretenst.com/images/2020-08/tower-0.png
 [tower-a]: https://pretenst.com/images/2020-08/tower-a.jpg
 [tower-b1]: https://pretenst.com/images/2020-08/tower-b1.jpg
 [tower-b2]: https://pretenst.com/images/2020-08/tower-b2.jpg
@@ -140,6 +158,7 @@ First I needed the remaining tension, aside from the rings already made. I stare
 [tower-f2]: https://pretenst.com/images/2020-08/tower-f2.jpg
 [tower-f3]: https://pretenst.com/images/2020-08/tower-f3.jpg
 [tower-f4]: https://pretenst.com/images/2020-08/tower-f4.jpg
+[tower-h0]: https://pretenst.com/images/2020-08/tower-h0.png
 [tower-h1]: https://pretenst.com/images/2020-08/tower-h1.jpg
 [tower-h2]: https://pretenst.com/images/2020-08/tower-h2.jpg
 [tower-h3]: https://pretenst.com/images/2020-08/tower-h3.jpg

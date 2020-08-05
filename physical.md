@@ -10,6 +10,7 @@ The software was built to open up the design space so that anyone can dream up m
 
 When we think of building a house, we think of are made of stacking solid bricks on top of one another, maybe with something like cement trowelled in between to stick them together. Gravity holds the bricks down as we build the walls, and we lay down some thick beams horizontally when we need to support a floor. It all seems more or less like an exercise in stacking solid things. There are pushing and pulling forces throughout, but they're hidden to us.
 
+
 A bridge or a really tall building with some kind of skeleton structure goes a bit further, so then we need to start thinking about where all the forces come from and where they go. This is what civil engineers do for a living. How much weight can this bridge hold? How thick do the beams need to be to hold up this building? Maybe even: How does this building behave during an earthquake?
 
 ## Concrete and Steel
