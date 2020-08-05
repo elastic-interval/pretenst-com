@@ -95,52 +95,136 @@ Then the scaffolded twist gets its two tension rings on bottom and top, but of c
 
 The cord went through the slits and then got pinched in the hole by the outer nut, but I didn't make it tight yet because there is some manipulation to be done.
 
-## The Letter N
+## The Zig-Zag
 
-First I needed the remaining tension, aside from the rings already made. I stared at the
+First I needed the remaining tension, aside from the rings already made. I stared at the tower segment rotating on screen for a few minutes until I decided that the best way to build the remaining tension was in groups of three.
 
 ![tower][tower-h0]
 
+So I set out to prepare those tension segments. To cut them, I came up with a trick using a slitted popsicle stick to hold the end knot so I could measure and cut.
 
 ![tower][tower-h1]
 
+Since I ended up cutting this difficult cord many times, I opted to go the luxury route and buy an official cord cutter hot knife. Few things have been as immensely useful as this tool, given the stuff I'm doing.
+
+I marked the length with a bit of tape so I could get them all the same.
+
 ![tower][tower-h2]
+
+The zig-zag needs to be divided into three segments so I marked another spot, and used a little glass tube to help me put a knot in the right place.
 
 ![tower][tower-h3]
 
+Slide out the tube.
+
 ![tower][tower-h4]
+
+Pull the knot tight.
 
 ![tower][tower-h5]
 
+So the zig-zag looks like this when you fold it so all the four knots are close:
+
 ![tower][tower-h6]
+
+## Radial tension
+
+The thing about prefab tension tower is that there is a problem at the top and bottom **triangle** ends. The rings are supposed to join two twists together by connecting three bar ends to three other bar ends, making a **hexagon**. 
+
+That's ok when there are indeed two twists to join, but you always have the two ends of the tower where there are no more twists. A ring is prefabricated, so it's **too long** for the end case to hold the triangle together.
+
+But thinking back to the [radial tension](https://pretenst.com/construction/2020/07/06/radial-tension) project, we had a trick for holding triangles together:
+
+![radial][radial]
+
+So the challenge became to use a prefabricated ring as radial tension, making it the right length to hold the end triangle together.
 
 ![tower][tower-m1]
 
+I once again started cutting the perforated aluminum, but this time in a different shape, with three petals. 
+
+The radial tension had to be **temporary**. Later the ring would become a real hexagonal ring.
+
 ![tower][tower-m10]
 
-![tower][tower-m11]
+The idea was to slip an open tie wrap through the loop formed from cord sticking up through a hole, to hold it in place.
 
 ![tower][tower-m3]
 
+Just after cutting they look pretty rough.
+
 ![tower][tower-m6]
+
+But aluminum is nice and soft for filing down, even by hand.
 
 ![tower][tower-m8]
 
+Eventually it looks pretty nice, so it can be put to work creating temporary radial tension to hold the triangle together.
+
+![tower][tower-m11]
+
+This way a ring (which was too long) is able to play the role of radial tension until it gets joined with the next twist to make a hexagon.
+
+Keep in mind, you **always** have ends, no matter how tall the tower, so it's important to get these triangles under control in a nice way.
+
+## Twists Meet
+
+Now that we can pinch the ring and the zig-zag together, such that the bars can be lengthened afterwards, we can start the real assembly.
+
 ![tower][tower-t1]
+
+When it's partially hooked up we basically have two [twist sisters](https://pretenst.com/construction/2020/07/13/twist) joined by a hexagon of tension.
 
 ![tower][tower-t2]
 
+Fortunately, you have quite a bit of freedom to attach and remove the ends from the bars themselves, and since you can make bars shorter at any time, it's easy to slacken things up temporarily to make a correction if you've done something wrong (I did, many times).
+
 ![tower][tower-t3]
+
+## Peculiar Milestone
+
+Just for fun, I decided that the first milestone would be for my tower to be tight and strong enough to hold up **both volumes** of Bucky Fuller's **Synergetics**.
 
 ![tower][tower-x1]
 
+If you look closely you can see that one of the bars is curving under the stress.
+
+## Become a Robot
+
+Then begins the step-by-step process of adding twists. 
+
+* clamp three bars of the new twist with the perpendicular clamps to hold them in place
+* attach a top tension ring to the upper bar ends
+* connect the ends of zig-zags to complete the new twist (with still the bottom ring absent)
+* gather the twist's top ring together with the aluminum connector into radial tension
+* remove the radial tension from the top tower ring (pull out the tie wraps)
+* place the new twist on the top of the tower, settling to make a tension hexagon that you then connect.
+* connect the tower's loose zig-zag ends to the new twist's loose ends and vice versa
+* pinch all cords tightly enough with the outer nuts
+* extend the bars using the inner nuts until it's all tight.
+
 ![tower][tower-x3]
 
-![tower][tower-x4]
+At a certain point, with some good music playing, you get into the flow and learn to avoid mistakes better and better until it almost becomes automatic.
 
 ## Conclusion
 
+I was able to build a high strung tower which I could assemble when things were slack, and then tighten up by turning nuts. Mission accomplished.
+
+The threaded rod inside the tube ends with pinch nut and length adjustment nut worked pretty well. The key thing is that I was able to loosen, unscrew, and correct all the stupid mistakes I made while connecting things up.
+
+![tower][tower-x4]
+
+Several things were less than ideal, but good learning for next time.
+
+* the nylon at M6 size is too weak. either stronger or larger threaded rod is needed.
+* the 8mm PVC pipes were nice to work with in many ways but not really rigid enough against buckling to make this a really strong tower.
+
+Heres a slow-mo video of how the tower behaves when I drop it on the floor:
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jRm4F8auGDI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+I still want a tighter stronger tower, ultimately. The battle continues.
 
 [tower-0]: https://pretenst.com/images/2020-08/tower-0.png
 [tower-a]: https://pretenst.com/images/2020-08/tower-a.jpg
@@ -177,3 +261,4 @@ First I needed the remaining tension, aside from the rings already made. I stare
 [tower-x1]: https://pretenst.com/images/2020-08/tower-x1.jpg
 [tower-x3]: https://pretenst.com/images/2020-08/tower-x3.jpg
 [tower-x4]: https://pretenst.com/images/2020-08/tower-x4.jpg
+[radial]: https://pretenst.com/images/2020-07/radial-h.jpg
