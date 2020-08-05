@@ -1,42 +1,89 @@
 ---
 title: "Prefab Tension Tower"
 date: 2020-08-10
-description: "a tower of eight twists"
+description: "the tower of eight twists"
 categories: construction
 categories: construction
 tags: [tensegrity]
 ---
 
+## Screwing a Tower Tight
+
+Ever since the first [prefab tension](/construction/2020/06/15/prefab-tension-1) project I've wondered what it would be like to tighten an entire tensegrity tower by a screwing action. How tight could I get a tower to be?
+
+I ordered some 20cm M6 nylon threaded rods and nuts, and got some more 1mm Dyneema cord.  The idea is to make bars that I can extend, and prefabricate the tension.
 
 ![tower][tower-a]
 
+The threaded rod length I needed was about a quarter of the rods I bought, so I made two pipe segments to help me measure.
+
 ![tower][tower-b1]
+
+With the first I cut all the rods in half.
 
 ![tower][tower-b2]
 
+Then with the second I cut the halfs in half.
+
 ![tower][tower-b3]
+
+To hold the cord I needed to have a hole near the end of the threaded rod.
+
+The idea is to have the outer nut pinch the cords in the hole, while I can use the inner nut to adjust the **effective length** of the bars.
 
 ![tower][tower-c0]
 
+The distance from the end is basically one-nut-wide, because the end nut has to screw over the hole to pinch the cords.
+
 ![tower][tower-c1]
+
+Unfortunately prefabricated tension, you can't easily thread all of the holes perfectly beforehand (for example, as you'll see, I prefabricated tension rings), so I needed the hole to be accessible from the end.
 
 ![tower][tower-c2]
 
+I cut a slit from the end down to the hole. Needless to say this had to be done many many times.
+
 ![tower][tower-c3]
+
+So now there is a hole with an access slit. It's not perfect, but it's pretty good. Actually I found the nylon material to be too weak to do this well at this scale, but it worked. I'm risking thin walls with the hole in the rod.
 
 ![tower][tower-d0]
 
+But when you put the nut back on, it all seems a lot stronger.
+
 ![tower][tower-d1]
+
+So we pinch cord with the outer nut.
 
 ![tower][tower-d2]
 
+And the inner nut can push the rod outwards to effectively lengthen the bar.
+
+## Assembly
+
+Now the tricky work of putting the tower together, twist by twist.
+
+I needed things held in place while I attach the parts together, so I came up with a little helper tool.
+
 ![tower][tower-f1]
+
+I bought super-cheap metal clamps from the dollar store and sawed a slit into their handles. This way I could hold two bars perpendicular to each other.
 
 ![tower][tower-f2]
 
+Three perp-clamps and you can hold an entire twist together without any tension, which is extremely handy while finding your way to making all the connections.
+
 ![tower][tower-f3]
 
+I've always thought that the tower's ability to withstand compression depended on the bars and the **rings** around each, so I made tension rings first. Melting the ends ever so slightly and making a square not was extremely strong.
+
 ![tower][tower-f4]
+
+Then the scaffolded twist gets its two tension rings, but of course everything is still completely slack. 
+
+The cord went through the slits and then got pinched in the hole by the outer nut, but I didn't make it tight yet because there is some manipulation to be done.
+
+First I needed the remaining tension, aside from the rings already made. I stared at the
 
 ![tower][tower-h1]
 
