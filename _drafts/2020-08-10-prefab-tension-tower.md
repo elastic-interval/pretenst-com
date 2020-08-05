@@ -7,9 +7,9 @@ categories: construction
 tags: [tensegrity]
 ---
 
-## Screwing a Tower Tight
+## Screw Tightening
 
-Ever since the first [prefab tension](/construction/2020/06/15/prefab-tension-1) project I've wondered what it would be like to tighten an entire tensegrity tower by a screwing action. How tight could I get a tower to be?
+Ever since the first [prefab tension](/construction/2020/06/15/prefab-tension-1) project I've wondered what it would be like to tighten an entire tensegrity tower by a screwing action. How **tight** could I get a tower to be?
 
 In the software it's too easy because the model is abstract, the mechanics of all the many connections are just there, and they're just perfect by definition.
 
@@ -21,6 +21,10 @@ I ordered some 20cm M6 nylon threaded rods and nuts, and got some more 1mm Dynee
 
 ![tower][tower-a]
 
+## Adjustable Bar Ends
+
+The plan involves having bar ends that can be extended to adjust the **effective length** of each bar.
+
 The threaded rod length I needed was about a quarter of the rods I bought, so I made two pipe segments to help me measure.
 
 ![tower][tower-b1]
@@ -29,13 +33,13 @@ With the first I cut all the rods in half.
 
 ![tower][tower-b2]
 
-Then with the second I cut the halfs in half.
+Then with the second I cut the halfs in half. Many times over, put some music on.
 
 ![tower][tower-b3]
 
 To hold the cord I needed to have a hole near the end of the threaded rod.
 
-The idea is to have the outer nut pinch the cords in the hole, while I can use the inner nut to adjust the **effective length** of the bars.
+The idea is to have the outer nut pinch the cords in the hole, while I can use the inner nut to adjust bar length.
 
 ![tower][tower-c0]
 
@@ -69,11 +73,11 @@ And the inner nut can push the rod outwards to effectively lengthen the bar.
 
 Now the tricky work of putting the tower together, twist by twist.
 
-I needed things held in place while I attach the parts together, so I came up with a little helper tool I call a perp-clamp.
+I needed things held in place while I attach the parts together, so I came up with a little helper tool I call a **perp-clamp**.
 
 ![tower][tower-f1]
 
-I bought super-cheap metal clamps from the dollar store and sawed a slit into their handles, and then tie wrapped them together.
+I bought super-cheap metal clamps from the dollar store and sawed a slit into their handles, and then tie-wrapped them together.
 
 This way I could hold two bars **perpendicular** to each other, and by extension...
 
@@ -95,7 +99,7 @@ Then the scaffolded twist gets its two tension rings on bottom and top, but of c
 
 The cord went through the slits and then got pinched in the hole by the outer nut, but it isn't yet time to tighten everything up by lengthening the bars. Nice and slack for now, thanks.
 
-## The Z
+## The Z Remains
 
 First I needed the remaining tension, aside from the rings already made. I stared at the tower segment rotating on screen for a few minutes until I decided that the best way to build the remaining tension was to make **Z-shapes**.
 
@@ -123,7 +127,7 @@ Pull the knot tight.
 
 ![tower][tower-h5]
 
-So the Z looks like this when you fold it so all the four knots are close:
+So the Z looks like this (a double-W?) when you fold it so all the four knots are close, and you can see that the three segments are the same length:
 
 ![tower][tower-h6]
 
@@ -139,9 +143,10 @@ But thinking back to the [radial tension](https://pretenst.com/construction/2020
 
 So the challenge became to use a prefabricated ring as radial tension, making it the right length to hold the end triangle together.
 
-![tower][tower-m1]
-
 I once again started cutting the perforated aluminum, but this time in a different shape, with three petals. 
+
+![tower][tower-m1]
+![tower][tower-m3]
 
 The radial tension had to be **temporary**. Later the ring would become a real hexagonal ring.
 
@@ -149,13 +154,9 @@ The radial tension had to be **temporary**. Later the ring would become a real h
 
 The idea was to slip an open tie wrap through the loop formed from cord sticking up through a hole, to hold it in place.
 
-![tower][tower-m3]
-
-Just after cutting they look pretty rough.
-
 ![tower][tower-m6]
 
-But aluminum is nice and soft for filing down, even by hand.
+Just after cutting they look pretty rough, but aluminum is nice and soft for filing down, even by hand.
 
 ![tower][tower-m8]
 
@@ -163,31 +164,31 @@ Eventually it looks pretty nice, so it can be put to work creating temporary rad
 
 ![tower][tower-m11]
 
-This way a ring (which was too long) is able to play the role of radial tension until it gets joined with the next twist to make a hexagon.
-
-Keep in mind, you **always** have ends, no matter how tall the tower, so it's important to get these triangles under control in a nice way.
+This way a **ring** (which was too long) is able to play the role of **radial tension** until it gets joined with the next twist to make a hexagon.
 
 ## Twists Meet
 
-Now that we can pinch the ring and the Z's together, such that the bars can be lengthened afterwards, we can start the real assembly.
+Now that we have bar ends that can pinch cord together, we can pinch both the **ring** and the **Z** together.
+
+Notice that the way you first connect a Z to a twist is to have its middle segment pull almost vertically between bar-ends, leaving the two end segments (top and bottom) **loose**.
 
 ![tower][tower-t1]
 
 When it's partially hooked up we basically have two [twist sisters](https://pretenst.com/construction/2020/07/13/twist) joined by a hexagon of tension.
 
-Notice that the way you first connect a Z to a twist is to have its middle segment pull almost vertically between bar-ends, leaving the two end segments (top and bottom) **loose**.
-
 ![tower][tower-t2]
 
-The loose ends of the Z's are there to make connections which melt one twist into the next. Each loose end reaches either up or down, in search of the next twist's bar ends.
+The loose ends of the Z's are waiting there to make connections which melt one twist into the next. Each loose end reaches either up or down, in search of the next twist's bar ends to grasp.
 
 ## Slack and a Peculiar Milestone
 
-Fortunately, you have quite a bit of freedom to attach and remove the ends from the bars themselves, and since you can make bars shorter at any time, it's easy to **slacken** things up temporarily to make a correction if you've done something wrong (I did, many many times).
+Fortunately, we have quite a bit of freedom to attach and remove the ends from the bars themselves, and since you can make bars shorter at any time, it's easy to **slacken** things up temporarily to make a correction if you've done something wrong (I did, many many times).
 
 ![tower][tower-t3]
 
-Just for fun, I decided that the first milestone would be for my tower to be tight and strong enough to hold up **both volumes** of Bucky Fuller's **Synergetics**. (Fuller fans unite and chant "More! With! Less! - More! With! Less!" until we have given all of humanity an adequate lifestyle on spaceship earth)
+Just for fun, I decided that the first milestone would be for my tower to be tight and strong enough to hold up **both volumes** of Bucky Fuller's **Synergetics**.
+
+(Fuller fans unite and chant "More! With! Less! - More! With! Less!" until we have given all of humanity an adequate lifestyle on spaceship earth)
 
 ![tower][tower-x1]
 
@@ -232,7 +233,7 @@ Heres a slow-mo video of how the tower behaves when I drop it on the floor:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jRm4F8auGDI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-I still want a tighter stronger tower, ultimately. The battle continues.
+I still want a **much tighter** and **much stronger** tower, ultimately. The battle continues.
 
 [tower-0]: https://pretenst.com/images/2020-08/tower-0.png
 [tower-a]: https://pretenst.com/images/2020-08/tower-a.jpg
