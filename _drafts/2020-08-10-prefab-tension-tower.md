@@ -239,7 +239,9 @@ I still want a **much tighter** and **much stronger** tower, ultimately. The bat
 
 Despite the weaknesses of this model, it does have one striking strength that should keep us thinking. 
 
-You can loosen some things up and disassemble it, **separating the tension from the crompression**.
+You can loosen some things up and disassemble the whole tower, **separating the tension from the crompression**.
+
+Here's a time lapse of my very first attempt. Let's just say I learned from it.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UaB7N2HWDKg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
