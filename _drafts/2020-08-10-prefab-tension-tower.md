@@ -235,6 +235,16 @@ Heres a slow-mo video of how the tower behaves when I drop it on the floor:
 
 I still want a **much tighter** and **much stronger** tower, ultimately. The battle continues.
 
+## Epilogue: The Superpower
+
+Despite the weaknesses of this model, it does have one striking strength that should keep us thinking. 
+
+You can loosen some things up and disassemble it, **separating the tension from the crompression**.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UaB7N2HWDKg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+This is  is the holy grail of **prefab tension**, and makes for easy transport and (re)deployment.
+
 [tower-0]: https://pretenst.com/images/2020-08/tower-0.png
 [tower-a]: https://pretenst.com/images/2020-08/tower-a.jpg
 [tower-b1]: https://pretenst.com/images/2020-08/tower-b1.jpg
