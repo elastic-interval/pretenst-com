@@ -3,7 +3,7 @@ title: "Prefab Tension Tower"
 date: 2020-08-10
 description: "the tower of eight twists"
 categories: construction
-categories: construction
+ring: sqrt(2-2*sqrt(2/3))
 tags: [tensegrity]
 ---
 
