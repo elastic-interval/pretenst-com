@@ -70,6 +70,29 @@ The normal screw can be turned to add significant effective length to the bar!
 ![brass][brass-d3]
 ![brass][brass-d4]
 
+## Assembly Twist by Twist
+
+![brass][brass-g0]
+
+![brass][brass-g1]
+
+![brass][brass-g2]
+
+![brass][brass-g3]
+
+![brass][brass-g4]
+
+![brass][brass-g5]
+
+![brass][brass-g7]
+
+![brass][brass-g8]
+
+![brass][brass-j1]
+
+![brass][brass-j2]
+
+![brass][brass-j3]
 
 
 [brass-0]: https://pretenst.com/images/2020-09/brass-0.jpg
@@ -86,3 +109,14 @@ The normal screw can be turned to add significant effective length to the bar!
 [brass-d2]: https://pretenst.com/images/2020-09/brass-d2.jpg
 [brass-d3]: https://pretenst.com/images/2020-09/brass-d3.jpg
 [brass-d4]: https://pretenst.com/images/2020-09/brass-d4.jpg
+[brass-g0]: https://pretenst.com/images/2020-09/brass-g0.jpg
+[brass-g1]: https://pretenst.com/images/2020-09/brass-g1.jpg
+[brass-g2]: https://pretenst.com/images/2020-09/brass-g2.jpg
+[brass-g3]: https://pretenst.com/images/2020-09/brass-g3.jpg
+[brass-g4]: https://pretenst.com/images/2020-09/brass-g4.jpg
+[brass-g5]: https://pretenst.com/images/2020-09/brass-g5.jpg
+[brass-g7]: https://pretenst.com/images/2020-09/brass-g7.jpg
+[brass-g8]: https://pretenst.com/images/2020-09/brass-g8.jpg
+[brass-j1]: https://pretenst.com/images/2020-09/brass-j1.jpg
+[brass-j2]: https://pretenst.com/images/2020-09/brass-j2.jpg
+[brass-j3]: https://pretenst.com/images/2020-09/brass-j3.jpg
