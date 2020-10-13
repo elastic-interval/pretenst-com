@@ -9,7 +9,7 @@ tags: [tensegrity]
 ## Turn up the Tension
 
 
-My previous project, the [prefab tension tower](/construction/2020/08/10/prefab-tension-1) achieved something interesting. I was able to lengthen the compression bars *as final step* because there were nuts that could be adjusted. The result was satisfying for what it was, but it was just asking to be repeated using **metal** so some higher tension could be reached.
+My previous project, the [prefab tension tower](/construction/2020/08/10/prefab-tension-tower) achieved something interesting. I was able to lengthen the compression bars *as final step* because there were nuts that could be adjusted. The result was satisfying for what it was, but it was just asking to be repeated using **metal** so some higher tension could be reached.
 
 ![brass][brass-0]
 
@@ -72,27 +72,67 @@ The normal screw can be turned to add significant effective length to the bar!
 
 ## Assembly Twist by Twist
 
+With all the compression parts manufactured, it was time to assemble the twists. For this, I reused a little trick from the previous project: the perpendicular clamp.
+
 ![brass][brass-g0]
+
+First clamping three bars into the twist orientation, I was able to connect the top and the bottom faces with radial tension, gathered at the middle with an aluminum fitting like [last time](/construction/2020/08/10/prefab-tension-tower). For this I made a loop of tension, which was easy to connect to the tulips.
 
 ![brass][brass-g1]
 
+Then with tension cords between one top and the next bottom, the twist can finally stand on its own. The little white segments on the aluminum triangles are pieces of nylon threaded rod, which was convenient because I could easily twist them to remove them.
+
+This is the first experience of **tightening** the twist using the screws of the tulips, which was very nice. I could make the twist remarkably tight!
+
 ![brass][brass-g2]
+
+Creating a twist is one thing, but connecting it to the next twist is a whole different challenge. First a hexagon **ring** of cord segments is made between the top tulips of the original twist and the bottom tulips of the new (currently still scaffolded) twist. This one can also be tightened up nicely such that the hexagon is really tight.
 
 ![brass][brass-g3]
 
+The same moves repeated resulted in three twists connected, but these are still just holding together by the tight and rather flat hexagons of tension. The tower is not yet very resistant to bending, because the hexagons can easily bend. What is still needed is cords which extend from the hexagons to the opposite ends of the twist bars.
+
 ![brass][brass-g4]
+
+With the "inter-twist" cords inserted, the hexagon rings are turned into zig-zags of tension, because tulips are alternatively pulled upwards and downwards. Now the tower nicely resists bending!
 
 ![brass][brass-g5]
 
+It's a step-by-step process, and every time I would start with a new hexagon ring, and with the end tulips of the final twist connected radially to the middle. The hexagon would then have three of its tulips pulled downward with new cords to lower bar ends, becoming a partial zig-zag.
+
+Only when a new end-twist is added can the other three tulips of the hexagon be pulled upwards, making it a full zig-zag. Here we have six twists:
+
 ![brass][brass-g7]
+
+After two more twists I had eight of them, and now the tower was finally taller than me!
 
 ![brass][brass-g8]
 
+It was friday evening, it was standing, and it felt nice and tight. But I still didn't dare put it to the test to see what it could carry.
+
+## Testing (as in Breaking)
+
+On saturday morning in bed I kept getting more and more curious how much the tower could actually carry, so I had to get back to it.
+
+The first test is the Bucky Fuller test: Can it hold both volumes of Synergetics? It could!
+
 ![brass][brass-j1]
+
+Unfortunately I couldn't stop there. I added another fascinating heavy book and the tower broke and fell over.
 
 ![brass][brass-j2]
 
+It was very specific cord segments that broke: only **ring cords** let go.  And they broke due to the cord's melted ball-end got violently yanked through the slits, so this was the primary weakness.
+
+I decided to make some strong loops to fortify the zig-zag hexagon rings, and I was able to string the loops around the hexagons, effectively doubling-up the tension of the rings.
+
+A good square knot (with melted ends) makes a superbly strong loop ring of Dyneema.
+
 ![brass][brass-j3]
+
+## Conclusion
+
+
 
 
 [brass-0]: https://pretenst.com/images/2020-09/brass-0.jpg
