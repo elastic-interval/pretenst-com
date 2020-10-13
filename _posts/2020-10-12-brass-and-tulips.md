@@ -165,7 +165,8 @@ This has turned out to be a very important structure for further structural expe
 [brass-g4]: https://pretenst.com/images/2020-09/brass-g4.jpg
 [brass-g5]: https://pretenst.com/images/2020-09/brass-g5.jpg
 [brass-g7]: https://pretenst.com/images/2020-09/brass-g7.jpg
-[brass-g8]: https://pretenst.com/images/2020-09/brass-g8.jpg
 [brass-j1]: https://pretenst.com/images/2020-09/brass-j1.jpg
 [brass-j2]: https://pretenst.com/images/2020-09/brass-j2.jpg
 [brass-j3]: https://pretenst.com/images/2020-09/brass-j3.jpg
+[brass-j4]: https://pretenst.com/images/2020-09/brass-j4.jpg
+[brass-z1]: https://pretenst.com/images/2020-09/brass-z1.jpg
