@@ -47,9 +47,10 @@ The slits are big enough for the cord, but too thin to let the ball part slip th
 
 ![brass][brass-a6]
 
-Then of course begins the phase of mass production.
+Then of course begins the phase of mass production of steel tulips.
 
 ![brass][brass-a8]
+![brass][brass-a7]
 
 Fortunately while slitting and filing endless numbers of tulips, I was able to listen to some podcasts, some music, and even watch a documentary or two. 
 
@@ -152,6 +153,7 @@ This has turned out to be a very important structure for further structural expe
 [brass-a4]: https://pretenst.com/images/2020-09/brass-a4.jpg
 [brass-a5]: https://pretenst.com/images/2020-09/brass-a5.jpg
 [brass-a6]: https://pretenst.com/images/2020-09/brass-a6.jpg
+[brass-a7]: https://pretenst.com/images/2020-09/brass-a7.jpg
 [brass-a8]: https://pretenst.com/images/2020-09/brass-a8.jpg
 [brass-a9]: https://pretenst.com/images/2020-09/brass-a9.jpg
 [brass-d1]: https://pretenst.com/images/2020-09/brass-d1.jpg
