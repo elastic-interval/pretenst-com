@@ -1,7 +1,7 @@
 ---
 title: "Brass and Tulips"
-date: 2020-10-19
-description: "tight and strong tensegrity tower"
+date: 2020-10-12
+description: "a tight and strong tensegrity tower"
 categories: construction
 tags: [tensegrity]
 ---
