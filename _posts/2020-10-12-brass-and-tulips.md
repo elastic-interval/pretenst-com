@@ -136,9 +136,9 @@ I was able to string the loops around the existing hexagons, effectively doublin
 
 ## Conclusion
 
-After two more twists I had eight of them, and now the tower was finally taller than me.
-
 With Dyneema cord loops strengthening the hexagon rings, the tower can carry a surprising amount of weight!  With a stack of books on top, the tower's cords can be plucked almost like guitar strings.
+
+The tower is taller than I am!
 
 ![brass][brass-z1]
 
