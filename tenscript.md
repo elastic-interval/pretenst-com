@@ -1,83 +1,80 @@
 # Tenscript
 
-The foundation of our exploration of tensegrity is the ability to generate structures systematically. For this we have created **tenscript**, which is a minimal language describing how to grow and connect tensegtrity structure.
+The foundation of our exploration of tensegrity is the ability to generate structures systematically. For this we have created **tenscript**, which is a minimal language describing how to grow and connect tensegrity structure. 
+
+It's an extremely terse language, using a lot of brackets, because it works recursively, nesting things within other things.
 
 ## The Twist
 
-The 
+The most basic building block is the twist, which has either a Left or Right spin. To see which spin, imagine curling the fingers of your hand the way that the blue bars are twisting making sure that your thumb points upwards.
 
-![twist](images/2020-07/twist-a.png)
+![twist](images/tenscript/left-and-right.png)
+
+The tenscript to generate these two structures is the "zero" code, which means stop immediately.
+
+    L(0) and R(0)
+
+The lengths visualized here also intended show something about the strain on the elements. All elements appear as they "wish" to be. The bars appear slightly longer since they were longer before the cables tightened in on them. The cables appear slightly shorter because they were this short before they got stretched to hold on to the bars. Pretension is causing strain, and the strain is visualized with these length differences.
+
+The colors here show the roles, where blue is pushing (bars) and yellow is pulling (cables). 
+
+The top triangle face is named "A" and the bottom triangle is named "a". This will make more sense when you see the omnitwist below.
+
+## Growing Columns
+
+A tensegrity column can be built of multiple alternating twists stacked on top of each other and interconnected. To extend one twist upwards, this script creates a minimum column.
+
+    L(1) and L(10)
+
+![twist](images/tenscript/left-one-ten.png)
+
+The twists start with L but go LRLRLR..., and you can see that a new kind of element has appeared, the ring cable, showing reddish. Ring cables form a hexagon that holds the two twists in place, and it is shorter than the other cables in yellow.
 
 ## The Omnitwist
 
-Tenscript builds tensegrities on the basis of the simplest symmetrical unit, made with 6 compression bars and 8 triangles of tension, which we call the tensegrity brick. The lengths of its elements are derived from the classic irrational number, the Golden Ratio called "phi" or &phi; (1.61803398874989484820... to be more precise). When the 24 cables have length 1, the 6 bars have length &phi;.
+Tenscript also uses the simplest symmetrical tensegrity unit, made with 6 compression bars and 8 triangles of tension, which we call the omnitwist. The lengths of its elements are derived from the classic irrational number, the Golden Ratio called "phi" or &phi; (1.61803398874989484820... to be more precise). When the 24 cables have length 1, the 6 bars have length &phi;.
 
-The smallest tenscript program is this one, generating only the brick unit:
+An omnitwist actually consists of two twists, and it can either start with a left or right twist, so they are created using "RL" and "LR".
 
-    (0)
+    RL(0) and LR(0)
 
-![0](images/brick-0.png)
+![omni](images/tenscript/rightleft-leftright.png)
 
-Each of the brick's 8 triangles is given a name which allows us to specify exactly how bricks are to be connected to each other, and the names are arranged  according to their relationships, and the uppercase/lowercase of the names indicate a kind of polarity.
+Each of the omnitwists's 8 triangles is given a name which allows us to specify exactly where to grow twists on top, and the names are arranged  according to their relationships, and the uppercase/lowercase of the names indicate a kind of polarity.
 
 The top triangle is called "A" and the bottom triangle is called "a". The three triangles adjacent to "A" near the top are called "b", "c", and "d", and the bottom triangles adjacent to "a" are called "B", "C" and "D". Lowercase names are on the opposite side their uppercase counterparts, so "c" is opposite "C", and so on.
 
-## Chirality: Left-handed and Right-handed
+## Left-handed and Right-handed Faces
 
-The brick's triangles are divided into two groups, the right-handed and left-handed ones. This comes from how the bars are angled where they touch the triangles of cables. To see how this works, pick a triangle and observe how the bars "spin" towards it from the inside in one direction. If you have the curl of your fingers follow the spin and your thumb pointing outwards, only one of your hands will fit on each triangle.
+The omnitwist's faces are divided into two groups, the right-handed and left-handed ones. This comes from how the bars are angled where they touch the triangles of cables. To see how this works, pick a triangle face and observe how the bars "spin" towards it from the inside in one direction. If you have the curl of your fingers follow the spin and your thumb pointing outwards, only one of your hands will fit on each triangle.
 
-Adjacent triangles (sharing a joint) are always of opposite chirality. By convention, the uppercase names are right-handed and the lowercase ones are left-handed. The triangles adjacent to the right-handed "A", which are "b", "c", and "d" are left-handed just like "a".
+Adjacent faces (sharing a joint) are always of opposite chirality. By convention, the uppercase names are right-handed and the lowercase ones are left-handed. The triangles adjacent to the right-handed "A", which are "b", "c", and "d" are left-handed just like "a". Whenever these special faces are used, the twist is promoted to become an omnitwist.
 
-## Tensegrity Columns
-
-Bricks are by default extended in the top "A" direction to make tensegrity columns of any length. The minimal program above "(0)" says "Build zero new bricks on the A triangle", and longer columns are built with larger numbers.
-
-    (1) - build one brick on top of the first one
-    (5) - build five bricks on top, column of 6
-    (27) - a column of 28 bricks
-
-![1](images/brick-1.png)
-![5](images/brick-5.png)
-![27](images/brick-27.png)
+Whenever the special directions are used, the ones only present in the omnitwist, the twist using them is promoted to become an omnitwist.
 
 ## Branching
 
-The other triangle names are used when the structure is to branch off in the different directions, and later on when a program has to point out the triangles which are to be joined together.
-
-Now, since the default direction is "A", these two programs mean exactly the same thing:
-
-    (1) = (A1)
-
-However, there is an important difference. The lone numbers describe how many bricks to add to the current brick **before** branching. The column described by the lone number is generated first, and then the branch or branches described by the letter-number combinations.
-
 The following program will build a column and then branch off in the "b" direction with another column, effectively creating a kind of "knee": 
 
-    (3,b3)
+    L(3,b3)
 
-![3b3](images/branch-3b3.png)
+![3b3](images/tenscript/knee.png)
 
-Just as easily, tenscript allows for branching in more than one direction at the same connection point, and when more than one branch is specified, they actually grow out at the same time as well. Here are some simple branching programs to illustrate:
+Just as easily, tenscript allows for branching in more than one direction at the same connection point, and when more than one branch is specified.
 
-    (2,b2,c2) - two bricks in the "A" direction, then two branches of two bricks each
-    (3,c3,d13) - three bricks, then branching in a short and a long column
-    (1,b1,c1,d1) - one brick up, then all possible branches outwards
+    L(1,b1,c1,d1)
 
-![1b1c1d1](images/nexus-1b1c1d1.png)
-
-Note that programs like this can also create messy structures that you may not want. For example, these programs build a column of 3 bricks and then double back in the direction it came from, overlapping the original:
-
-    (2,a2) - build straight backwards into the original
-    (2,C2) - build a sharply bent knee which starts by overlapping
+![1b1c1d1](images/tenscript/nexus.png)
 
 ## Nesting
 
 So far the programs we've looked at have just a single pair of brackets, but tenscript allows nesting or "recursion", so we can build much more complicated and interesting structures. When you see a letter-number combination in tenscript, it's actually shorthand for an expression leaving the brackets out, so:
 
-    (3,b3) is the same as (3,b(3))
+    L(3,b3) is the same as L(3,b(3))
 
 This is where things get much more interesting since we can now imagine putting code inside of code. This program will build a structure with two knees, branching twice:
 
-    (3,b(3,c3))
+    L(3,b(3,c3))
 
 ![zzi](images/zig-zag-initial.png)
 
