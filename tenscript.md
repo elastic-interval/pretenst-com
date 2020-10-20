@@ -1,10 +1,14 @@
 # Tenscript
 
-The foundation of our exploration of tensegrity is the ability to generate structures systematically. For this we have created **tenscript**, which is a minimal language describing how to grow and connect structure.
+The foundation of our exploration of tensegrity is the ability to generate structures systematically. For this we have created **tenscript**, which is a minimal language describing how to grow and connect tensegtrity structure.
 
-**This section needs updating since the algorithm has been changed to grow twist-by-twist.**
+## The Twist
 
-## The Brick System
+The 
+
+![twist](images/2020-07/twist-a.png)
+
+## The Omnitwist
 
 Tenscript builds tensegrities on the basis of the simplest symmetrical unit, made with 6 compression bars and 8 triangles of tension, which we call the tensegrity brick. The lengths of its elements are derived from the classic irrational number, the Golden Ratio called "phi" or &phi; (1.61803398874989484820... to be more precise). When the 24 cables have length 1, the 6 bars have length &phi;.
 
