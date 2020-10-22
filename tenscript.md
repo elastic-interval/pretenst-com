@@ -2,7 +2,7 @@
 
 The foundation of our exploration of tensegrity is the ability to generate structures systematically. For this we have created **tenscript**, which is a minimal language describing how to grow and connect tensegrity structure. 
 
-It's an extremely terse language, using a lot of brackets, because it works recursively, nesting things within other things.
+It's an extremely terse language, using a lot of brackets nesting things within other things, but that makes it very expressive.
 
 ## The Twist
 
@@ -70,13 +70,11 @@ Just as easily, tenscript allows for branching in more than one direction at the
 
 So far the programs we've looked at have just a single pair of brackets, but tenscript allows nesting or "recursion", so we can build much more complicated and interesting structures. When you see a letter-number combination in tenscript, it's actually shorthand for an expression leaving the brackets out, so:
 
-    L(3,b3) is the same as L(3,b(3))
+    LR(d3,c7)
+    LR(d3,c(7))
+    LR(d3,c(7,b7)) adding a new branch in the "b" direction
 
-This is where things get much more interesting since we can now imagine putting code inside of code. This program will build a structure with two knees, branching twice:
-
-    L(3,b(3,c3))
-
-![zzi](images/zig-zag-initial.png)
+![zz3](images/tenscript/zigzag-3.png)
 
 The instructions here is to start by adding three bricks on top of the "A" triangle, turning in the "b" direction to build three more, and then once again at the end of the second column branching in the "c" direction to build a third column.
 
@@ -84,9 +82,13 @@ If this is starting to look complicated, fasten your seatbelts, because once you
 
 For example, here is a program which keeps building like the one above, column after column, every time in exactly the right branch direction so that it eventually returns to almost where it started. It builds what we call a "zig-zag ring":
 
-    (a1,c(3,b(3,d(3,c(3,b(3,d1))))))
+    LR(d3,c(7,b7))
+    LR(d3,c(7,b(7,d7)))
+    LR(d3,c(7,b(7,d(7,d7))))
+    LR(d3,c(7,b(7,d(7,d(7,d7)))))
+    LR(d3,c(7,b(7,d(7,d(7,d(7,d3))))))
 
-![zzincomplete](images/zig-zag-incomplete.png)
+![zz](images/tenscript/zigzag-6.png)
 
 The first brick is however not connected to the last one so it doesn't actually complete the ring. For that we need another feature: marking.
 
@@ -98,14 +100,23 @@ Tenscript has another feature to handle this which is the ability to **mark** th
 
 Now this is not at all easy to think about, but we need this kind of thing to make connecting possible. Marking triangles is done by adding an item starting with the letter "M" for mark, then naming the triangle of the current brick which is to be marked, and then giving the mark number. So tagging the "b" triangle of the current brick with the number "8" would be done with "Mb8".
 
-To illustrate this, it's easiest to see an unmarked program beside a marked program so here we mark triangles of the "zig-zag ring" mentioned above so that the ends of the C-shaped zig-zag are connected together. This way we can complete the ring! To make it a little more readable, spaces are added:
+To illustrate this, it's easiest to see an unmarked program beside a marked program so here we mark triangles of the "zig-zag ring" mentioned above so that the ends of the C-shaped zig-zag are connected together. This way we can complete the ring!
 
-    (a1,      c(3,b(3,d(3,c(3,b(3,d1      ))))))
-    (a(1,MA7),c(3,b(3,d(3,c(3,b(3,d(1,MA7)))))))
+    LR(d3,c(7,b(7,d(7,d(7,d(7,d3))))))
+    LR(d(3),c(7,b(7,d(7,d(7,d(7,d(3)))))))
+    LR(d(3,MA1),c(7,b(7,d(7,d(7,d(7,d(3,MA1)))))))
 
-![zzcomplete](images/zig-zag-complete.png)
+![zzcomplete](images/tenscript/zigzag-finished.png)
 
-As you can see, in both cases the "1" is replaced with its equivalent "(1)" and then the brick's "A" triangle is marked by the "MA7" to make "(1,MA7)".
+A face connection must always take place between a left-spin face and a right-spin face. If the two faces marked have the same spin, a new omnitwist is created in between and then the marked faces are brought together with appropriate faces of the omnitwist.
+
+This can be seen in the "Convergence" example:
+
+    'Convergence':LR(a1,b(15,S92,MA1),c(15,S92,MA1),d(15,S92,MA1))
+
+![convergence](images/tenscript/convergence-1.png)
+
+![convergence](images/tenscript/convergence-2.png)
 
 ## Scaling
 
@@ -115,44 +126,23 @@ Tenscript has a feature which makes tensegrity columns follow this same pattern 
 
 A seventeen brick Snelson Needle Tower column turns out to be a tiny simple program which includes the scale command:
 
-    (16,S90)
+    L(30,S95)
 
-![tower-s90](images/tower-s90.png)
+![tower-s90](images/tenscript/axoneme.png)
 
 Combining scaling with branching and marking starts to give us some very pretty and interesting structures indeed, such as the "bulge ring":
 
-    (A(8,S85,MA1),a(8,S85,MA1))
+    L(A(15,S90,MA1),a(16,S90,MA1))
 
-![bulge-ring](images/bulge-ring.png)
+![bulge-ring](images/tenscript/bulge-ring.png)
 
 Here, there are two eight-brick tapering columns extending in opposite directions "A" and "a", which then have their end triangles marked so that the are drawn together and welded, resulting into a ring.
-
-## Cable Rings
-
-Another way to look at the tension in this single brick is to forget about the 8 triangles, but instead observe that the tension cables make up 4 intermingled rings of tension, each making a zig-zag pattern around the shape. Since the brick is a regular shape, all of these rings are identical.
-
-We can say that each ring is like a zig-zag equator which points out four different rotation axes. Remember these rings because they come into play when we start making connections between bricks.
-
-## Melting Together
-
-Bricks connect together by melting triangles of opposing chirality together, turning a star-of-david shape into a regular hexagon. To melt together, the opposing tension triangles are replaced with a ring of tension capturing all 6 points, and extra connector cables are added which bind the bars of one to the bars of the next so that the bricks become one.
-
-This trivial program shows only the melting together of two bricks:
-
-    (0) vs (1)
-
-![0](images/brick-0.png)
-![0](images/brick-1.png)
-
-The new tensegrity then consists of 12 bars, where the new brick has been added to replace the "A" triangle and it is melted into the next brick's opposing "a" triangle.
-
-Something else also takes place when two bricks are melted together, because the new column structure has a very different shape. 
 
 ## Multiple Sections
 
 Tenscript is encoded as a string of characters, and as you've seen, often with many brackets. The character string can be subdivided into sections using the colon character ":". For example, you can give a name by adding a section with quotes:
 
-    'Axoneme':(16,S90)
+    'Axoneme':L(30,S95)
 
 Other sections can be added as well, which allows for both composition and for specifying what the marks are to be used for. Other sections are therefore prefixed with "0=", "1=", "2=", etc which indicates the mark number.
 
@@ -160,9 +150,9 @@ Other sections can be added as well, which allows for both composition and for s
 
 In tenscript, you can create subroutines and effectively compose construction programs using marks which substitute subtrees.
 
-    'Composed':(3,b(2,MA0),c(2,MA0),d(2,MA0)):0=subtree(b2,c2,d2)
+    'Composed':L(6,b(4,MA0),c(4,MA0),d(4,MA0)):0=subtree(b5,c5,d5)
 
-![composed](images/composed.png)
+![composed](images/tenscript/composed.png)
 
 Here you can see that the 3-column fanout is defined in the subtree and built at the end of three different branches. This makes the whole program much shorter since there is less repetition.
 
@@ -170,8 +160,53 @@ Here you can see that the 3-column fanout is defined in the subtree and built at
 
 Another feature which uses the special mark sections is "face-distance-N" which instructs the builder to create intervals between all of the marked faces and change them to "N %" of their original length.  So for example this program chooses the final faces on its three legs and pulls them until they are at a 35% distance from where they started.
 
-    'Thick Tripod':(A1,B(3,MA1),C(3,MA1),D(3,MA1)):1=face-distance-35
+    'Thick Tripod':LR(A3,B(8,MA1),C(8,MA1),D(8,MA1)):1=face-distance-35
 
 As a result, the legs are pulled inwards so that the structure grows thinner and taller.
 
-![distancing](images/distancing.png)
+![distancing](images/tenscript/distancing.png)
+
+## Twists Beyond Three
+
+It gets a little risky but the tenscript language even allows for experimenting with twists made up of more than three pushing elements. The number of pushes per twist can be passed on in the initial section before the first bracket.
+
+    'Cup':L24(15,S105)
+
+![cup](images/tenscript/cup-1.png)
+
+![cup](images/tenscript/cup-2.png)
+
+## What can it do?
+
+The design space that can be explored with this minimal language is significant!
+
+    'Equus Lunae':LR(A(16,S95,Mb0),b(16,S95,Md0),a(16,S95,Md0),B(16,Mb0,S95)):0=face-distance-60
+
+![equus](images/tenscript/equus.png)
+
+    'Infinity':LR(a(16,S90,MA1),b(16,S90,MA2),B(16,S90,MA1),A(16,S90,MA2))
+
+![infinity](images/tenscript/infinity.png)
+
+    'Mobiosity':LR(
+        d(16,S90,MA4),C(16,S90,MA4),c(16,S90,MA3),
+        D(16,S90,MA2),a(16,S90,MA1),b(16,S90,MA2),
+        B(16,S90,MA1),A(16,S90,MA3)
+    )
+
+![mobiosity](images/tenscript/mobiosity.png)
+
+    'Diamond':RL(
+        a(5,b(5,c(5,c(2,MA3)),d(5,b(2,MA4))),
+        c(5,d(5,b(2,MA5)),c(5,c(2,MA1))),
+        d(5,c(5,c(2,MA6)),d(5,b(2,MA2)))),
+        b(5,b(5,d(2,MA3)),c(5,c(2,MA2))),
+        c(5,b(5,d(2,MA6)),c(5,c(2,MA5))),
+        d(5,c(5,c(2,MA4)),b(5,d(2,MA1)))
+    )
+
+![diamond](images/tenscript/diamond.png)
+
+## Future work
+
+From here it might make sense to expand the tenscript language, or since it's such a small language, perhaps it would be better to develop another parallel language that explores another way of generating. One thing that we're considering is somehow defining building blocks which start separated but join together on command. Let me know if you have any other ideas at **pretenst@gmail.com**
