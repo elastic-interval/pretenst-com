@@ -76,7 +76,7 @@ So far the programs we've looked at have just a single pair of brackets, but ten
 
 ![zz3](images/tenscript/zigzag-3.png)
 
-The instructions here is to start by adding three bricks on top of the "A" triangle, turning in the "b" direction to build three more, and then once again at the end of the second column branching in the "c" direction to build a third column.
+The instructions here is to start by adding three twists on top of the "A" triangle, turning in the "b" direction to build seven more, and then once again at the end of the second column branching in the "c" direction to build a third column.
 
 If this is starting to look complicated, fasten your seatbelts, because once you have the ability to nest code inside of code, things get very weird indeed and we've just gotten started. As you may have guessed, we will be swimming in brackets.
 
@@ -90,15 +90,15 @@ For example, here is a program which keeps building like the one above, column a
 
 ![zz](images/tenscript/zigzag-6.png)
 
-The first brick is however not connected to the last one so it doesn't actually complete the ring. For that we need another feature: marking.
+The first triangle face is however not connected to the last one so it doesn't actually complete the ring. For that we need another feature: marking.
 
 ## Mark to Connect
 
-So far we have been able to grow new bricks and branch in various directions, finally reaching the point of building a zig-zag ring where the first brick is very near the last brick, but we have only grown new bricks and never connected existing bricks together.
+So far we have been able to grow new twists and branch in various directions, finally reaching the point of building a zig-zag ring where the first twist is very near the last twist, but we have only grown new twists and never connected existing twists together.
 
-Tenscript has another feature to handle this which is the ability to **mark** the triangles of the bricks or, in other words, to tag them with a number. The tenscript interpreter is set up to connect triangles which are tagged with the same number. Which number it is makes no difference at all, because it's just a tag.
+Tenscript has another feature to handle this which is the ability to **mark** the triangles of the twists or, in other words, to tag them with a number. The tenscript interpreter is set up to connect triangles which are tagged with the same number. Which number it is makes no difference at all, because it's just a tag.
 
-Now this is not at all easy to think about, but we need this kind of thing to make connecting possible. Marking triangles is done by adding an item starting with the letter "M" for mark, then naming the triangle of the current brick which is to be marked, and then giving the mark number. So tagging the "b" triangle of the current brick with the number "8" would be done with "Mb8".
+Now this is not at all easy to think about, but we need this kind of thing to make connecting possible. Marking triangles is done by adding an item starting with the letter "M" for mark, then naming the triangle of the current twist which is to be marked, and then giving the mark number. So tagging the "b" triangle of the current twist with the number "8" would be done with "Mb8".
 
 To illustrate this, it's easiest to see an unmarked program beside a marked program so here we mark triangles of the "zig-zag ring" mentioned above so that the ends of the C-shaped zig-zag are connected together. This way we can complete the ring!
 
@@ -122,9 +122,9 @@ This can be seen in the "Convergence" example:
 
 Historically, the initial trigger for creating this project was the first shocking encounter with the "Needle Tower" sculpture by Kenneth Snelson. It seemed to defy gravity and it also seemed to be taller than it actually ways. This sculpture starts large at ground level and then every section extending upwards becomes progressively smaller.
 
-Tenscript has a feature which makes tensegrity columns follow this same pattern of diminishing size in the form of the "S" command which stands for "scale". The command takes a percentage as a parameter, and it applies to each brick in the column progressively, so "S99" builds a tower that tapers slightly, and "S101" builds one that gradually increases in size.
+Tenscript has a feature which makes tensegrity columns follow this same pattern of diminishing size in the form of the "S" command which stands for "scale". The command takes a percentage as a parameter, and it applies to each twist in the column progressively, so "S99" builds a tower that tapers slightly, and "S101" builds one that gradually increases in size.
 
-A seventeen brick Snelson Needle Tower column turns out to be a tiny simple program which includes the scale command:
+A thirty twist Snelson Needle Tower column turns out to be a tiny simple program which includes the scale command:
 
     L(30,S95)
 
@@ -136,7 +136,7 @@ Combining scaling with branching and marking starts to give us some very pretty 
 
 ![bulge-ring](images/tenscript/bulge-ring.png)
 
-Here, there are two eight-brick tapering columns extending in opposite directions "A" and "a", which then have their end triangles marked so that the are drawn together and welded, resulting into a ring.
+Here, there are two sixteen-twist tapering columns extending in opposite directions "A" and "a", which then have their end triangles marked so that the are drawn together and welded, resulting into a ring.
 
 ## Multiple Sections
 
