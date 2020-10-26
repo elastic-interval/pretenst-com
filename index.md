@@ -12,7 +12,7 @@ Pretenst structure, otherwise known as **tensegrity**, is minimalistic. It is st
 
 Pretenst software is tool for designing four-dimensional physical structures made from elements of pure compression (struts) and tension (cables) and exploring how they behave over time and under stress. The model behind it is as simple as possible, yet provides for structure building like in the "Oritensa" movie above.
 
-For more examples and high resolution images, please visit the [Gallery](gallery.md).
+For more examples and high resolution images, please visit the [Blender Gallery](gallery.md).
 
 
 ![gallery](images/gallery.png)
