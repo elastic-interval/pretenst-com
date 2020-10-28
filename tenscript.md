@@ -12,7 +12,7 @@ The most basic building block is the twist, which has either a Left or Right spi
 
 The tenscript to generate these two structures is the "zero" code, which means stop immediately.
 
-    L(0) and R(0)
+    L() and R()
 
 The lengths visualized here also intended show something about the strain on the elements. All elements appear as they "wish" to be. The bars appear slightly longer since they were longer before the cables tightened in on them. The cables appear slightly shorter because they were this short before they got stretched to hold on to the bars. Pretension is causing strain, and the strain is visualized with these length differences.
 
@@ -36,7 +36,7 @@ Tenscript also uses the simplest symmetrical tensegrity unit, made with 6 compre
 
 An omnitwist actually consists of two twists, and it can either start with a left or right twist, so they are created using "RL" and "LR".
 
-    RL(0) and LR(0)
+    RL() and LR()
 
 ![omni](images/tenscript/rightleft-leftright.png)
 
