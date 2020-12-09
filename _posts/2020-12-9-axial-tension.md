@@ -64,6 +64,8 @@ I made a little slow-motion movie to hopefully get the effect to show clearly an
 
 The way the tower feels when it is axially pretenst is strange because, to a point, it is completely rigid. In other words, whenever the axial tension is tight, the height of the tower stays the same. Add another book on top, and nothing happens!
 
+The **resonance** that we started with is gone altogether, and instead there is a very much higher resonance visible on each and **every twist** equally.
+
 This is structurally interesting because it essentially replaces springiness with predictable rigidity. Certainly food for thought.
 
 To make it even a little more fun, I made an animation of the computer model and added sounds. Sorry about that, gratuitous I know.
