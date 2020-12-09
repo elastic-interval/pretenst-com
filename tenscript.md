@@ -14,7 +14,9 @@ The tenscript to generate these two structures is the "zero" code, which means s
 
     L() and R()
 
-The lengths visualized here also intended show something about the strain on the elements. All elements appear as they "wish" to be. The bars appear slightly longer since they were longer before the cables tightened in on them. The cables appear slightly shorter because they were this short before they got stretched to hold on to the bars. Pretension is causing strain, and the strain is visualized with these length differences.
+The lengths of the elements that you see here are also intended show something about the strain on the elements. All elements appear as they "wish" to be. 
+
+The bars appear slightly longer since they were longer before the cables tightened in on them. The cables appear slightly shorter because they were this short before they got stretched to hold on to the bars. Pretension is causing strain, and the strain is visualized with these length differences.
 
 The colors here show the roles, where blue is pushing (bars) and yellow is pulling (cables). 
 
