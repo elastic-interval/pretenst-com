@@ -1,6 +1,6 @@
 ---
 title: "Axial Tension"
-date: 2020-12-14
+date: 2020-12-09
 description: "pretensing what is already pretenst"
 categories: construction
 tags: [tensegrity]
