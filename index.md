@@ -4,13 +4,13 @@ title: Welcome!
 
 # What is it?
 
-"Pretenst" structure, otherwise known as **tensegrity**, is structure which is distilled down to the basics of **push** and **pull**, making all of the forces visible. It is minimal, and as a result these structures appear to defy gravity, and that gives them their elegant beauty.
+"Pretenst" structure, otherwise known as [**tensegrity**](http://kennethsnelson.net/), is structure which is distilled down to the basics of **push** and **pull**, making all of the forces visible. It is minimal, and as a result these structures appear to defy gravity, and that gives them their elegant beauty.
 
 ![minimal](images/2021-01/minimal-left-right-small.jpg)
 
 The defining feature of tensegrity is that the pushing elements or bars are **floating**, separated from each other and only held together by a **network of tension**. The shape maintains its integrity because of the tension, with or without gravity, since the compression pushing outwards is only localized.
 
-This project is both about a piece of software, and about building real world tensegrity structures.
+This project has two parts. It is both about a piece of open source software, and about projects to build real world tensegrity structures.
 
 ## Design Software
 
