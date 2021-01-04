@@ -1,3 +1,5 @@
+
+
 # Tenscript
 
 The foundation of our exploration of tensegrity is the ability to generate structures systematically. For this we have created **tenscript**, which is a minimal language describing how to grow and connect tensegrity structure. 
@@ -24,7 +26,7 @@ The top triangle face is named "A" and the bottom triangle is named "a". This wi
 
 ## Growing Columns
 
-A tensegrity column can be built of multiple alternating twists stacked on top of each other and interconnected. To extend one twist upwards, this script creates a minimum column.
+A tensegrity column can be built of multiple alternating twists stacked on top of each other and [woven together](http://kennethsnelson.net/Tensegrity_and_Weaving.pdf) using new tension lines. To extend one twist upwards, this script creates a minimum column.
 
     L(1) and L(10)
 
@@ -78,7 +80,7 @@ So far the programs we've looked at have just a single pair of brackets, but ten
 
 ![zz3](images/tenscript/zigzag-3.png)
 
-The instructions here is to start by adding three twists on top of the "A" triangle, turning in the "b" direction to build seven more, and then once again at the end of the second column branching in the "c" direction to build a third column.
+The instructions here are to start by adding three twists on top of the "A" triangle, turning in the "b" direction to build seven more, and then once again at the end of the second column branching in the "c" direction to build a third column.
 
 If this is starting to look complicated, fasten your seatbelts, because once you have the ability to nest code inside of code, things get very weird indeed and we've just gotten started. As you may have guessed, we will be swimming in brackets.
 
@@ -116,6 +118,8 @@ This can be seen in the "Convergence" example:
 
     'Convergence':LR(a1,b(15,S92,MA1),c(15,S92,MA1),d(15,S92,MA1))
 
+(note: S92 is explained in Scaling below)
+
 ![convergence](images/tenscript/convergence-1.png)
 
 ![convergence](images/tenscript/convergence-2.png)
@@ -138,7 +142,7 @@ Combining scaling with branching and marking starts to give us some very pretty 
 
 ![bulge-ring](images/tenscript/bulge-ring.png)
 
-Here, there are two sixteen-twist tapering columns extending in opposite directions "A" and "a", which then have their end triangles marked so that the are drawn together and welded, resulting into a ring.
+Here, there are two sixteen-twist tapering columns extending in opposite directions "A" and "a", which then have their end triangles marked so that they are drawn together and welded, resulting into a ring.
 
 ## Multiple Sections
 

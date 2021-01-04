@@ -16,10 +16,12 @@
   </head>
   <body>
       <header class="page-header" role="banner">
-      <a href="/"><h1 class="project-name">{{ site.title }}</h1></a>
+      <div>
+        <a style="display: inline-block;" href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
+        <a style="display: inline-block; width: 30em" href="/"><h1 class="project-name">{{ site.title }}</h1></a>
+        <a style="display: inline-block;" href="{{ site.app_url }}" class="btn">Try the App</a>
+  	  </div>  
       <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-      <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      <a href="{{ site.app_url }}" class="btn">Try the App</a>
     </header>
 
     <main id="content" class="main-content" role="main">
@@ -29,8 +31,7 @@
 
       {{ content }}
 
-        <hr/>
-        <h4>Constructions:</h4>
+        <h2>Pretenst Construction Projects:</h2>
       {% for page in site.categories.construction %}
         <strong class="title">
         	{{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>": {{ page.description }}

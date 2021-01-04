@@ -1,31 +1,30 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
-<script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+---
+title: Welcome!
+---
 
-## The Essence of Physical Structure
+# What is it?
 
-Pretenst structure, otherwise known as **tensegrity**, is minimalistic. It is structure distilled down to the basics of push and pull. It's because of this that these structures appear to be lighter than air, defying gravity, and that gives them their elegant beauty. The defining feature of tensegrity is that the pushing elements or bars are **floating**, separated from each other and only held together by a **network of tension**. The shape maintains its integrity because of the tension, and the compression pushing outwards is only localized.
+"Pretenst" structure, otherwise known as **tensegrity**, is structure which is distilled down to the basics of **push** and **pull**, making all of the forces visible. It is minimal, and as a result these structures appear to defy gravity, and that gives them their elegant beauty.
 
-## A Taste
+![minimal](images/2021-01/minimal-left-right-small.jpg)
 
-<iframe width="600" height="340" src="https://www.youtube.com/embed/SIyi6v5fbaA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+The defining feature of tensegrity is that the pushing elements or bars are **floating**, separated from each other and only held together by a **network of tension**. The shape maintains its integrity because of the tension, with or without gravity, since the compression pushing outwards is only localized.
 
-Pretenst software is tool for designing four-dimensional physical structures made from elements of pure compression (struts) and tension (cables) and exploring how they behave over time and under stress. The model behind it is as simple as possible, yet provides for structure building like in the "Oritensa" movie above.
+This project is both about a piece of software, and about building real world tensegrity structures.
 
-For more examples and high resolution images, please visit the [Blender Gallery](gallery.md).
+## Design Software
 
+Pretenst software is an open source online tool for designing four-dimensional physical structures made from elements of pure compression (struts) and tension (cables) and exploring how they behave over time and under stress.
 
-![gallery](images/gallery.png)
+The app generates tensegrities based on a minimal language called "[tenscript](tenscript.md)". For example, the structure called "Halo by Crane" was generated with this short script: 
 
-## About the project
+**L(5,S92,b(12,S92,MA1),d(11,S92,MA1))**
 
-This project is about developing open source exploration tools for designing and experimenting with **pretenst** tensegrity structures, as well as finding ways to build these things in real life.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hzGxoJWpRZs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+With all the numbers from the generated virtual model, it became possible to [build](/construction/2020/10/26/halo-1) the real physical object!
 
-* [Process](process.md) - playful trial and error towards refinement and realization
-* [Tenscript](tenscript.md) - a minimal language for generating pretenst structures
-* [Physical](physical.md) - all about building things we can feel in our hands
-* [Dynamic](dynamic.md) - when the structure starts to move
+![halo by crane](images/2020-11/standing-tall.jpg){:height="700px"}
 
-<script>window.addEventListener('load', function(){ new Glider(document.querySelector('.glider'), { dots: '.dots', arrows: {prev: '.glider-prev',    next: '.glider-next'  }})})</script>
+Scripts have also been written for importing structures into [Blender](https://www.blender.org/) for generating [high resolution renderings](gallery.md).
 
