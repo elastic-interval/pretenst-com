@@ -28,3 +28,12 @@ With all the numbers from the generated virtual model, it became possible to [bu
 
 Scripts have also been written for importing structures into [Blender](https://www.blender.org/) for generating [high resolution renderings](gallery.md).
 
+## Physical Models
+
+The articles below record the progression of projects and technique refinements which seem to be a necessary part of the journey to really understand this structural principle. 
+
+Anything is possible in the virtual world, and although the behavior is convincing and accurate to seven digits, it completely sidesteps the details of the connection mechanism, and the imperfections of real world materials. Building physical pretenst objects exposes us to the realities of tension and compression.
+
+One fairly unique feature of our approach here is that the **tension** network is almost always assembled in a **slack** state and only tightened later. High tension is achieved purely by effectively **lengthening** the compression elements instead.
+
+It is this approach which enabled the building of complex tensegrity structures, and primarily because it becomes possible to return the structure to a slack state temporarily for repairs or adjustments.

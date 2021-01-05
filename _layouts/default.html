@@ -31,7 +31,7 @@
 
       {{ content }}
 
-        <h2>Pretenst Construction Projects:</h2>
+        <h2>Pretenst Constructions:</h2>
       {% for page in site.categories.construction %}
         <strong class="title">
         	{{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>": {{ page.description }}
@@ -40,7 +40,7 @@
       {% endfor %}
 
       <footer class="site-footer">
-        Contact <a href="mailto:pretenst@gmail.com?subject=Pretenst%20Tensegrity%20Design">pretenst@gmail.com</a>
+        If you have questions or other feedback, please contact us <a href="mailto:pretenst@gmail.com?subject=Pretenst%20Tensegrity%20Design">pretenst@gmail.com</a>
       </footer>
     </main>
   </body>
