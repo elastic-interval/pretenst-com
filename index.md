@@ -14,7 +14,7 @@ This project has two parts. It is both about a piece of open source software, an
 
 ## Design Software
 
-Pretenst software is an open source online tool for designing four-dimensional physical structures made from elements of pure compression (struts) and tension (cables) and exploring how they behave over time and under stress.
+Pretenst software is an open source [online tool](/app) for designing four-dimensional physical structures made from elements of pure compression (struts) and tension (cables) and exploring how they behave over time and under stress.
 
 The app generates tensegrities based on a minimal language called "[tenscript](tenscript.md)". For example, the structure called "Halo by Crane" was generated with this short script: 
 
