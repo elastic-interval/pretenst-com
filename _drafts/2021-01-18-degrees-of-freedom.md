@@ -115,6 +115,11 @@ Each one has its own unique QR-code identity. They have been very well received 
 
 They're not very expensive. Ping us if you want us at **pretenst@gmail.com** if you want us to make one for you.
 
+![dof-portrait-2][dof-portrait-2]
+
+![dof-portrait-3][dof-portrait-3]
+
+
 [dof-application-1]: /images/2021-01/dof-application-1.jpg
 [dof-decorated]: /images/2021-01/dof-decorated.jpg
 [dof-kid]: /images/2021-01/dof-kid.jpg
@@ -142,3 +147,5 @@ They're not very expensive. Ping us if you want us at **pretenst@gmail.com** if 
 [dof-sphere]: /images/2021-01/dof-sphere.jpg
 [dof-tension-hex]: /images/2021-01/dof-tension-hex.jpg
 [dof-qr]: /images/2021-01/dof-qr.jpg
+[dof-portrait-2]: /images/2021-01/dof-portrait-2.jpg
+[dof-portrait-3]: /images/2021-01/dof-portrait-3.jpg
