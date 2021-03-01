@@ -34,12 +34,19 @@
       {{ content }}
 
         <h2>Pretenst Constructions:</h2>
-      {% for page in site.categories.construction %}
-        <strong class="title">
-        	{{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>": {{ page.description }}
-        </strong>
-        <br>
-      {% endfor %}
+          {% for page in site.categories.construction %}
+            <strong class="title">
+                {{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>": {{ page.description }}
+            </strong>
+            <br>
+          {% endfor %}
+        <h2>Software:</h2>
+            {% for page in site.categories.software %}
+            <strong class="title">
+                {{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>": {{ page.description }}
+            </strong>
+            <br>
+        {% endfor %}
 
       <footer class="site-footer">
         If you have questions or other feedback, please contact us <a href="mailto:pretenst@gmail.com?subject=Pretenst%20Tensegrity%20Design">pretenst@gmail.com</a>
