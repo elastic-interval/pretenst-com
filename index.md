@@ -6,7 +6,7 @@ title: Welcome!
 
 "Pretenst" structure, otherwise known as [**tensegrity**](http://kennethsnelson.net/), is structure which is distilled down to the basics of **push** and **pull**, making all of the forces visible. It is minimal, and as a result these structures appear to defy gravity, and that gives them their elegant beauty.
 
-![minimal](images/2021-01/minimal-left-right-small.jpg)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/27DpAGpfjKk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The defining feature of tensegrity is that the pushing elements or bars are **floating**, separated from each other and only held together by a **network of tension**. The shape maintains its integrity because of the tension, with or without gravity, since the compression pushing outwards is only localized.
 
