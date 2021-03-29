@@ -96,6 +96,7 @@ I can get high tension adjustable tensegrity structures into other peoples' hand
 
 It's very exciting to be able to help more people **cross the perception gap** and hopefully help other people develop new intuitions!
 
+![tension hex](/images/2021-03/6TE.jpg)
 
 
 
