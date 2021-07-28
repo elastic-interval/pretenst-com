@@ -83,4 +83,4 @@ I set up a new comfortable programming environment and started working on a spec
 
 ![programming](/images/2021-05/programming-environment.jpg)
 
-This was going to be daunting, so I teamed up with my civil engineer friend [Jöel Keijnemans](https://www.linkedin.com/in/jo%C3%ABl-keijnemans-07235820/) to build [two big bubbles](/construction/2021/07/27/brass-bubble-120).
+This was going to be daunting, so I teamed up with my civil engineer friend [Joël Keijnemans](https://www.linkedin.com/in/jo%C3%ABl-keijnemans-07235820/) to build [two big bubbles](/construction/2021/07/27/brass-bubble-120).
