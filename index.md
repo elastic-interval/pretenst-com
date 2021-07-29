@@ -4,7 +4,7 @@ title: Welcome!
 
 # What is this?
 
-"Pretenst" structure, otherwise known as [**tensegrity**](http://kennethsnelson.net/), is structure which is distilled down to the basics of **push** and **pull**, making all of the forces visible. It is minimal, and as a result these structures appear to defy gravity, and that gives them their elegant beauty.
+"Pretenst" structure, otherwise known as [**tensegrity**](http://kennethsnelson.net/), is distilled down to the basics of **push** and **pull**, making all of the forces visible. It is minimal, and as a result these structures appear to defy gravity, and that gives them their elegant beauty.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/27DpAGpfjKk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
