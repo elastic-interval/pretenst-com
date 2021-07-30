@@ -10,7 +10,7 @@ title: Welcome!
 
 The defining feature of tensegrity is that the pushing elements or bars are **floating**, separated from each other and only held together by a **network of tension**. The shape maintains its integrity because of the tension, with or without gravity, since the compression pushing outwards is only localized.
 
-This project has two parts. It is both about a piece of open source software, and about projects to build real world tensegrity structures.
+This project has two parts. It is both about a piece of open source software, and about projects to build real world structures.
 
 ## Design Software
 
