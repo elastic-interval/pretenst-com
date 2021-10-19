@@ -18,6 +18,8 @@ What is much harder to imagine is what you can do with these two simple ideas wh
 
 That question prompted me to build "Elastic Interval Geometry" as a computer model of a universe of *push and pull*, implemented as simply as possible.
 
+![complex models](/images/home/complex-models.jpg)
+
 After many years of testing the limits of what the model could do (an out-of-control hobby), and building quite elaborate algorithms around it for automated construction, I reached a local maximum of how fun it was to do things virtually.
 
 I even went so far as to build "muscle" systems and let the push-pull structures compete in a [darwinian competition for survival](https://pretenst.com/app/#evolution), judged on their ability to coordinate twitches to crawl, walk or run to their target.
@@ -40,7 +42,7 @@ Before a tensegrity takes its shape, it must be must be **pre-tensioned**.
 
 Tensegrity structures are really hard to build, but the results are very satisfying, so the mission became to
 
-    make it easier so that more people could do it
+    make it easier so that more people can do it
 
 **Pretenst** tensegrity structures are built by hand, but the tension is connected up while the cords are [**slack**](https://subgenius.fandom.com/wiki/Slack) so it's never about pulling a cord tight.
 
@@ -51,9 +53,3 @@ Building these structures became easier after a year or more of [experimentation
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SJGDPl3rhwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 You can [get one for yourself or someone who should have it](https://getpretenst.com/), and spread the fun of learning with your hands!
-
----
-
-If you have ideas you want to share, contact me at **pretenst@gmail.com**.
-
----
