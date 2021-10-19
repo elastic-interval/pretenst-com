@@ -2,38 +2,52 @@
 title: Welcome!
 ---
 
-# What is this?
+# Pretenst Design
 
-"Pretenst" structure, otherwise known as [**tensegrity**](http://kennethsnelson.net/), is distilled down to the basics of **push** and **pull**, making all of the forces visible. It is minimal, and as a result these structures appear to defy gravity, and that gives them their elegant beauty.
+If you imagine for a second you can picture something that **pulls** two other things together, then soon after you should also be able to picture the opposite, something that **pushes** two things apart.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Pu09uH8u1Dw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+What is much harder to imagine is what you can do with these two simple ideas when you put them together.
 
-The defining feature of tensegrity is that the pushing elements or bars are **floating**, separated from each other and only held together by a **network of tension**. The shape maintains its integrity because of the tension, with or without gravity, since the compression pushing outwards is only localized.
+    What could possibly be built from pushes and pulls alone?
 
-This project has two parts. It is both about a piece of open source software, and about projects to build real world structures.
+That question prompted me to build "Elastic Interval Geometry" as a computer model of a universe of *push and pull*, implemented as simply as possible.
 
-## Design Software
+After many years of testing the limits of what the model could do (an out-of-control hobby), and building quite elaborate algorithms around it for automated construction, I reached a local maximum of how fun it was to do things virtually.
 
-Pretenst software is an open source [online tool](/app) for designing four-dimensional physical structures made from elements of pure compression (struts) and tension (cables) and exploring how they behave over time and under stress.
+I even went so far as to build "muscle" systems and let the push-pull structures compete in a [darwinian competition for survival](https://pretenst.com/app/#evolution), judged on their ability to coordinate twitches to crawl, walk or run to their target.
 
-The app generates tensegrities based on a minimal language called "[tenscript](tenscript.md)". For example, the structure called "Halo by Crane" was generated with this short script: 
+I found myself drawn back to physical space, wondering what could actually be built in the **real world**. 
 
-**L(5,S92,b(12,S92,MA1),d(11,S92,MA1))**
+Many people learn with their hands.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hzGxoJWpRZs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+# Tensegrity
 
-With all the numbers from the generated virtual model, it became possible to [build](/construction/2020/10/26/halo-1) the real physical object!
+**Tensegrity**, is a [real world art form](http://kennethsnelson.net/), as well as a [collection of ideas](https://books.google.nl/books/about/A_Fuller_Explanation.html?id=G8zttcNdKBAC), and it was above all the ideas which had fascinated me for decades.
 
-![halo by crane](images/2020-11/standing-tall.jpg){:height="700px"}
+The defining feature of tensegrity is that the **floating struts** don't touch each other and only held in place by a **network of cables**. The shape maintains its integrity because of the tension, with or without gravity.
 
-Scripts have also been written for importing structures into [Blender](https://www.blender.org/) for generating [high resolution renderings](gallery.md).
+When I began to build the structures in the real world, I was confronted with entirely new challenges. The biggest hurdle was always at the place where *push* and *pull* met each other, the connection **joints**.
 
-## Physical Models
+# Mission
 
-The articles below record the progression of projects and technique refinements which seem to be a necessary part of the journey to really understand this structural principle. 
+Before a tensegrity takes its shape, it must be must be **pre-tensioned**.
 
-Anything is possible in the virtual world, and although the behavior is convincing and accurate to seven digits, it completely sidesteps the details of the connection mechanism, and the imperfections of real world materials. Building physical pretenst objects exposes us to the realities of tension and compression.
+Tensegrity structures are really hard to build, but the results are very satisfying, so the mission became to
 
-One fairly unique feature of our approach here is that the **tension** network is almost always assembled in a **slack** state and only tightened later. High tension is achieved purely by effectively **lengthening** the compression elements instead.
+    make it easier so that more people could do it
 
-It is this approach which enabled the building of complex tensegrity structures, and primarily because it becomes possible to return the structure to a slack state temporarily for repairs or adjustments.
+**Pretenst** tensegrity structures are built by hand, but the tension is connected up while the cords are [**slack**](https://subgenius.fandom.com/wiki/Slack) so it's never about pulling a cord tight.
+
+This is a much easier way, and only later on does the structure as a whole get tensioned, and then by *lengthening the struts*.
+
+Building these structures became easier after a year or more of [experimentation](construction/2020/06/15/prefab-tension-1) to find the right materials and techniques, but now I can finally offer an [inexpensive kit](https://getpretenst.com/) to people all over the world.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SJGDPl3rhwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+You can [get one for yourself or someone who should have it](https://getpretenst.com/), and spread the fun of learning with your hands!
+
+---
+
+If you have ideas you want to share, contact me at **pretenst@gmail.com**.
+
+---
