@@ -4,7 +4,13 @@ title: Welcome!
 
 # Pretenst Design
 
-If you imagine for a second you can picture something that **pulls** two other things together, then soon after you should also be able to picture the opposite, something that **pushes** two things apart.
+If you imagine for a second you can picture something that **pulls** two other things together.
+
+![pull](/images/home/pull.jpg)
+
+You should also be able to picture the opposite, something that **pushes** two things apart.
+
+![push](/images/home/push.jpg)
 
 What is much harder to imagine is what you can do with these two simple ideas when you put them together.
 
