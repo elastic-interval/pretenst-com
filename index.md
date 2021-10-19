@@ -26,7 +26,7 @@ I even went so far as to build "muscle" systems and let the push-pull structures
 
 I found myself drawn back to physical space, wondering what could actually be built in the **real world**. 
 
-Many people learn with their hands.
+![real models](/images/home/real-models.jpg)
 
 # Tensegrity
 
