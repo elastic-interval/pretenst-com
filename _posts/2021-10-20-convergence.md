@@ -12,7 +12,7 @@ One of the hardest parts of writing the tensegrity construction code in the app 
 
 Bringing loose ends together would allow bending into new and beautiful curved shapes!
 
-I had it set up to **grow** tensegrity columns, and to divide into multiple directions from a symmetrical "omni-twist", but the branches that grow are all had the same chirality or handedness.
+I had it set up to **grow** tensegrity columns, and to divide into multiple directions from a symmetrical "omni-twist", but the branches that grew all had the same chirality or handedness.
 
 <video width="800" height="600" autoplay="autoplay" loop="true" muted="true">
   <source src="/movies/convergence-branches.mp4" type="video/mp4" />
