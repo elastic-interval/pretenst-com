@@ -1,7 +1,7 @@
 ---
 title: "Convergence"
 date: 2021-10-20
-description: "a sci-fi alien nest"
+description: "growing and reconnecting"
 categories: construction
 tags: [tensegrity]
 ---
@@ -13,6 +13,11 @@ One of the hardest parts of writing the tensegrity construction code in the app 
 Bringing loose ends together would allow bending into new and beautiful curved shapes!
 
 I had it set up to **grow** tensegrity columns, and to divide into multiple directions from a symmetrical "omni-twist", but the branches that grow are all had the same chirality or handedness.
+
+<video width="800" height="600" autoplay="autoplay" loop="true" muted="true">
+  <source src="/movies/convergence-branches.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 That is to say that they all ended with right-handed twists, or all with left-handed twists. The problem is that these *do not fit together properly*.
 
