@@ -1,6 +1,6 @@
 ---
 title: "Rebuilding the Halo"
-date: 2021-10-27
+date: 2021-10-28
 description: "finally got it right"
 categories: construction
 tags: [tensegrity]
