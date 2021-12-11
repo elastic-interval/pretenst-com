@@ -1,22 +1,20 @@
 {
   "files": {
-    "static/js/0.277ef16c.chunk.js": "/app/static/js/0.277ef16c.chunk.js",
-    "91a5158517bd4c4e5614.module.wasm": "/app/91a5158517bd4c4e5614.module.wasm",
-    "static/js/0.277ef16c.chunk.js.map": "/app/static/js/0.277ef16c.chunk.js.map",
-    "main.css": "/app/static/css/main.ace70fa9.chunk.css",
-    "main.js": "/app/static/js/main.9d0c6492.chunk.js",
-    "main.js.map": "/app/static/js/main.9d0c6492.chunk.js.map",
-    "runtime-main.js": "/app/static/js/runtime-main.8753fea8.js",
-    "runtime-main.js.map": "/app/static/js/runtime-main.8753fea8.js.map",
-    "static/js/3.0df57fdf.chunk.js": "/app/static/js/3.0df57fdf.chunk.js",
-    "static/js/3.0df57fdf.chunk.js.map": "/app/static/js/3.0df57fdf.chunk.js.map",
-    "static/js/4.b35ebbac.chunk.js": "/app/static/js/4.b35ebbac.chunk.js",
-    "static/js/4.b35ebbac.chunk.js.map": "/app/static/js/4.b35ebbac.chunk.js.map",
-    "static/js/5.90cb9634.chunk.js": "/app/static/js/5.90cb9634.chunk.js",
-    "static/js/5.90cb9634.chunk.js.map": "/app/static/js/5.90cb9634.chunk.js.map",
+    "static/js/0.09808338.chunk.js": "/app/static/js/0.09808338.chunk.js",
+    "d5073922c8e1b716a81b.module.wasm": "/app/d5073922c8e1b716a81b.module.wasm",
+    "static/js/0.09808338.chunk.js.map": "/app/static/js/0.09808338.chunk.js.map",
+    "main.css": "/app/static/css/main.756002a1.chunk.css",
+    "main.js": "/app/static/js/main.54c2fc3f.chunk.js",
+    "main.js.map": "/app/static/js/main.54c2fc3f.chunk.js.map",
+    "runtime-main.js": "/app/static/js/runtime-main.5c30f8ee.js",
+    "runtime-main.js.map": "/app/static/js/runtime-main.5c30f8ee.js.map",
+    "static/js/3.a3c63769.chunk.js": "/app/static/js/3.a3c63769.chunk.js",
+    "static/js/3.a3c63769.chunk.js.map": "/app/static/js/3.a3c63769.chunk.js.map",
+    "static/js/4.924eed12.chunk.js": "/app/static/js/4.924eed12.chunk.js",
+    "static/js/4.924eed12.chunk.js.map": "/app/static/js/4.924eed12.chunk.js.map",
     "index.html": "/app/index.html",
-    "precache-manifest.10caeee33e09a2bbb4a35fba01e1703b.js": "/app/precache-manifest.10caeee33e09a2bbb4a35fba01e1703b.js",
+    "precache-manifest.ae741ef9e0620147965818e584c691fa.js": "/app/precache-manifest.ae741ef9e0620147965818e584c691fa.js",
     "service-worker.js": "/app/service-worker.js",
-    "static/css/main.ace70fa9.chunk.css.map": "/app/static/css/main.ace70fa9.chunk.css.map"
+    "static/css/main.756002a1.chunk.css.map": "/app/static/css/main.756002a1.chunk.css.map"
   }
 }

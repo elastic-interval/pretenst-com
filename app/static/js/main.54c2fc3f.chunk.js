@@ -1,0 +1,2 @@
+(window.webpackJsonppretenst=window.webpackJsonppretenst||[]).push([[1],[function(n,t,e){n.exports=e(1)},function(n,t,e){"use strict";e.r(t);e(2),e(3);!async function(){const n=await e.e(0).then(e.bind(null,4));!async function(n,t){const i=await Promise.all([e.e(3),e.e(0),e.e(4)]).then(e.bind(null,5));await i.startReact(n,t)}(n,n.World.new())}()},function(n,t,e){},function(n,t,e){}],[[0,2]]]);
+//# sourceMappingURL=main.54c2fc3f.chunk.js.map
