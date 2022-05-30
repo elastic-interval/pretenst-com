@@ -96,3 +96,4 @@ This is a pretty nice result!  I think many people will find this more aesthetic
 
 ![](/images/2022-05/final-phi.jpg)
 
+In a way, though, you could say that I've come full circle from my very first posting introducing [prefab tension](/construction/2020/06/15/prefab-tension-1).
