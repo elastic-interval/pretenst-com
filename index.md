@@ -26,7 +26,7 @@ If you're going to be using these structures to communicate ideas with others, y
 
 Beyond that, there is a whole new dimension of understanding available if you can change the tensegrity from loose to tight and back. Few get this.
 
-Expand your experience by ordering your own **adjustable** tensegrity kit at [getpretenst.com](https://getpretenst.com/).
+Give your hands a treat by ordering your own **adjustable** tensegrity kit at [getpretenst.com](https://getpretenst.com/).
 
 ### Symmetrical
 
