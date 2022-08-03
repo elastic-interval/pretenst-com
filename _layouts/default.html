@@ -15,11 +15,13 @@
 	</style>
   </head>
   <body>
-      <header class="page-header" role="banner">
-      <div>
-        <a style="display: inline-block;" href="{{ site.github.repository_url }}" class="btn">Code</a>
-        <a style="display: inline-block; width: 30em" href="/"><h1 class="project-name">{{ site.title }}</h1></a>
-        <a style="display: inline-block;" href="{{ site.app_url }}" class="btn">App</a>
+    <header class="page-header" role="banner">
+      <div style="display: inline-flex">
+        <a href="{{ site.github.repository_url }}" class="btn">Code</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/"><h4 class="project-name">{{ site.title }}</h4></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{{ site.app_url }}" class="btn">App</a>
   	  </div>
     </header>
 
@@ -30,23 +32,23 @@
 
       {{ content }}
 
-        <h2>Pretenst Constructions:</h2>
+        <h2>History:</h2>
           {% for page in site.categories.construction %}
             <strong class="title">
                 {{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>": {{ page.description }}
             </strong>
             <br>
           {% endfor %}
-        <h2>Software:</h2>
-            {% for page in site.categories.software %}
-            <strong class="title">
-                {{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>": {{ page.description }}
-            </strong>
-            <br>
-        {% endfor %}
+<!--        <h2>Software:</h2>-->
+<!--            {% for page in site.categories.software %}-->
+<!--            <strong class="title">-->
+<!--                {{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>": {{ page.description }}-->
+<!--            </strong>-->
+<!--            <br>-->
+<!--        {% endfor %}-->
 
       <footer class="site-footer">
-        If you have questions or other feedback, please contact us <a href="mailto:pretenst@gmail.com?subject=Pretenst%20Tensegrity%20Design">pretenst@gmail.com</a>
+        <b>If you have questions or other feedback, please contact us:<b></b> <a href="mailto:pretenst@gmail.com?subject=Pretenst%20Tensegrity%20Design">pretenst@gmail.com</a>
       </footer>
     </main>
   </body>

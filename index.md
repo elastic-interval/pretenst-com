@@ -1,55 +1,37 @@
 ---
-title: Welcome!
+title: Open Source Tensegrity
 ---
 
-# Pretenst Design
+# Only Push and Pull
 
-If you imagine for a second you can picture something that **pulls** two other things together.
+In the 1960s [Ken Snelson](http://kennethsnelson.net/) first explored what could be done (artistically) with structures that were *based on tension and compression only*, and [Bucky Fuller](https://www.bfi.org/) elaborated the philosophical implications and called it **tensegrity**. [Tom Flemons](http://intensiondesigns.ca/archive/) showed us what it could mean in terms of biology. 
 
-![pull](/images/home/pull.jpg)
+This project starts *in the abstract* with a [home grown software model](https://github.com/elastic-interval/pretenst) (minimal physics engine) called **elastic interval geometry**, and extends the exploration into what can be [designed](https://pretenst.com/app/) and ultimately built in physical form when you work in terms of only push and pull forces.
 
-You should also be able to picture the opposite, something that **pushes** two things apart.
+![from virtual to real](/images/home/from-virtual-to-real.jpg)
 
-![push](/images/home/push.jpg)
+[![halo by crane](/images/home/halo.jpg)](https://pretenst.com/app/#construction;Halo-by-Crane)
 
-What is much harder to imagine is what you can do with these two simple ideas when you put them together.
+[![triped](/images/home/triped.jpg)](https://pretenst.com/app/#construction;Triped)
 
-    What could possibly be built from pushes and pulls alone?
+[![convergence](/images/home/convergence.jpg)](https://pretenst.com/app/#construction;Convergence)
 
-That question prompted me to build "Elastic Interval Geometry" as a computer model of a universe of *push and pull*, implemented as simply as possible.
+[![headless hug](/images/home/headless-hug.jpg)](https://pretenst.com/app/#construction;Headless-Hug)
 
-![complex models](/images/home/complex-models.jpg)
+# Your Hands
 
-After many years of testing the limits of what the model could do (an out-of-control hobby), and building quite elaborate algorithms around it for automated construction, I reached a local maximum of how fun it was to do things virtually.
+Unfortunately, pictures and movies and even live virtual models fail to really communicate what tensegrity is. The only way to really internalize this idea is to give it to your hands.
 
-I even went so far as to build "muscle" systems and let the push-pull structures compete in a [darwinian competition for survival](https://pretenst.com/app/#evolution), judged on their ability to coordinate twitches to crawl, walk or run to their target.
+If you're going to be using these structures to communicate ideas with others, you need structures which are durable and robust so they last for years.
 
-I found myself drawn back to physical space, wondering what could actually be built in the **real world**. 
+Beyond that, there is a whole new dimension of understanding available if you can change the tensegrity from loose to tight and back. Few get this.
 
-![real models](/images/home/real-models.jpg)
+Expand your experience by ordering your own **adjustable** tensegrity kit at [getpretenst.com](https://getpretenst.com/).
 
-# Tensegrity
+### Symmetrical
 
-**Tensegrity**, is a [real world art form](http://kennethsnelson.net/), as well as a [collection of ideas](https://books.google.nl/books/about/A_Fuller_Explanation.html?id=G8zttcNdKBAC), and it was above all the ideas which had fascinated me for decades.
+[![symmetrical](/images/home/symmetrical.jpg)](https://getpretenst.com/)
 
-The defining feature of tensegrity is that the **floating struts** don't touch each other and only held in place by a **network of cables**. The shape maintains its integrity because of the tension, with or without gravity.
+### Vertebra module
 
-When I began to build the structures in the real world, I was confronted with entirely new challenges. The biggest hurdle was always at the place where *push* and *pull* met each other, the connection **joints**.
-
-# Mission
-
-Before a tensegrity takes its shape, it must be must be **pre-tensioned**.
-
-Tensegrity structures are really hard to build, but the results are very satisfying, so the mission became to
-
-    make it easier so that more people can do it
-
-**Pretenst** tensegrity structures are built by hand, but the tension is connected up while the cords are [**slack**](https://subgenius.fandom.com/wiki/Slack) so it's never about pulling a cord tight.
-
-This is a much easier way, and only later on does the structure as a whole get tensioned, and then by *lengthening the struts*.
-
-Building these structures became easier after a year or more of [experimentation](construction/2020/06/15/prefab-tension-1) to find the right materials and techniques, but now I can finally offer an [inexpensive kit](https://getpretenst.com/) to people all over the world.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SJGDPl3rhwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-You can [get one for yourself or someone who should have it](https://getpretenst.com/), and spread the fun of learning with your hands!
+[![spine](/images/home/spine.jpg)](https://getpretenst.com/)
