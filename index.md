@@ -6,7 +6,7 @@ title: Open Source Tensegrity
 
 In the 1960s [Ken Snelson](http://kennethsnelson.net/) first explored what could be done (artistically) with structures that were *based on tension and compression only*, and [Bucky Fuller](https://www.bfi.org/) elaborated the philosophical implications and called it **tensegrity**. [Tom Flemons](http://intensiondesigns.ca/archive/) showed us what it could mean in terms of biology. 
 
-This project starts *in the abstract* with a [home grown software model](https://github.com/elastic-interval/pretenst) (minimal physics engine) called **elastic interval geometry**, and extends the exploration into what can be [designed](https://pretenst.com/app/) and ultimately built in physical form when you work in terms of only push and pull forces.
+The **Pretenst** project starts *in the abstract* with a [home grown software model](https://github.com/elastic-interval/pretenst) (minimal physics engine) called **elastic interval geometry**, and extends the exploration into what can be [designed](https://pretenst.com/app/) and ultimately built in physical form when you work in terms of only push and pull forces.
 
 ![from virtual to real](/images/home/from-virtual-to-real.jpg)
 
