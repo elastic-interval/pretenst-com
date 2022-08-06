@@ -10,13 +10,15 @@ The **Pretenst** project starts *in the abstract* with a [home grown software mo
 
 ![from virtual to real](/images/home/from-virtual-to-real.jpg)
 
-[![halo by crane](/images/home/halo.jpg)](https://pretenst.com/app/#construction;Halo-by-Crane)
+Click on the images below or scan the QR with your smart phone to see how the designs emerge.
 
-[![triped](/images/home/triped.jpg)](https://pretenst.com/app/#construction;Triped)
-
-[![convergence](/images/home/convergence.jpg)](https://pretenst.com/app/#construction;Convergence)
-
-[![headless hug](/images/home/headless-hug.jpg)](https://pretenst.com/app/#construction;Headless-Hug)
+<a href="https://pretenst.com/app/#construction;Halo-by-Crane" target="_blank"><img src="/images/home/halo.jpg"></a>
+<br>
+<a href="https://pretenst.com/app/#construction;Triped" target="_blank"><img src="/images/home/triped.jpg"></a>
+<br>
+<a href="https://pretenst.com/app/#construction;Convergence" target="_blank"><img src="/images/home/convergence.jpg"></a>
+<br>
+<a href="https://pretenst.com/app/#construction;Headless-Hug" target="_blank"><img src="/images/home/headless-hug.jpg"></a>
 
 # Your Hands
 
@@ -30,8 +32,8 @@ Give your hands a treat by ordering your own **adjustable** tensegrity kit at [g
 
 ### Symmetrical
 
-[![symmetrical](/images/home/symmetrical.jpg)](https://getpretenst.com/)
+<a href="https://getpretenst.com/" target="_blank"><img src="/images/home/symmetrical.jpg"></a>
 
 ### Vertebra module
 
-[![spine](/images/home/spine.jpg)](https://getpretenst.com/)
+<a href="https://getpretenst.com/" target="_blank"><img src="/images/home/spine.jpg"></a>
