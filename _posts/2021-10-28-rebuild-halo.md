@@ -120,11 +120,7 @@ The new Halo by Crane is easy to pick up and transport, and very strong. The Hal
 
 **Mission accomplished!**.
 
-<video width="800" height="1400" autoplay="autoplay" loop="true" muted="true">
-  <source src="/movies/halo-fist.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/761813514?h=773cecdb00" width="640" height="1137" frameborder="0" allowfullscreen></iframe>
 More importantly, it **no longer requires a guy wire** since the stem is strong enough now!  
 
 There is only one cord holding it upright and it is attached to the top of the lowermost bar.

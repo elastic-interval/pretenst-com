@@ -58,11 +58,7 @@ With the brass nicely polished, and some sunshine coming in the window, it was t
 
 We even started toying around with hanging the bubble from a brass Six Twist Essential, that I had previously put together.
 
-<video width="800" height="600" autoplay="autoplay" loop="true" muted="true">
-  <source src="/movies/30-push-dangle.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
+<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/761800134?h=a1a5c29161&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="30-push-dangle.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 This was a lovely result indeed. In fact, I decided to take it home with me.
 
 ## For the Living Room

@@ -22,18 +22,10 @@ The lessons learned along my journey from building the first structures to nearl
 
 That is to say tension *connected while slack*, and this allowed high-performance materials to be used, like *Dyneema* cord which is extremely strong and **almost inelastic**.
 
-<video width="800" height="600" autoplay="autoplay" loop="true" muted="true">
-  <source src="/movies/prefab-tension.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/761815126?h=ad2dd1597d" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 This strategy implies that the *compression* necessarily needs to be **extensible**, and since it has become the source of tightening, it needed to extend by *turning a nut* on a bolt to have enough strength.
 
-<video width="800" height="600" autoplay="autoplay" loop="true" muted="true">
-  <source src="/movies/turning-nut.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/761816014?h=bd349b68cd" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 Experience taught me that it was an extremely important consequence of this strategy was that it enables **loosening** the structure when it needs to be fixed, and *that happens*. Afterwards, it can be tightented up again.
 
 Another consequence is that tensegrities can be easily **re-tightened** as the materials and the connections get accustomed to high tension.

@@ -14,11 +14,7 @@ Bringing loose ends together would allow bending into new and beautiful curved s
 
 I had it set up to **grow** tensegrity columns, and to divide into multiple directions from a symmetrical "omni-twist", but the branches that grew all had the same chirality or handedness.
 
-<video width="800" height="600" autoplay="autoplay" loop="true" muted="true">
-  <source src="/movies/convergence-branches.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/761812566?h=00aa2505d2" width="640" height="410" frameborder="0" allowfullscreen></iframe>
 That is to say that they all ended with right-handed twists, or all with left-handed twists. The problem is that these *do not fit together properly*.
 
 The solution I came up with was to introduce a new "omni-twist" element in the middle of the loose ends, and connect properly to its faces.
@@ -97,9 +93,6 @@ One thing that I could take advantage of was the threefold symmetry, so every ba
 
 In the finished construction there are two rings suspended in the middle of the top and the bottom, so I could not help but string a cord from one to the other, as a kind of "axis".
 
-<video width="800" height="600" autoplay="autoplay" loop="true" muted="true">
-  <source src="/movies/convergence.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/761816606?h=36d7d90ae9" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
 Unfortunately my materials here were not quite strong enough, so I eventually had to reinforce the bottom long bars.
