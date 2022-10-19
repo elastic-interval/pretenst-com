@@ -1,61 +1,143 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
+<html lang="{{ site.lang | default: " en-US" }}">
+<head>
     <meta charset="UTF-8">
-{% seo %}
+    {% seo %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-  	<style>
-	.center {text-align: center;}
-    .page-header {padding: 1em;}
-    .project-name {color: white; }
-	body { background-color: #eddbd7; }
-	</style>
-  </head>
-  <body>
-    <header class="page-header" role="banner">
-      <div style="display: inline-flex;">
+    <style>
+        .center {
+            text-align: center;
+        }
+
+        .page-header {
+            padding: 1em;
+        }
+
+        .project-name {
+            color: white;
+        }
+
+        body {
+            background-color: #eddbd7;
+        }
+
+        /* Popup container */
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        /* The actual popup (appears on top) */
+        .popup .popuptext {
+            visibility: hidden;
+            width: fit-content;
+            color: black;
+            text-align: left;
+            border-radius: 6px;
+            border-style: solid;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 50%;
+            margin-left: -10em;
+        }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        /* Toggle this class when clicking on the popup container (hide and show the popup) */
+        .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s
+        }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        function showPopup() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+    </script>
+</head>
+<body>
+<header class="page-header" role="banner">
+    <div style="display: inline-flex;">
+        <div class="popup" onclick="showPopup()">
+            <div style="border-style: solid; border-width: 1px; padding-left: 0.8em; padding-right: 0.8em">
+                <strong>
+                    Constructions<br/>
+                    <div style="font-size: xxx-large">&#128065;</div>
+                </strong>
+            </div>
+            <div class="popuptext" id="myPopup"
+                 style="width: 45em; border-color: #7d5a29; border-style: solid; padding: 1em; opacity: 1; background-color: white">
+                <div style="float: right; font-size: xxx-large">&#128065;</div>
+                <h2>Projects:</h2>
+                {% for page in site.categories.construction %}
+                {{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>":
+                <i>{{ page.description }}</i>
+                <br>
+                {% endfor %}
+            </div>
+        </div>
         <a href="/"><h4 class="project-name">&nbsp;&nbsp;{{ site.title }}&nbsp;&nbsp;</h4></a>
         <div style="border-style: solid; border-width: 1px; padding-left: 0.8em; padding-right: 0.8em">
-          <a style="color: white" href="https://getpretenst.com/" target="_BLANK">get yours
-            <br/>
-            <img alt="get pretenst" src="/images/home/getpretenst-icon.jpg" height="64" width="64"/>
-          </a>
+            <a style="color: white" href="https://getpretenst.com/" target="_BLANK">get yours
+                <br/>
+                <img alt="get pretenst" src="/images/home/getpretenst-icon.jpg" height="64" width="64"/>
+            </a>
         </div>
-      </div>
-    </header>
+    </div>
+</header>
 
-    <main id="content" class="main-content" role="main">
+<main id="content" class="main-content" role="main">
 
-      <h1 class="project-name center">{{ page.title |  default: "" }}</h1>
-      <h2 class="project-tagline center">{{ page.description  |  default: "" }}</h2>
 
-      {{ content }}
+    <h1 class="project-name center">{{ page.title | default: "" }}</h1>
+    <h2 class="project-tagline center">{{ page.description | default: "" }}</h2>
 
-        <h2>History:</h2>
-          {% for page in site.categories.construction %}
-            <strong class="title">
-                {{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>": {{ page.description }}
-            </strong>
-            <br>
-          {% endfor %}
-<!--        <h2>Software:</h2>-->
-<!--            {% for page in site.categories.software %}-->
-<!--            <strong class="title">-->
-<!--                {{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>": {{ page.description }}-->
-<!--            </strong>-->
-<!--            <br>-->
-<!--        {% endfor %}-->
 
-      <footer class="site-footer">
+    {{ content }}
+
+    <footer class="site-footer">
         Contact: <a href="mailto:pretenst@gmail.com?subject=Pretenst%20Tensegrity%20Design">pretenst@gmail.com</a>
         <br>
-        <a href="/">Back to Homepage</a>
-        <a href="{{ site.app_url }}" target="_BLANK">Try the app</a>
+        <a href="/">Back to Homepage</a><br/>
+        <a href="{{ site.app_url }}" target="_BLANK">Try the app</a><br/>
         <a href="{{ site.github.repository_url }}" target="_BLANK">See the code</a>
-      </footer>
-    </main>
-  </body>
+    </footer>
+</main>
+</body>
 </html>
