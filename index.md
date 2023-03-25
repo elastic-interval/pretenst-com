@@ -2,6 +2,12 @@
 title: Open Source Tensegrity
 ---
 
+## [Webinar: Build your own tensegrity!](https://fasciatrainingacademy.com/product/tensegrity-webinar/)
+
+![mitosis](/images/2022-08/mitosis-z.jpg)
+
+You can [follow](/images/home/Tensegrity-Kit-Assembly.pdf) the instructions and get a head start.
+
 # Only Push and Pull
 
 In the 1960s [Ken Snelson](http://kennethsnelson.net/) first explored what could be done (artistically) with structures that were *based on using only continuous tension and floating compression*, and [Bucky Fuller](https://www.bfi.org/) elaborated the philosophical implications and called it **tensegrity**. [Tom Flemons](http://intensiondesigns.ca/archive/) showed us what it could mean in terms of biology. 
