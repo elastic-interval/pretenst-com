@@ -213,8 +213,6 @@ GEM
     multipart-post (2.1.1)
     nokogiri (1.14.2-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.14.2-x86_64-linux)
-      racc (~> 1.4)
     octokit (4.20.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
@@ -258,12 +256,13 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
-  x86_64-linux
+  arm64-darwin-22
 
 DEPENDENCIES
   github-pages
   jekyll-feed (~> 0.12)
+  jekyll-theme-cayman (~> 0.1.1)
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.2.6
+   2.3.26
