@@ -2,12 +2,6 @@
 title: Open Source Tensegrity
 ---
 
-## [Webinar: Build your own tensegrity!](https://fasciatrainingacademy.com/product/tensegrity-webinar/)
-
-![mitosis](/images/2022-08/mitosis-z.jpg)
-
-You can [follow](/images/home/Tensegrity-Kit-Assembly.pdf) the instructions and get a head start.
-
 # Only Push and Pull
 
 In the 1960s [Ken Snelson](http://kennethsnelson.net/) first explored what could be done (artistically) with structures that were *based on using only continuous tension and floating compression*, and [Bucky Fuller](https://www.bfi.org/) elaborated the philosophical implications and called it **tensegrity**. [Tom Flemons](http://intensiondesigns.ca/archive/) showed us what it could mean in terms of biology. 
@@ -35,11 +29,3 @@ If you're going to be using these structures to communicate ideas with others, y
 Beyond that, there is a whole new dimension of understanding available if you can change the tensegrity from loose to tight and back. Few get this.
 
 Give your hands a treat by ordering your own **adjustable** tensegrity kit at [getpretenst.com](https://getpretenst.com/).
-
-### Symmetrical
-
-<a href="https://getpretenst.com/" target="_blank"><img src="/images/home/symmetrical.jpg"></a>
-
-### Vertebra module
-
-<a href="https://getpretenst.com/" target="_blank"><img src="/images/home/spine.jpg"></a>

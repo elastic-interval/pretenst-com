@@ -23,66 +23,6 @@
         body {
             background-color: #eddbd7;
         }
-
-        /* Popup container */
-        .popup {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-        }
-
-        /* The actual popup (appears on top) */
-        .popup .popuptext {
-            visibility: hidden;
-            width: fit-content;
-            color: black;
-            text-align: left;
-            border-radius: 6px;
-            border-style: solid;
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            left: 50%;
-            margin-left: -10em;
-        }
-
-        /* Popup arrow */
-        .popup .popuptext::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: #555 transparent transparent transparent;
-        }
-
-        /* Toggle this class when clicking on the popup container (hide and show the popup) */
-        .popup .show {
-            visibility: visible;
-            -webkit-animation: fadeIn 1s;
-            animation: fadeIn 1s
-        }
-
-        /* Add animation (fade in the popup) */
-        @-webkit-keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
     </style>
     <script>
         function showPopup() {
@@ -94,30 +34,23 @@
 <body>
 <header class="page-header" role="banner">
     <div style="display: inline-flex;">
-        <div class="popup" onclick="showPopup()">
-            <div style="border-style: solid; border-width: 1px; padding-left: 0.8em; padding-right: 0.8em">
-                <strong>
-                    Constructions<br/>
-                    <div style="font-size: xxx-large">&#128065;</div>
-                </strong>
-            </div>
-            <div class="popuptext" id="myPopup"
-                 style="width: 45em; border-color: #7d5a29; border-style: solid; padding: 1em; opacity: 1; background-color: white">
-                <div style="float: right; font-size: xxx-large">&#128065;</div>
-                <h2>Projects:</h2>
-                {% for page in site.categories.construction %}
-                {{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>":
-                <i>{{ page.description }}</i>
-                <br>
-                {% endfor %}
-            </div>
-        </div>
-        <a href="/"><h4 class="project-name">&nbsp;&nbsp;{{ site.title }}&nbsp;&nbsp;</h4></a>
         <div style="border-style: solid; border-width: 1px; padding-left: 0.8em; padding-right: 0.8em">
             <a style="color: white" href="https://getpretenst.com/" target="_BLANK">get yours
                 <br/>
                 <img alt="get pretenst" src="/images/home/getpretenst-icon.jpg" height="64" width="64"/>
             </a>
+        </div>
+        <a href="/"><h4 class="project-name">&nbsp;&nbsp;{{ site.title }}&nbsp;&nbsp;</h4></a>
+        <div style="border-style: solid; border-width: 1px; padding-left: 0.8em; padding-right: 0.8em;">
+            <b>say hello!</b>
+            <br/>
+            <b>pretenst@gmail.com</b>
+            <br/>
+            <div style="display: inline-flex; text-align: center">
+                <a style="color:white" href="{{ site.app_url }}" target="_BLANK">[app]</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a style="color:white" href="{{ site.github.repository_url }}" target="_BLANK">[code]</a>
+            </div>
         </div>
     </div>
 </header>
@@ -128,15 +61,19 @@
     <h1 class="project-name center">{{ page.title | default: "" }}</h1>
     <h2 class="project-tagline center">{{ page.description | default: "" }}</h2>
 
-
     {{ content }}
 
     <footer class="site-footer">
-        Contact: <a href="mailto:pretenst@gmail.com?subject=Pretenst%20Tensegrity%20Design">pretenst@gmail.com</a>
+        <h2>Projects:</h2>
+        {% for page in site.categories.construction %}
+        {{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>":
+        <i>{{ page.description }}</i>
         <br>
-        <a href="/">Back to Homepage</a><br/>
-        <a href="{{ site.app_url }}" target="_BLANK">Try the app</a><br/>
-        <a href="{{ site.github.repository_url }}" target="_BLANK">See the code</a>
+        {% endfor %}
+
+        <br>
+        <a href="/">Back to Homepage</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </footer>
 </main>
 </body>
