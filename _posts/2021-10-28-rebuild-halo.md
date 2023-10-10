@@ -16,7 +16,7 @@ About a year ago today, I jumped in the deep end and tried to build a physical s
 
 ![building halo](/images/2020-10/twists-on-pvc-4.jpg)
 
-My [first building effort](/construction/2020/10/26/halo-1) was a hard learning experience, but through [heroic strengthening](/construction/2020/10/26/halo-2) I was able to create a stable "Halo by Crane" structure.
+My [first building effort](/construction/2020/11/02/halo-1) was a hard learning experience, but through [heroic strengthening](/construction/2020/11/02/halo-2) I was able to create a stable "Halo by Crane" structure.
 
 There was still something **bothersome** about it. Alright, the halo stood for months but I couldn't help but feel sorry for how much stress it looked like it was under.
 
@@ -34,7 +34,7 @@ I had just fully explored the [bow tie pattern](/construction/2021/04/08/bowtie-
 
 This way of constructing a tensegrity column resulted in a **much greater resistance to bending** than the technique typically used by Ken Snelson on his Needle.
 
-The weight that the Halo stem has to carry would have made it collapse had I not come up with the [guy wire trick](/construction/2020/10/26/halo-2), but maybe with bow tie style it could be strong enough.
+The weight that the Halo stem has to carry would have made it collapse had I not come up with the [guy wire trick](/construction/2020/11/02/halo-2), but maybe with bow tie style it could be strong enough.
 
 ## Gradual Thinning
 
