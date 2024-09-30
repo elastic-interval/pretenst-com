@@ -1,80 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ site.lang | default: " en-US" }}">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     {% seo %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <style>
-        .center {
-            text-align: center;
-        }
-
-        .page-header {
-            padding: 1em;
-        }
-
-        .project-name {
-            color: white;
-        }
-
-        body {
-            background-color: #eddbd7;
-        }
-    </style>
-    <script>
-        function showPopup() {
-            var popup = document.getElementById("myPopup");
-            popup.classList.toggle("show");
-        }
-    </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    {% include head-custom.html %}
 </head>
 <body>
-<header class="page-header" role="banner">
-    <div style="display: inline-flex;">
-        <div style="border-style: solid; border-width: 1px; padding-left: 0.8em; padding-right: 0.8em">
-            <a style="color: white" href="https://getpretenst.com/" target="_BLANK">get yours
-                <br/>
-                <img alt="get pretenst" src="/images/home/getpretenst-icon.jpg" height="64" width="64"/>
-            </a>
+<nav>
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+</nav>
+<div id="header">
+    <nav>
+        <ul>
+            <li class="fork"><a href="/">Home</a></li>
+            <li class="fork"><a href="{{ site.github.repository_url }}">Code</a></li>
+            <li class="fork"><a href="{{ site.app_url }}">App</a></li>
+            <li class="fork"><a href="{{ site.lab_url }}">Lab</a></li>
+            <li class="fork"><a href="https://getpretenst.com/">Get Yours</a></li>
+        </ul>
+    </nav>
+</div><!-- end header -->
+
+<div class="wrapper">
+
+    <section>
+        <div id="title">
+            <h1>{{ site.title | default: site.github.repository_name }}</h1>
+            <p>{{ site.description | default: site.github.project_tagline }}</p>
+            <hr>
+            <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
+            <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a
+                    href="https://twitter.com/mattgraham">mattgraham</a></span>
         </div>
-        <a href="/"><h4 class="project-name">&nbsp;&nbsp;{{ site.title }}&nbsp;&nbsp;</h4></a>
-        <div style="border-style: solid; border-width: 1px; padding-left: 0.8em; padding-right: 0.8em;">
-            <b>say hello!</b>
-            <br/>
-            <b>pretenst@gmail.com</b>
-            <br/>
-            <div style="display: inline-flex; text-align: center">
-                <a style="color:white" href="{{ site.app_url }}" target="_BLANK">[app]</a>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <a style="color:white" href="{{ site.github.repository_url }}" target="_BLANK">[code]</a>
-            </div>
+
+        {{ content }}
+
+        <div>
+            <hr/>
+            <h2>Projects:</h2>
+            {% for page in site.categories.construction %}
+            {{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>":
+            <i>{{ page.description }}</i>
+            <br>
+            {% endfor %}
         </div>
-    </div>
-</header>
 
-<main id="content" class="main-content" role="main">
+    </section>
 
-
-    <h1 class="project-name center">{{ page.title | default: "" }}</h1>
-    <h2 class="project-tagline center">{{ page.description | default: "" }}</h2>
-
-    {{ content }}
-
-    <footer class="site-footer">
-        <h2>Projects:</h2>
-        {% for page in site.categories.construction %}
-        {{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>":
-        <i>{{ page.description }}</i>
-        <br>
-        {% endfor %}
-
-        <br>
-        <a href="/">Back to Homepage</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </footer>
-</main>
+</div>
 </body>
 </html>

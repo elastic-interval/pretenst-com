@@ -1,12 +1,15 @@
-theme: jekyll-theme-cayman
+remote_theme: pages-themes/midnight@v0.2.0
 
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
+
 title: PretensT
 description: >
   Tensegrity design software with real world construction experiments
 email: pretenst@gmail.com
-app_url: https://pretenst.com/app/
+app_url: /app/
+lab_url: /lab/
 github:
   repository_url: https://github.com/elastic-interval/pretenst
   repository_name: pretenst

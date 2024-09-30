@@ -2,7 +2,6 @@
 title: "Elastic Bubble"
 date: 2020-07-27
 description: "building with elastic ease"
-categories: construction
 header-img: /images/2020-07/bubble-z.png
 categories: construction
 tags: [tensegrity]
