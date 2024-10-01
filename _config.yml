@@ -11,5 +11,5 @@ email: pretenst@gmail.com
 app_url: /app/
 lab_url: /lab/
 github:
-  repository_url: https://github.com/elastic-interval/pretenst
-  repository_name: pretenst
+  repository_url: https://github.com/elastic-interval/tensegrity-lab
+  repository_name: tensegrity-lab
