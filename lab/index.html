@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 <!-- Disable zooming: -->
@@ -10,9 +10,9 @@
 
     <!-- config for our rust wasm binary. go to https://trunkrs.dev/assets/#rust for more customization -->
     
-<script type="module" nonce="JAlLk8ZYKL6dRYs2hBRLMg==">
-import init, * as bindings from '/lab/tensegrity_lab-91b7b86f5645570f.js';
-const wasm = await init({ module_or_path: '/lab/tensegrity_lab-91b7b86f5645570f_bg.wasm' });
+<script type="module" nonce="kSd6SmBuxnd3xhgwStO3Gg==">
+import init, * as bindings from '/lab/tensegrity_lab-14ae6ff8e8dced05.js';
+const wasm = await init({ module_or_path: '/lab/tensegrity_lab-14ae6ff8e8dced05_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -25,9 +25,8 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     <base href="/lab/" />
 
     <link rel="icon" href="/lab/favicon-f402c8741ce815ec.ico" integrity="sha384&#x2D;jNOAE6jgE03LznIulCTVP6BH4NrTuROFjP9wj8bV1UUMJKtZAvstFpIAP3PDcFpx"/>
-    <link rel="stylesheet" href="/lab/style-e6b18d4d1e4d6bbd.css" integrity="sha384&#x2D;dPNxSIW8ReNhWBMwrDPQEe7f20IGbn4kdIwRWkKPnUv9&#x2F;ozg7TAfRCb6oFr9XXJk"/>
+    <link rel="stylesheet" href="/lab/style-99126570d3dc636c.css" integrity="sha384&#x2D;gBeBF4ceSyHUK7ufy&#x2F;GAeAnfX60XXSKNSXhaFx&#x2B;RnnpI&#x2F;m&#x2B;yW4Ehar9tgy79W34n"/>
 
-    
     
     
     
@@ -37,14 +36,48 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     <link rel="apple-touch-icon" href="icon_ios_touch_192.png">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#404040">
-<link rel="modulepreload" href="/lab/tensegrity_lab-91b7b86f5645570f.js" crossorigin=anonymous><link rel="preload" href="/lab/tensegrity_lab-91b7b86f5645570f_bg.wasm" crossorigin=anonymous as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/lab/tensegrity_lab-14ae6ff8e8dced05.js" crossorigin=anonymous><link rel="preload" href="/lab/tensegrity_lab-14ae6ff8e8dced05_bg.wasm" crossorigin=anonymous as="fetch" type="application/wasm"></head>
 <body>
+<div id="loading-screen">
+    <span class="loader"></span>
+    <div class="app-title">Tensegrity Lab</div>
+    <div class="loading-text">Loading application...</div>
+</div>
+<script>
+    // Check for dark mode preference
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.getElementById('loading-screen').classList.add('dark-theme');
+    }
 
+    // Hide loading screen when the application is ready
+    window.addEventListener('load', function() {
+        // This will hide the loading screen when all resources (including WASM) are loaded
+        const canvas = document.getElementById('canvas');
+        const loadingScreen = document.getElementById('loading-screen');
 
-<!-- The WASM code will resize the canvas dynamically -->
-<!-- the id is hardcoded in main.rs . so, make sure both match. -->
+        // Function to check if the application has started rendering
+        function checkCanvas() {
+            // Check if canvas has content (you may need to adjust this logic based on your app)
+            if (canvas.width > 0 && canvas.height > 0 &&
+                (canvas.getContext('webgpu') || canvas.getContext('webgl2'))) {
+                // App has started, fade out loading screen and fade in canvas
+                loadingScreen.style.opacity = '0';
+                canvas.classList.add('loaded');
+
+                // Remove loading screen after transition
+                setTimeout(function() {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            } else {
+                // Check again after a short delay
+                setTimeout(checkCanvas, 100);
+            }
+        }
+
+        // Start checking if canvas is ready
+        setTimeout(checkCanvas, 500);
+    });
+</script>
 <canvas id="canvas"></canvas>
-<div id="control_overlay"></div>
 </body>
-
 </html>
