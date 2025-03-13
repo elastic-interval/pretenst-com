@@ -10,7 +10,7 @@
 
     <!-- config for our rust wasm binary. go to https://trunkrs.dev/assets/#rust for more customization -->
     
-<script type="module" nonce="5SjUQP0usSgR0kIc+6ojEA==">
+<script type="module" nonce="CQ3gYT7oFq206APbkJ5z1Q==">
 import init, * as bindings from '/lab/tensegrity_lab-15fc91f47489b4ab.js';
 const wasm = await init({ module_or_path: '/lab/tensegrity_lab-15fc91f47489b4ab_bg.wasm' });
 
@@ -44,10 +44,6 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     <div class="loading-text">Loading application...</div>
 </div>
 <script>
-    document.addEventListener('touchmove', function(event) {
-        event.preventDefault();
-    }, { passive: false });
-
     // Check for dark mode preference
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.getElementById('loading-screen').classList.add('dark-theme');
