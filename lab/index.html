@@ -10,9 +10,9 @@
 
     <!-- config for our rust wasm binary. go to https://trunkrs.dev/assets/#rust for more customization -->
     
-<script type="module" nonce="kSd6SmBuxnd3xhgwStO3Gg==">
-import init, * as bindings from '/lab/tensegrity_lab-14ae6ff8e8dced05.js';
-const wasm = await init({ module_or_path: '/lab/tensegrity_lab-14ae6ff8e8dced05_bg.wasm' });
+<script type="module" nonce="HUGTWmE2reXp1ooT+gnlEQ==">
+import init, * as bindings from '/lab/tensegrity_lab-15fc91f47489b4ab.js';
+const wasm = await init({ module_or_path: '/lab/tensegrity_lab-15fc91f47489b4ab_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -36,7 +36,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     <link rel="apple-touch-icon" href="icon_ios_touch_192.png">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#404040">
-<link rel="modulepreload" href="/lab/tensegrity_lab-14ae6ff8e8dced05.js" crossorigin=anonymous><link rel="preload" href="/lab/tensegrity_lab-14ae6ff8e8dced05_bg.wasm" crossorigin=anonymous as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/lab/tensegrity_lab-15fc91f47489b4ab.js" crossorigin=anonymous><link rel="preload" href="/lab/tensegrity_lab-15fc91f47489b4ab_bg.wasm" crossorigin=anonymous as="fetch" type="application/wasm"></head>
 <body>
 <div id="loading-screen">
     <span class="loader"></span>
@@ -44,6 +44,10 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     <div class="loading-text">Loading application...</div>
 </div>
 <script>
+    document.addEventListener('touchmove', function(event) {
+        event.preventDefault();
+    }, { passive: false });
+
     // Check for dark mode preference
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.getElementById('loading-screen').classList.add('dark-theme');
