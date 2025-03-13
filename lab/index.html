@@ -10,9 +10,9 @@
 
     <!-- config for our rust wasm binary. go to https://trunkrs.dev/assets/#rust for more customization -->
     
-<script type="module" nonce="CQ3gYT7oFq206APbkJ5z1Q==">
-import init, * as bindings from '/lab/tensegrity_lab-15fc91f47489b4ab.js';
-const wasm = await init({ module_or_path: '/lab/tensegrity_lab-15fc91f47489b4ab_bg.wasm' });
+<script type="module" nonce="0dkjtMdfTKg1J3RdjHwrJg==">
+import init, * as bindings from '/lab/tensegrity_lab-d96a8a6d9bd85354.js';
+const wasm = await init({ module_or_path: '/lab/tensegrity_lab-d96a8a6d9bd85354_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -24,19 +24,14 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     <!-- this is the base url relative to which other urls will be constructed. trunk will insert this from the public-url option -->
     <base href="/lab/" />
 
-    <link rel="icon" href="/lab/favicon-f402c8741ce815ec.ico" integrity="sha384&#x2D;jNOAE6jgE03LznIulCTVP6BH4NrTuROFjP9wj8bV1UUMJKtZAvstFpIAP3PDcFpx"/>
+    <link rel="icon" href="/lab/favicon-141821dc603e69f4.svg" integrity="sha384&#x2D;FIYUgeXYomY1tqKNH&#x2B;&#x2F;mYchU&#x2F;vPsdLhw50l7ARqm2e&#x2B;2BA&#x2B;vmm0Gb54HlaLRkbDv"/>
     <link rel="stylesheet" href="/lab/style-99126570d3dc636c.css" integrity="sha384&#x2D;gBeBF4ceSyHUK7ufy&#x2F;GAeAnfX60XXSKNSXhaFx&#x2B;RnnpI&#x2F;m&#x2B;yW4Ehar9tgy79W34n"/>
-
     
     
     
-    
-
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="icon_ios_touch_192.png">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#404040">
-<link rel="modulepreload" href="/lab/tensegrity_lab-15fc91f47489b4ab.js" crossorigin=anonymous><link rel="preload" href="/lab/tensegrity_lab-15fc91f47489b4ab_bg.wasm" crossorigin=anonymous as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/lab/tensegrity_lab-d96a8a6d9bd85354.js" crossorigin=anonymous><link rel="preload" href="/lab/tensegrity_lab-d96a8a6d9bd85354_bg.wasm" crossorigin=anonymous as="fetch" type="application/wasm"></head>
 <body>
 <div id="loading-screen">
     <span class="loader"></span>
@@ -50,7 +45,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     }
 
     // Hide loading screen when the application is ready
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         // This will hide the loading screen when all resources (including WASM) are loaded
         const canvas = document.getElementById('canvas');
         const loadingScreen = document.getElementById('loading-screen');
@@ -65,7 +60,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
                 canvas.classList.add('loaded');
 
                 // Remove loading screen after transition
-                setTimeout(function() {
+                setTimeout(function () {
                     loadingScreen.style.display = 'none';
                 }, 500);
             } else {
