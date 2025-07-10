@@ -11,29 +11,38 @@ If you're standing beside it now, send me a selfie!
 
 If you found yourself staring at it and seeing that there were some things that looked **not quite right**, then I have but one thing to say to you:
 
-	"I seek the finest and the bravest Knights in the 
-	land to join me in my court at Camelot. You have 
-	proved yourself worthy. Will you join me?"
-	- Arthur, King of the Britons (coincidentally also pretenst@gmail.com)
+<div style="margin-left: 2em;">
+<I>"I seek the finest and the bravest Knights in the 
+land to join me in my court at Camelot. You have 
+proved yourself worthy. Will you join me?"</I>
+<br>
+- Arthur, King of the Britons (coincidentally also pretenst@gmail.com)
+<br>
+</div>
+---
 
 In other words, this is **Open Source**, meaning that you get to see how it is made. So if you are interested, or even maybe want to get involved in the future projects like this, let me know.
 
 ## A Little about Art
 
-This all began as a software project, and I am at heart a software developer (sorry, so this is going to get weird), so when I think of art, I think of what [Joscha Bach](http://bach.ai/) describes.
+This all began as a software project, and I am at heart a software developer (sorry, so this is going to get weird). When I think of art, I think of what [Joscha Bach](http://bach.ai/) describes.
 
-	In machine learning, a loss function measures how  
-	far off a model's predictions are from the desired 
-	outcomes - it quantifies error or deviation. The 
-	system learns by minimizing this loss function, 
-	essentially being guided by its mistakes.
-	
-	Rather than seeing these limitations as obstacles to 
-	overcome, the artist develops an aesthetic 
-	appreciation for the very thing that creates tension 
-	between intention and outcome. The "loss function" 
-	becomes not just a tool for improvement, but a 
-	source of creative discovery and emotional resonance.
+<div style="margin-left: 2em;">
+In machine learning, a loss function measures how  
+far off a model's predictions are from the desired 
+outcomes - it quantifies error or deviation. The 
+system learns by minimizing this loss function, 
+essentially being guided by its mistakes.
+<br><br>
+Rather than seeing these limitations as obstacles to 
+overcome, the artist develops an aesthetic 
+appreciation for the very thing that creates tension 
+between intention and outcome. The "loss function" 
+becomes not just a tool for improvement, but a 
+source of creative discovery and emotional resonance.
+</div>
+
+---
 
 # Background: Only Push and Pull
 
