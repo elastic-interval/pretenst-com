@@ -5,6 +5,8 @@ title: Open Source Tensegrity
 
 If you saw this structure at [Wildeburg](https://wildeburg.nl/) festival, then give me a shout at **pretenst@gmail.com** and let me know what you think! To tag along for more, follow [De Twips](https://www.instagram.com/detwips?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==) on Instagram.
 
+If you're standing beside it now, send me a selfie!
+
 ![Twips](/images/home/twips-final.jpg)
 
 If you found yourself staring at it and seeing that there were some things that looked **not quite right**, then I have but one thing to say to you:
