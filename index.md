@@ -3,7 +3,7 @@ title: Open Source Tensegrity
 ---
 # Open Source Tensegrity
 
-If you saw this structure at Wildeburg festival, then give me a shout at **pretenst@gmail.com** and let me know what you think! To tag along for more, follow [De Twips](https://www.instagram.com/detwips?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==) on Instagram.
+If you saw this structure at [Wildeburg](https://wildeburg.nl/) festival, then give me a shout at **pretenst@gmail.com** and let me know what you think! To tag along for more, follow [De Twips](https://www.instagram.com/detwips?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==) on Instagram.
 
 ![Twips](/images/home/twips-final.jpg)
 
