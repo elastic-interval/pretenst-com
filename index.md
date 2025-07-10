@@ -61,13 +61,3 @@ Click on the images below or scan the QR with your smart phone to see how the de
 <a href="https://pretenst.com/app/#construction;Convergence" target="_blank"><img src="/images/home/convergence.jpg"></a>
 <br>
 <a href="https://pretenst.com/app/#construction;Headless-Hug" target="_blank"><img src="/images/home/headless-hug.jpg"></a>
-
-# Your Hands
-
-Unfortunately, pictures and movies and even live virtual models fail to really communicate what tensegrity is. The only way to really internalize this idea is to give it to your hands.
-
-If you're going to be using these structures to communicate ideas with others, you need structures which are durable and robust so they last for years.
-
-Beyond that, there is a whole new dimension of understanding available if you can change the tensegrity from loose to tight and back. Few get this.
-
-Give your hands a treat by ordering your own **adjustable** tensegrity kit at [getpretenst.com](https://getpretenst.com/).
