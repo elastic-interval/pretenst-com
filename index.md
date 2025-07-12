@@ -7,7 +7,7 @@ If you saw this structure at [Wildeburg](https://wildeburg.nl/) festival, then g
 
 If you're standing beside it now, send me a selfie!
 
-![Twips](/images/home/twips-final.jpg)
+![Twips](/images/home/twips-festival.jpg)
 
 If you found yourself staring at it and seeing that there were some things that looked **not quite right**, then I have but one thing to say to you:
 
@@ -19,9 +19,14 @@ proved yourself worthy. Will you join me?"</I>
 - Arthur, King of the Britons (coincidentally also pretenst@gmail.com)
 <br>
 </div>
+
 ---
 
+
 In other words, this is **Open Source**, meaning that you get to see how it is made. So if you are interested, or even maybe want to get involved in the future projects like this, let me know.
+
+![Twips](/images/home/twips-final.jpg)
+
 
 ## A Little about Art
 
