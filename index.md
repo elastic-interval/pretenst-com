@@ -3,16 +3,11 @@ title: Open Source Tensegrity
 ---
 # Open Source Tensegrity
 
-A full-scale Pretenst tensegrity structure stood at the [Wildeburg](https://wildeburg.nl/) festival.
+Our latest creation stood ten meters tall at the [Wildeburg](https://wildeburg.nl/) festival last summer.
 
 ![Twips](/images/home/twips-festival.jpg)
 
----
-
-In other words, this is **Open Source**, meaning that you get to see how it is made. So if you are interested, or even maybe want to get involved in the future projects like this, let me know.
-
-![Twips](/images/home/twips-final.jpg)
-
+You can see open source the [software model](/lab/) that was used to create it.
 
 ## A Little about Art
 
