@@ -1,67 +1,73 @@
-<!doctype html>
-<html lang="{{ site.lang | default: " en-US" }}">
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    {% seo %}
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    {% include head-custom.html %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% seo %}
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Syncopate:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ '/assets/css/fluxe.css' | relative_url }}" />
 </head>
 <body>
-<nav>
-    <a href="/">Home</a>
-    <a href="/blog/">Blog</a>
-</nav>
-<div id="header">
-    <nav>
-        <ul>
-            <li class="fork"><a href="/">Home</a></li>
-            <li class="fork"><a href="{{ site.github.repository_url }}">Code</a></li>
-            <li class="fork"><a href="{{ site.lab_url }}">Lab (Rust/WGPU)</a></li>
-            <li class="fork"><a href="{{ site.app_url }}">App (TS/React/Rust)</a></li>
-            <li class="fork"><a href="https://getpretenst.com/">Physical</a></li>
-            <li class="fork"><a href="https://youtube.com/playlist?list=PLnnq4ehQ0uCV5RAzdJh6GVIUys-atTf-1&si=82shGDLQSctxtHJF">Video Podcast</a></li>
-        </ul>
-    </nav>
-</div><!-- end header -->
 
-<div class="wrapper">
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-    <section>
-        <div id="title">
-            <h1>{{ site.title | default: site.github.repository_name }}</h1>
-            <p>{{ site.description | default: site.github.project_tagline }}</p>
-            <hr>
-            <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
-            <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a
-                    href="https://twitter.com/mattgraham">mattgraham</a></span>
-        </div>
+  {% include header.html %}
 
-        {{ content }}
+  <main id="main">
+    {{ content }}
+  </main>
 
-        <div>
-            <hr/>
-            <h2>Projects:</h2>
-            {% for page in site.categories.construction %}
-            {{page.date | date: "%Y-%m-%d"}}: "<a href="{{ page.url | replace:'.html','' }}">{{ page.title }}</a>":
-            <i>{{ page.description }}</i>
-            <br>
-            {% endfor %}
-        </div>
+  {% include footer.html %}
 
-    </section>
+  <script>
+    // Mobile nav drawer
+    (function() {
+      const hamburger = document.getElementById('hamburger');
+      const drawer    = document.getElementById('navDrawer');
+      if (!hamburger || !drawer) return;
 
-</div>
+      function closeDrawer() {
+        drawer.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+      window.closeDrawer = closeDrawer;
+
+      hamburger.addEventListener('click', () => {
+        const isOpen = drawer.classList.toggle('open');
+        hamburger.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeDrawer();
+      });
+    })();
+
+    // Scroll reveal
+    (function() {
+      const reveals = document.querySelectorAll('.reveal');
+      if (!reveals.length) return;
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const siblings = [...entry.target.parentElement.querySelectorAll('.reveal')];
+            const idx = siblings.indexOf(entry.target);
+            entry.target.style.transitionDelay = (idx * 0.08) + 's';
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      reveals.forEach(el => observer.observe(el));
+    })();
+  </script>
+
+  {% if page.extra_js %}{{ page.extra_js }}{% endif %}
+
 </body>
 </html>

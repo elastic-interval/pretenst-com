@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bouncy Wooden Sphere — Fluxe by Gerald de Jong</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Syncopate:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-base:#07111e; --bg-surface:#0d1a2b; --bg-raised:#112236;
+      --text-primary:#f0f4f8; --text-secondary:#c5d4e0; --text-muted:#8ba5bc;
+      --accent:#5bafd6; --accent-dim:#2e5f7a;
+      --border:#1e3548; --border-light:#2a4a62;
+      --font-display:'Syncopate',sans-serif;
+      --font-serif:'Cormorant Garamond',serif;
+      --font-body:'DM Sans',sans-serif;
+      --content-w:680px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;font-size:16px;}
+    body{background:var(--bg-base);color:var(--text-primary);font-family:var(--font-body);font-weight:400;line-height:1.7;overflow-x:hidden;}
+    img{max-width:100%;display:block;}
+    a{color:inherit;}
+
+    .skip-link{position:absolute;top:-100%;left:1rem;background:var(--accent);color:var(--bg-base);padding:.5rem 1rem;font-size:.9rem;font-weight:500;border-radius:0 0 4px 4px;z-index:9999;text-decoration:none;}
+    .skip-link:focus{top:0;}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 3rem;background:rgba(7,17,30,.92);border-bottom:1px solid var(--border);backdrop-filter:blur(8px);}
+    .nav-brand{display:flex;flex-direction:column;text-decoration:none;line-height:1.1;}
+    .brand-fluxe{font-family:var(--font-display);font-size:1.25rem;font-weight:700;letter-spacing:.18em;color:var(--text-primary);}
+    .brand-by{font-size:.7rem;font-weight:400;letter-spacing:.2em;color:var(--text-muted);text-transform:uppercase;margin-top:.15rem;}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:.875rem;letter-spacing:.08em;color:var(--text-secondary);text-decoration:none;padding:.25rem 0;border-bottom:2px solid transparent;transition:color .25s,border-color .25s;}
+    .nav-links a:hover,.nav-links a:focus{color:var(--text-primary);border-bottom-color:var(--accent);outline:none;}
+    .nav-links a.active{color:var(--text-primary);border-bottom-color:var(--accent);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.5rem;}
+    .nav-hamburger span{display:block;width:24px;height:2px;background:var(--text-secondary);transition:all .3s ease;}
+    .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .nav-hamburger.open span:nth-child(2){opacity:0;}
+    .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .nav-drawer{display:none;position:fixed;inset:0;background:rgba(7,17,30,.98);z-index:250;flex-direction:column;align-items:center;justify-content:center;gap:2rem;}
+    .nav-drawer.open{display:flex;}
+    .nav-drawer a{font-family:var(--font-serif);font-size:2rem;font-weight:600;color:var(--text-primary);text-decoration:none;transition:color .2s;}
+    .nav-drawer a:hover{color:var(--accent);}
+
+    /* BREADCRUMB */
+    .breadcrumb{max-width:1100px;margin:0 auto;padding:6rem 3rem 0;display:flex;align-items:center;gap:.6rem;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);}
+    .breadcrumb a{color:var(--text-muted);text-decoration:none;transition:color .2s;}
+    .breadcrumb a:hover{color:var(--accent);}
+    .breadcrumb-sep{opacity:.4;}
+
+    /* HERO */
+    .hero-image{max-width:1100px;margin:1.5rem auto 0;padding:0 3rem;}
+    .hero-image .photo-slot{aspect-ratio:16/9;background:var(--bg-surface);border:1px solid var(--border);overflow:hidden;}
+    .hero-image img{width:100%;height:100%;object-fit:cover;}
+    .photo-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;color:var(--text-muted);padding:2rem;text-align:center;}
+    .photo-placeholder svg{opacity:.2;width:48px;height:48px;}
+    .photo-placeholder p{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;opacity:.45;}
+
+    /* WORK HEADER */
+    .work-header{max-width:1100px;margin:0 auto;padding:3rem 3rem 0;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;}
+    .work-eyebrow{display:block;font-size:.72rem;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:var(--accent);margin-bottom:.85rem;}
+    .work-title{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,3rem);font-weight:700;letter-spacing:.1em;color:var(--text-primary);line-height:1.1;margin-bottom:.75rem;}
+    .work-subtitle{font-family:var(--font-serif);font-size:1.2rem;font-style:italic;color:var(--text-secondary);line-height:1.6;}
+    .work-meta{display:flex;flex-direction:column;align-items:flex-end;gap:.5rem;padding-top:.25rem;}
+    .meta-item{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);text-align:right;}
+    .meta-item span{display:block;color:var(--text-secondary);font-weight:500;margin-top:.1rem;}
+
+    /* NARRATIVE */
+    .narrative{max-width:1100px;margin:0 auto;padding:4rem 3rem 0;}
+
+    /* Each chapter */
+    .chapter{margin-bottom:4.5rem;}
+    .chapter:last-child{margin-bottom:0;}
+
+    .chapter h2{
+      font-family:var(--font-serif);
+      font-size:1.5rem;
+      font-weight:600;
+      color:var(--text-primary);
+      margin-bottom:1.25rem;
+      line-height:1.3;
+      max-width:var(--content-w);
+    }
+
+    .chapter p{
+      font-size:1.05rem;
+      line-height:1.95;
+      color:var(--text-secondary);
+      margin-bottom:1.25rem;
+      max-width:var(--content-w);
+    }
+    .chapter p:last-child{margin-bottom:0;}
+    .chapter p strong{color:var(--text-primary);font-weight:500;}
+
+    /* Inline image — sits within the narrative flow */
+    .inline-img{margin:2.5rem 0;}
+    .inline-img .photo-slot{background:var(--bg-surface);border:1px solid var(--border);overflow:hidden;}
+    .inline-img .photo-slot--wide{aspect-ratio:4/3;max-width:var(--content-w);}
+    .inline-img .photo-slot--full{aspect-ratio:16/9;}
+    .inline-img .photo-slot--portrait{aspect-ratio:3/4;max-width:460px;}
+    .inline-img img{width:100%;height:100%;object-fit:cover;}
+    .inline-img figcaption{font-size:.75rem;letter-spacing:.08em;color:var(--text-muted);padding:.6rem 0 0;font-style:italic;}
+
+    /* Pull quote */
+    .pull-quote{margin:2.5rem 0;padding:1.75rem 1.75rem 1.75rem 2rem;border-left:3px solid var(--accent);background:var(--bg-raised);max-width:var(--content-w);}
+    .pull-quote p{font-family:var(--font-serif);font-size:1.35rem!important;font-style:italic;color:var(--text-primary)!important;line-height:1.6!important;margin-bottom:0!important;max-width:100%!important;}
+
+    /* Video embed */
+    .video-wrap{margin:2.5rem 0;position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:var(--bg-surface);border:1px solid var(--border);}
+    .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;}
+
+    /* WORK NAV */
+    .work-nav{border-top:1px solid var(--border);margin-top:6rem;}
+    .work-nav-inner{max-width:1100px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);}
+    .work-nav-item{background:var(--bg-base);padding:2.5rem 2rem;text-decoration:none;display:flex;flex-direction:column;gap:.5rem;transition:background .25s;}
+    .work-nav-item:hover,.work-nav-item:focus{background:var(--bg-surface);outline:none;}
+    .work-nav-item--next{text-align:right;align-items:flex-end;}
+    .nav-direction{font-size:.68rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--text-muted);}
+    .nav-work-title{font-family:var(--font-serif);font-size:1.2rem;font-weight:600;color:var(--text-primary);line-height:1.3;}
+    .nav-work-sub{font-size:.8rem;font-style:italic;color:var(--text-muted);}
+    .nav-arrow{font-size:1rem;color:var(--accent);margin-top:.25rem;}
+
+    .back-to-works{max-width:1100px;margin:0 auto;padding:2rem 3rem;text-align:center;}
+    .back-to-works a{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;transition:color .2s;}
+    .back-to-works a:hover{color:var(--accent);}
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--border);background:var(--bg-base);padding:3rem;display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:auto auto;align-items:center;gap:1.25rem 2rem;}
+    .footer-brand{font-family:var(--font-display);font-size:1rem;letter-spacing:.2em;color:var(--text-muted);grid-column:1;grid-row:1;}
+    .footer-nav{list-style:none;display:flex;gap:1.75rem;flex-wrap:wrap;grid-column:2;grid-row:1;}
+    .footer-nav a{font-size:.82rem;letter-spacing:.1em;color:var(--text-muted);text-decoration:none;transition:color .2s;}
+    .footer-nav a:hover,.footer-nav a:focus{color:var(--text-secondary);outline:none;}
+    .footer-socials{display:flex;gap:1.25rem;align-items:center;grid-column:3;grid-row:1;}
+    .footer-social-link{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--border-light);color:var(--text-muted);text-decoration:none;transition:border-color .25s,color .25s,background .25s;}
+    .footer-social-link:hover,.footer-social-link:focus{border-color:var(--accent);color:var(--accent);background:rgba(91,175,214,.08);outline:none;}
+    .footer-social-link svg{width:20px;height:20px;fill:currentColor;}
+    .footer-copy{font-size:.75rem;color:var(--text-muted);opacity:.6;grid-column:1/-1;grid-row:2;}
+
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      nav{padding:1rem 1.5rem;}
+      .breadcrumb{padding:6rem 1.5rem 0;}
+      .hero-image{padding:0 1.5rem;}
+      .work-header{padding:2.5rem 1.5rem 0;grid-template-columns:1fr;gap:1rem;}
+      .work-meta{align-items:flex-start;flex-direction:row;flex-wrap:wrap;gap:1.5rem;}
+      .meta-item{text-align:left;}
+      .narrative{padding:3rem 1.5rem 0;}
+    }
+    @media(max-width:600px){
+      .nav-links{display:none;}
+      .nav-hamburger{display:flex;}
+      .breadcrumb{padding:5.5rem 1.25rem 0;font-size:.68rem;}
+      .hero-image{padding:0 1.25rem;}
+      .work-header{padding:2rem 1.25rem 0;}
+      .narrative{padding:2.5rem 1.25rem 0;}
+      .inline-img .photo-slot--portrait{max-width:100%;}
+      .work-nav-inner{grid-template-columns:1fr;}
+      .work-nav-item--next{text-align:left;align-items:flex-start;}
+      .back-to-works{padding:1.5rem 1.25rem;}
+      footer{grid-template-columns:1fr;padding:2rem 1.25rem;}
+      .footer-brand,.footer-nav,.footer-socials,.footer-copy{grid-column:1;grid-row:auto;}
+      .footer-nav{gap:1rem;}
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <a class="nav-brand" href="../index.html" aria-label="Fluxe home">
+      <span class="brand-fluxe">FLUXE</span>
+      <span class="brand-by">by Gerald de Jong</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../works.html" class="active">Works</a></li>
+      <li><a href="../lab.html">Lab</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <a href="../index.html" onclick="closeDrawer()">Home</a>
+    <a href="../about.html" onclick="closeDrawer()">About</a>
+    <a href="../works.html" onclick="closeDrawer()">Works</a>
+    <a href="../lab.html" onclick="closeDrawer()">Lab</a>
+    <a href="../contact.html" onclick="closeDrawer()">Contact</a>
+  </div>
+
+  <main id="main">
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../works.html">Works</a>
+      <span class="breadcrumb-sep" aria-hidden="true">—</span>
+      <span>Bouncy Wooden Sphere</span>
+    </div>
+
+    <!-- HERO IMAGE -->
+    <div class="hero-image reveal">
+      <div class="photo-slot">
+        <!-- Replace with: <img src="../img/bouncy-wooden-sphere-hero.jpg" alt="Bouncy Wooden Sphere — completed sculpture"> -->
+        <div class="photo-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+          <p>Hero image — completed Bouncy Wooden Sphere</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- WORK HEADER -->
+    <div class="work-header reveal">
+      <div>
+        <span class="work-eyebrow">2024</span>
+        <h1 class="work-title">Bouncy Wooden Sphere</h1>
+        <p class="work-subtitle">what you can do with a discarded bed</p>
+      </div>
+      <div class="work-meta" aria-label="Work details">
+        <div class="meta-item">Material<span>Wood, Dyneema cord</span></div>
+        <div class="meta-item">Elements<span>30 slats, 60 cords</span></div>
+        <div class="meta-item">Year<span>2024</span></div>
+      </div>
+    </div>
+
+    <!-- NARRATIVE -->
+    <div class="narrative">
+
+      <div class="chapter reveal">
+        <h2>Found a discarded bed</h2>
+        <p>One day I was taking out the garbage bag to throw in the container on my street.</p>
+        <p>It was raining quite hard, but I didn't have to walk far, so I expected to stay fairly dry.</p>
+        <p>Beside the garbage container someone had discarded a double bed with slats, like this one:</p>
+
+        <figure class="inline-img">
+          <div class="photo-slot photo-slot--wide">
+            <!-- Replace with: <img src="../img/bws-bed.jpg" alt="A discarded double bed with slats"> -->
+            <div class="photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="1"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+              <p>The discarded bed with slats</p>
+            </div>
+          </div>
+          <figcaption>The bed that started it all</figcaption>
+        </figure>
+
+        <p>Normal people would probably continue with their day, but I couldn't help but stand there and count the slats, because if there were <strong>thirty</strong> or more, I could <strong>make</strong> something out of them!</p>
+        <p>I was thinking of an interesting structure that I had once made from PVC pipe, which used the springiness of the curving pipes, rather than relying on the springiness of the cable. I suppose this is also a kind of tensegrity.</p>
+
+        <figure class="inline-img">
+          <div class="photo-slot photo-slot--wide">
+            <!-- Replace with: <img src="../img/bws-pvc-reference.jpg" alt="PVC pipe tensegrity reference structure"> -->
+            <div class="photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M8 8l8 8M16 8l-8 8"/></svg>
+              <p>PVC pipe tensegrity reference</p>
+            </div>
+          </div>
+          <figcaption>A previous PVC structure — the inspiration for the sphere form</figcaption>
+        </figure>
+
+        <p>So yes, I ended up spending a long time in the rain getting soaked while demolishing the bed to collect those beautiful strong curved slats and taking them home.</p>
+      </div>
+
+      <div class="chapter reveal">
+        <h2>Thirty slats</h2>
+        <p>After collecting and cleaning the slats (one to spare, just in case), I was ready to start figuring out how to use some Dyneema cord and turn the bed into a <strong>sphere</strong>!</p>
+
+        <figure class="inline-img">
+          <div class="photo-slot photo-slot--wide">
+            <!-- Replace with: <img src="../img/bws-slats.jpg" alt="30 wooden slats laid out with a spool of Dyneema cord"> -->
+            <div class="photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="3" y="8" width="18" height="2"/><rect x="3" y="12" width="18" height="2"/><rect x="3" y="16" width="18" height="2"/></svg>
+              <p>30 slats + Dyneema cord spool</p>
+            </div>
+          </div>
+          <figcaption>Thirty slats and sixty cords — all the raw material needed</figcaption>
+        </figure>
+      </div>
+
+      <div class="chapter reveal">
+        <h2>Four holes equally spaced</h2>
+        <p>The first thing to do is to drill four holes in each slat, and the holes have to be big enough to allow the cord to pass through, but not too big that they would fail to hold back a knot.</p>
+
+        <figure class="inline-img">
+          <div class="photo-slot photo-slot--wide">
+            <!-- Replace with: <img src="../img/bws-drilling.jpg" alt="Drilling holes in slats"> -->
+            <div class="photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M14 2l6 6-10 10H4v-6L14 2z"/><line x1="14" y1="8" x2="10" y2="12"/></svg>
+              <p>Drilling four equally spaced holes per slat</p>
+            </div>
+          </div>
+          <figcaption>Four holes per slat — 120 holes in total</figcaption>
+        </figure>
+
+        <p>I was actually able to enlist the help of my Sicilian friend, so we were able to turn the process into a fairly efficient assembly line.</p>
+        <p>He was drilling holes into slat after slat, which is of course 120 holes in total, while I got busy cutting 60 cords of approximately the right length and stringing them through the holes.</p>
+        <p>Then I made a knot at one end of all the cords and pulled them "upward" through the middle two holes of each slat.</p>
+
+        <figure class="inline-img">
+          <div class="photo-slot photo-slot--wide">
+            <!-- Replace with: <img src="../img/bws-slats-drilled.jpg" alt="Drilled slats ready for assembly"> -->
+            <div class="photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="3" y="6" width="18" height="3" rx="1"/><circle cx="7" cy="7.5" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="17" cy="7.5" r="1"/></svg>
+              <p>Drilled slats ready for stringing</p>
+            </div>
+          </div>
+          <figcaption>Slats drilled and ready — an efficient assembly line with two pairs of hands</figcaption>
+        </figure>
+      </div>
+
+      <div class="chapter reveal">
+        <h2>Built hanging</h2>
+        <p>Since this thing is going to end up as a sphere, it's a lot easier to hang it and build downwards.</p>
+        <p>It was very nice to be able to do this with the help of my friend, because it was much easier with four hands than it would have been with two.</p>
+
+        <figure class="inline-img">
+          <div class="photo-slot photo-slot--wide">
+            <!-- Replace with: <img src="../img/bws-hanging-build.jpg" alt="Building the sphere hanging from above"> -->
+            <div class="photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><line x1="12" y1="2" x2="12" y2="6"/><circle cx="12" cy="14" r="8"/></svg>
+              <p>Building the sphere hanging downward</p>
+            </div>
+          </div>
+          <figcaption>Hanging and building down — much easier with four hands</figcaption>
+        </figure>
+
+        <div class="pull-quote">
+          <p>"It only really gets its shape when you make the final connections."</p>
+        </div>
+
+        <p>We had to quite forcefully pull the cords through holes which were almost exactly the width of the cord itself, and then tie a knot, and this all had to happen kind of hanging in midair.</p>
+        <p>The challenge of putting this together was fun, but as usual in the construction of tensegrity, it only really gets its shape when you make the final connections.</p>
+
+        <figure class="inline-img">
+          <div class="photo-slot photo-slot--portrait">
+            <!-- Replace with: <img src="../img/bws-gerald-inside.jpg" alt="Gerald inside the partially assembled sphere"> -->
+            <div class="photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              <p>Gerald inside the partially assembled sphere</p>
+            </div>
+          </div>
+          <figcaption>Gerald inside the structure mid-assembly</figcaption>
+        </figure>
+      </div>
+
+      <div class="chapter reveal">
+        <h2>Final tightening</h2>
+        <p>The first time that we had the whole sphere assembled it was quite loose and sagged considerably.</p>
+        <p>Obviously I had not estimated the length of the cords quite right, but this was not a problem.</p>
+        <p>All we had to do was pull each of the 60 cords a bit further out, make another knot below the existing one, and then let it go.</p>
+        <p>One extra knot everywhere and it was tight!</p>
+
+        <figure class="inline-img">
+          <div class="photo-slot photo-slot--wide">
+            <!-- Replace with: <img src="../img/bws-final-tightening.jpg" alt="The sphere after final tightening"> -->
+            <div class="photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg>
+              <p>The sphere tightened and taking shape</p>
+            </div>
+          </div>
+          <figcaption>Final tightening — one extra knot on each of the 60 cords</figcaption>
+        </figure>
+      </div>
+
+      <div class="chapter reveal">
+        <h2>Conclusion</h2>
+        <p>This is actually a very easy and gratifying project to do, if you ever find a discarded bed, because either it goes into the garbage, or it <strong>bounces like a ball</strong>:</p>
+
+        <!-- YouTube embed — replace VIDEO_ID with actual ID from pretenst YouTube channel -->
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Bouncing the Sphere made from bed slats"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <!-- To find the correct video ID: go to the Pretenst YouTube channel, find "Bouncing the Sphere made from bed slats" and replace dQw4w9WgXcQ with the ID from the URL -->
+      </div>
+
+    </div>
+
+    <!-- PREV / NEXT NAVIGATION -->
+    <div class="work-nav" aria-label="Navigate between works">
+      <div class="work-nav-inner">
+        <a class="work-nav-item work-nav-item--prev" href="twisted-torque.html">
+          <span class="nav-direction">← Previous</span>
+          <span class="nav-work-title">Twisted Torque</span>
+          <span class="nav-work-sub">tied into a permanent twist</span>
+        </a>
+        <a class="work-nav-item work-nav-item--next" href="easy-30-push-sphere.html">
+          <span class="nav-direction">Next →</span>
+          <span class="nav-work-title">Easy 30-Push Sphere</span>
+          <span class="nav-work-sub">one simple element</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="back-to-works">
+      <a href="../works.html">← Back to all works</a>
+    </div>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-brand">FLUXE</div>
+    <ul class="footer-nav">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../works.html">Works</a></li>
+      <li><a href="../lab.html">Lab</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <div class="footer-socials">
+      <a class="footer-social-link" href="#" target="_blank" rel="noopener" aria-label="Fluxe on Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a class="footer-social-link" href="#" target="_blank" rel="noopener" aria-label="Fluxe on YouTube">
+        <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+      </a>
+      <a class="footer-social-link" href="mailto:info@fluxe.nl" aria-label="Email Gerald de Jong">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Gerald de Jong &mdash; Fluxe</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('navDrawer');
+    hamburger.addEventListener('click', () => {
+      const isOpen = drawer.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -4,6 +4,10 @@ date: 2021-10-20
 description: "growing and reconnecting"
 categories: construction
 tags: [tensegrity]
+redirect_from:
+  - /construction/2021/10/20/convergence.html
+  - /construction/2021/10/20/convergence
+featured_image: /images/2021-10/conv-0.jpg
 ---
 
 ## Oritensa

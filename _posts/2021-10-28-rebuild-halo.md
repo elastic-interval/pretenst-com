@@ -4,6 +4,10 @@ date: 2021-10-28
 description: "finally got it right"
 categories: construction
 tags: [tensegrity]
+redirect_from:
+  - /construction/2021/10/28/rebuild-halo.html
+  - /construction/2021/10/28/rebuild-halo
+featured_image: /images/2020-11/through-halo.jpg
 ---
 
 # Halo by Crane

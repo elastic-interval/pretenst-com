@@ -4,6 +4,10 @@ date: 2024-07-23
 description: "what you can do with a discarded bed"
 categories: construction
 tags: [tensegrity]
+redirect_from:
+  - /construction/2024/07/23/bed-sphere.html
+  - /construction/2024/07/23/bed-sphere
+featured_image: /images/2024-07/bed.jpg
 ---
 
 ## Found a discarded bed

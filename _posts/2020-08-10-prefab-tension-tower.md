@@ -5,6 +5,10 @@ description: "the tower of eight twists"
 categories: construction
 ring: sqrt(2-2*sqrt(2/3))
 tags: [tensegrity]
+redirect_from:
+  - /construction/2020/08/10/prefab-tension-tower.html
+  - /construction/2020/08/10/prefab-tension-tower
+featured_image: /images/2020-08/tower-0.png
 ---
 
 ## Screw Tightening

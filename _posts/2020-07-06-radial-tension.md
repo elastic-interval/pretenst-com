@@ -5,6 +5,10 @@ description: "Pulling towards the middle"
 header-img: /images/2020-07/radial-h.jpg
 categories: construction
 tags: [tensegrity]
+redirect_from:
+  - /construction/2020/07/06/radial-tension.html
+  - /construction/2020/07/06/radial-tension
+featured_image: /images/2020-06/final-3.jpg
 ---
 
 ## The Tension Triangle

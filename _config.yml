@@ -1,14 +1,45 @@
-theme: jekyll-theme-midnight
-
-plugins:
-  - jekyll-feed
-
-title: PretensT
+title: Fluxe
 description: >
-  Tensegrity is a special kind of structure made of push and pull.
+  Tensegrity sculpture by Gerald de Jong. Steel, cable, tension, balance.
+  An invitation to look closer at structures held together by pure push and pull.
 email: pretenst@gmail.com
-app_url: /app/
+author: Gerald de Jong
+lang: en
+
+# External app/lab linked from nav
 lab_url: /lab/
+
+# Optional socials — uncomment when accounts exist
+# instagram_url: https://instagram.com/fluxe
+# youtube_url:   https://youtube.com/@fluxe
+
+# GitHub link kept for SEO / metadata
 github:
   repository_url: https://github.com/elastic-interval/tensegrity-lab
   repository_name: tensegrity-lab
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
+# Each blog post in _posts/ becomes a "work" at /works/<slug>/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: work
+
+permalink: /works/:slug/
+
+# Folders Jekyll should not process or copy to _site
+exclude:
+  - fluxe/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - README.md
+  - CLAUDE.md
+  - .ruby-version
+  - .DS_Store

@@ -1,0 +1,25 @@
+{% assign url = page.url %}
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <a class="nav-brand" href="{{ '/' | relative_url }}" aria-label="Fluxe — home">
+    <span class="brand-fluxe">FLUXE</span>
+    <span class="brand-by">by Gerald de Jong</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="{{ '/' | relative_url }}"{% if url == '/' %} class="active"{% endif %}>Home</a></li>
+    <li><a href="{{ '/about/' | relative_url }}"{% if url contains '/about' %} class="active"{% endif %}>About</a></li>
+    <li><a href="{{ '/works/' | relative_url }}"{% if url contains '/works' %} class="active"{% endif %}>Works</a></li>
+    <li><a href="{{ '/lab/' | relative_url }}"{% if url contains '/lab' %} class="active"{% endif %}>Lab</a></li>
+    <li><a href="{{ '/contact/' | relative_url }}"{% if url contains '/contact' %} class="active"{% endif %}>Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <a href="{{ '/' | relative_url }}" onclick="closeDrawer()">Home</a>
+  <a href="{{ '/about/' | relative_url }}" onclick="closeDrawer()">About</a>
+  <a href="{{ '/works/' | relative_url }}" onclick="closeDrawer()">Works</a>
+  <a href="{{ '/lab/' | relative_url }}" onclick="closeDrawer()">Lab</a>
+  <a href="{{ '/contact/' | relative_url }}" onclick="closeDrawer()">Contact</a>
+</div>

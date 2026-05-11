@@ -3,6 +3,10 @@ title: "Diamond of Tension"
 description: Four pulls for every push
 date: 2020-06-22
 categories: construction
+redirect_from:
+  - /construction/2020/06/22/diamond-of-tension.html
+  - /construction/2020/06/22/diamond-of-tension
+featured_image: /images/2020-06/phi24-0.jpg
 ---
 
 ## Tensegrity Violation!

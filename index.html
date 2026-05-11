@@ -1,0 +1,175 @@
+---
+layout: default
+title: Fluxe — Tensegrity sculpture by Gerald de Jong
+description: Tensegrity sculpture by Gerald de Jong. Steel, cable, tension, balance. An invitation to look closer.
+---
+
+<!-- ── HERO ── -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-bg" role="img" aria-label="Tensegrity sculpture illuminated at a festival"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Tensegrity sculpture</p>
+    <h1 class="hero-name">FLUXE</h1>
+    <p class="hero-by">by Gerald de Jong</p>
+    <div class="hero-tags" aria-label="Materials">
+      <span class="hero-tag">Steel</span>
+      <span class="hero-tag">Cable</span>
+      <span class="hero-tag">Tension</span>
+      <span class="hero-tag">Balance</span>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-bar"></div>
+  </div>
+</section>
+
+<!-- ── STORY ── -->
+<div class="story-bg">
+  <div class="section section--full story-bg">
+    <div class="section-inner">
+      <div class="story-grid">
+
+        <div class="story-left reveal">
+          <span class="section-label">The story</span>
+          <h2 class="section-title">Building.<br>Breaking.<br><em>Rebuilding.</em></h2>
+          <a href="{{ '/about/' | relative_url }}" class="btn btn-inline">Full story &rarr;</a>
+        </div>
+
+        <div class="story-right">
+          <p class="lead reveal">I am a software developer at heart before I was an artist. The instinct never left me, it just found new materials: steel, cable and tension.</p>
+          <p class="reveal">In the 90's, I stood in front of a Kenneth Snelson sculpture and felt something shift. I got curious. I got ambitious. The will to build something massive and inspiring became the core for me. Something that will make people stop and ask: <strong>How is that even possible?</strong></p>
+          <p class="reveal">Life intervened. Family came first. But now my children are grown, and I'm raising something new.</p>
+          <p class="reveal"><strong>This is Fluxe. An invitation. Not finished, just growing.</strong></p>
+
+          <div class="tensegrity-box reveal">
+            <h3>What is Tensegrity?</h3>
+            <p>Tensegrity (tension + integrity) is a structural principle based on only push and pull — continuous tension and floating compression. No rigid connections. No glue. No welds holding it upright. Just balance.</p>
+            <p>Invented artistically by Kenneth Snelson in the 1960s and later named by Buckminster Fuller, tensegrity appears throughout biology, as shown by Tom Flemons. It's a system where every part supports the whole through pure interplay of forces.</p>
+            <p>So I took the idea and put my own twist to it.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<!-- ── UPCOMING EVENTS ── -->
+<section class="section" id="events" aria-labelledby="events-heading">
+  <span class="section-label">Find the work</span>
+  <h2 class="section-title" id="events-heading">Upcoming<br><em>appearances</em></h2>
+
+  <div class="events-grid">
+
+    <a class="event-card reveal" href="#" aria-label="Wilde Weide festival — details and tickets">
+      <span class="event-num" aria-hidden="true">01</span>
+      <span class="event-arrow" aria-hidden="true">&#8599;</span>
+      <h3 class="event-name">Wilde Weide</h3>
+      <p class="event-detail">
+        <span class="highlight">Date TBC</span><br>
+        Location TBC<br>
+        Netherlands
+      </p>
+      <span class="event-badge">Festival</span>
+    </a>
+
+    <a class="event-card reveal" href="#" aria-label="Wildeburg festival — details and tickets">
+      <span class="event-num" aria-hidden="true">02</span>
+      <span class="event-arrow" aria-hidden="true">&#8599;</span>
+      <h3 class="event-name">Wildeburg</h3>
+      <p class="event-detail">
+        <span class="highlight">Date TBC</span><br>
+        Netherlands
+      </p>
+      <span class="event-badge">Festival</span>
+    </a>
+
+    <a class="event-card reveal" href="#" aria-label="Into the Woods festival — details and tickets">
+      <span class="event-num" aria-hidden="true">03</span>
+      <span class="event-arrow" aria-hidden="true">&#8599;</span>
+      <h3 class="event-name">Into the Woods</h3>
+      <p class="event-detail">
+        <span class="highlight">Date TBC</span><br>
+        Location TBC<br>
+        Netherlands
+      </p>
+      <span class="event-badge">Festival</span>
+    </a>
+
+    <a class="event-card reveal" href="#" aria-label="Amsterdam Dance Event — details and tickets">
+      <span class="event-num" aria-hidden="true">04</span>
+      <span class="event-arrow" aria-hidden="true">&#8599;</span>
+      <h3 class="event-name">Amsterdam Dance Event</h3>
+      <p class="event-detail">
+        <span class="highlight">October 2025</span><br>
+        Amsterdam, NL
+      </p>
+      <span class="event-badge">Cultural Event</span>
+    </a>
+
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ── WORKS SHOWCASE (3 most recent posts) ── -->
+<div class="works-bg">
+  <section class="section section--full works-bg" id="works" aria-labelledby="works-heading">
+    <div class="section-inner">
+
+      <div class="works-header">
+        <div>
+          <span class="section-label">Recent work</span>
+          <h2 class="section-title" id="works-heading">The works</h2>
+        </div>
+      </div>
+
+      <div class="home-works-grid">
+        {% for post in site.posts limit:3 %}
+        <a class="work-card reveal" href="{{ post.url | relative_url }}" aria-label="View {{ post.title | escape }}, {{ post.date | date: '%Y' }}">
+          <div class="work-thumb">
+            {% if post.featured_image %}
+              <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy" />
+            {% else %}
+              <div class="thumb-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9"/>
+                  <line x1="3" y1="12" x2="21" y2="12"/>
+                  <line x1="12" y1="3" x2="12" y2="21"/>
+                  <line x1="5.6" y1="5.6" x2="18.4" y2="18.4"/>
+                  <line x1="18.4" y1="5.6" x2="5.6" y2="18.4"/>
+                </svg>
+              </div>
+            {% endif %}
+          </div>
+          <div class="work-info">
+            <h3 class="work-title">{{ post.title }}</h3>
+            <p class="work-year">{{ post.date | date: '%Y' }}</p>
+            <p class="work-link-hint">View project &rarr;</p>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+
+      <div class="works-cta-wrap reveal">
+        <a href="{{ '/works/' | relative_url }}" class="btn btn--accent btn--large">View all works &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ── CONTACT NUDGE ── -->
+<section class="section" id="contact-nudge" aria-labelledby="contact-heading">
+  <div style="max-width: 640px;">
+    <span class="section-label">Get in touch</span>
+    <h2 class="section-title" id="contact-heading">Curious about tensegrity<br><em>or the code behind it?</em></h2>
+    <p style="font-size:1.05rem; color: var(--text-secondary); line-height: 1.85; margin-bottom: 0.5rem;">
+      Whether you're interested in acquiring a sculpture, want to learn more about the process, or have questions about the structural or coding principles behind the work — reach out. Every conversation about these structures is a good one.
+    </p>
+    <a href="{{ '/contact/' | relative_url }}" class="btn btn--accent btn-inline">Send a message &rarr;</a>
+  </div>
+</section>

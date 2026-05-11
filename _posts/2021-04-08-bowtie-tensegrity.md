@@ -4,6 +4,10 @@ date: 2021-04-08
 description: "better bend resistance"
 categories: construction
 tags: [tensegrity]
+redirect_from:
+  - /construction/2021/04/08/bowtie-tensegrity.html
+  - /construction/2021/04/08/bowtie-tensegrity
+featured_image: /images/2021-03/tension-hex.jpg
 ---
 
 # Rigidity

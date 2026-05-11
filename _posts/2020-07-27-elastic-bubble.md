@@ -5,6 +5,10 @@ description: "building with elastic ease"
 header-img: /images/2020-07/bubble-z.png
 categories: construction
 tags: [tensegrity]
+redirect_from:
+  - /construction/2020/07/27/elastic-bubble.html
+  - /construction/2020/07/27/elastic-bubble
+featured_image: /images/2020-07/bubble-a.jpg
 ---
 
 <meta property="og:image" content="https://pretenst.com/images/2020-07/bubble-z.jpg" />

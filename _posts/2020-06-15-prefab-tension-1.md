@@ -3,6 +3,10 @@ title: "Prefab Tension"
 description: "Separating compression from tension"
 date: 2020-06-15
 categories: construction
+redirect_from:
+  - /construction/2020/06/15/prefab-tension-1.html
+  - /construction/2020/06/15/prefab-tension-1
+featured_image: /images/2020-06/joint-sphere-detail-gradient.png
 ---
 
 ## Challenge

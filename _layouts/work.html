@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<article class="work-article reveal">
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p class="work-meta">
+      {{ page.date | date: "%B %Y" }}
+      {% if page.year %} &middot; {{ page.year }}{% endif %}
+    </p>
+    {% if page.description %}
+      <p class="work-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <div class="work-body">
+    {{ content }}
+  </div>
+
+  <footer>
+    {% if page.previous %}
+      <a class="work-nav-link" href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>
+    {% else %}<span></span>{% endif %}
+    {% if page.next %}
+      <a class="work-nav-link" href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>
+    {% endif %}
+  </footer>
+</article>

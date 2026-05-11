@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Works — Fluxe by Gerald de Jong</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Syncopate:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-base:#07111e; --bg-surface:#0d1a2b; --bg-raised:#112236;
+      --text-primary:#f0f4f8; --text-secondary:#c5d4e0; --text-muted:#8ba5bc;
+      --accent:#5bafd6; --accent-dim:#2e5f7a;
+      --border:#1e3548; --border-light:#2a4a62;
+      --font-display:'Syncopate',sans-serif;
+      --font-serif:'Cormorant Garamond',serif;
+      --font-body:'DM Sans',sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;font-size:16px;}
+    body{background:var(--bg-base);color:var(--text-primary);font-family:var(--font-body);font-weight:400;line-height:1.7;overflow-x:hidden;}
+    img{max-width:100%;display:block;}
+    a{color:inherit;}
+
+    .skip-link{position:absolute;top:-100%;left:1rem;background:var(--accent);color:var(--bg-base);padding:.5rem 1rem;font-size:.9rem;font-weight:500;border-radius:0 0 4px 4px;z-index:9999;text-decoration:none;}
+    .skip-link:focus{top:0;}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 3rem;background:rgba(7,17,30,.92);border-bottom:1px solid var(--border);backdrop-filter:blur(8px);}
+    .nav-brand{display:flex;flex-direction:column;text-decoration:none;line-height:1.1;}
+    .brand-fluxe{font-family:var(--font-display);font-size:1.25rem;font-weight:700;letter-spacing:.18em;color:var(--text-primary);}
+    .brand-by{font-size:.7rem;font-weight:400;letter-spacing:.2em;color:var(--text-muted);text-transform:uppercase;margin-top:.15rem;}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:.875rem;letter-spacing:.08em;color:var(--text-secondary);text-decoration:none;padding:.25rem 0;border-bottom:2px solid transparent;transition:color .25s,border-color .25s;}
+    .nav-links a:hover,.nav-links a:focus{color:var(--text-primary);border-bottom-color:var(--accent);outline:none;}
+    .nav-links a.active{color:var(--text-primary);border-bottom-color:var(--accent);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.5rem;}
+    .nav-hamburger span{display:block;width:24px;height:2px;background:var(--text-secondary);transition:all .3s ease;}
+    .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .nav-hamburger.open span:nth-child(2){opacity:0;}
+    .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .nav-drawer{display:none;position:fixed;inset:0;background:rgba(7,17,30,.98);z-index:250;flex-direction:column;align-items:center;justify-content:center;gap:2rem;}
+    .nav-drawer.open{display:flex;}
+    .nav-drawer a{font-family:var(--font-serif);font-size:2rem;font-weight:600;color:var(--text-primary);text-decoration:none;transition:color .2s;}
+    .nav-drawer a:hover{color:var(--accent);}
+
+    /* PAGE HEADER */
+    .page-header{padding:9rem 3rem 4rem;max-width:1300px;margin:0 auto;}
+    .page-eyebrow{display:block;font-size:.72rem;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;}
+    .page-title{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;letter-spacing:.12em;color:var(--text-primary);line-height:1.1;margin-bottom:1rem;}
+    .page-meta{font-size:.85rem;color:var(--text-muted);letter-spacing:.08em;}
+    .page-foreword{font-family:var(--font-serif);font-size:clamp(1.05rem,1.8vw,1.25rem);color:var(--text-secondary);line-height:1.85;max-width:680px;margin-bottom:1.5rem;}
+
+    /* FILTER BAR */
+    .filter-bar{max-width:1300px;margin:0 auto;padding:0 3rem 3rem;display:flex;gap:.75rem;flex-wrap:wrap;}
+    .filter-btn{font-family:var(--font-body);font-size:.75rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;padding:.45rem 1.1rem;border:1px solid var(--border-light);background:none;color:var(--text-muted);cursor:pointer;transition:all .2s ease;}
+    .filter-btn:hover,.filter-btn:focus{border-color:var(--accent);color:var(--text-secondary);outline:none;}
+    .filter-btn.active{background:var(--accent);border-color:var(--accent);color:var(--bg-base);}
+
+    /* GRID */
+    .works-grid{max-width:1300px;margin:0 auto;padding:0 3rem 8rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);}
+
+    /* CARD */
+    .work-card{background:var(--bg-base);text-decoration:none;display:block;position:relative;overflow:hidden;transition:background .25s;}
+    .work-card:hover,.work-card:focus{background:var(--bg-surface);outline:none;}
+
+    .work-thumb{aspect-ratio:1/1;background:var(--bg-surface);overflow:hidden;position:relative;}
+    .work-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+    .work-card:hover .work-thumb img{transform:scale(1.04);}
+
+    /* Placeholder */
+    .thumb-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:var(--bg-raised);}
+    .thumb-placeholder svg{opacity:.15;width:48px;height:48px;transition:opacity .3s;}
+    .work-card:hover .thumb-placeholder svg{opacity:.25;}
+
+    /* Arrow overlay */
+    .card-arrow{position:absolute;top:1rem;right:1rem;width:32px;height:32px;border:1px solid rgba(91,175,214,.4);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:.8rem;opacity:0;transform:translate(4px,-4px);transition:all .25s ease;background:rgba(7,17,30,.6);}
+    .work-card:hover .card-arrow,.work-card:focus .card-arrow{opacity:1;transform:translate(0,0);}
+
+    .work-info{padding:1.25rem 1.25rem 1.5rem;}
+
+    .work-title{font-family:var(--font-serif);font-size:1.15rem;font-weight:600;color:var(--text-primary);line-height:1.25;margin-bottom:.3rem;}
+
+    .work-subtitle{font-size:.8rem;color:var(--text-muted);line-height:1.5;margin-bottom:.5rem;font-style:italic;}
+
+    .work-year{font-size:.72rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);}
+
+    /* Permanent location tag */
+    .work-location{display:inline-flex;align-items:center;gap:.35rem;margin-top:.6rem;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);opacity:.85;}
+    .work-location svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;flex-shrink:0;}
+
+    /* BOTTOM CTA */
+    .works-cta{background:var(--bg-surface);border-top:1px solid var(--border);padding:6rem 3rem;}
+    .works-cta-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+    .cta-headline{font-family:var(--font-serif);font-size:clamp(2rem,4vw,3rem);font-weight:600;color:var(--text-primary);line-height:1.2;margin-bottom:.75rem;}
+    .cta-sub{font-size:1rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.75rem;}
+    .cta-lab-text{font-size:1rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.75rem;}
+    .works-cta-right{border-left:1px solid var(--border);padding-left:4rem;}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--font-body);font-size:.85rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:.85rem 2rem;border:1px solid var(--border-light);color:var(--text-secondary);transition:all .25s ease;}
+    .btn:hover,.btn:focus{background:var(--accent-dim);border-color:var(--accent);color:var(--text-primary);outline:none;}
+    .btn--accent{background:var(--accent);border-color:var(--accent);color:var(--bg-base);}
+    .btn--accent:hover,.btn--accent:focus{background:#72c0e3;border-color:#72c0e3;color:var(--bg-base);}
+    .btn--ghost{background:none;border-color:var(--border-light);color:var(--text-secondary);}
+    .btn--ghost:hover,.btn--ghost:focus{border-color:var(--accent);color:var(--text-primary);background:var(--accent-dim);}
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--border);background:var(--bg-base);padding:3rem;display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:auto auto;align-items:center;gap:1.25rem 2rem;}
+    .footer-brand{font-family:var(--font-display);font-size:1rem;letter-spacing:.2em;color:var(--text-muted);grid-column:1;grid-row:1;}
+    .footer-nav{list-style:none;display:flex;gap:1.75rem;flex-wrap:wrap;grid-column:2;grid-row:1;}
+    .footer-nav a{font-size:.82rem;letter-spacing:.1em;color:var(--text-muted);text-decoration:none;transition:color .2s;}
+    .footer-nav a:hover,.footer-nav a:focus{color:var(--text-secondary);outline:none;}
+    .footer-socials{display:flex;gap:1.25rem;align-items:center;grid-column:3;grid-row:1;}
+    .footer-social-link{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--border-light);color:var(--text-muted);text-decoration:none;transition:border-color .25s,color .25s,background .25s;}
+    .footer-social-link:hover,.footer-social-link:focus{border-color:var(--accent);color:var(--accent);background:rgba(91,175,214,.08);outline:none;}
+    .footer-social-link svg{width:20px;height:20px;fill:currentColor;}
+    .footer-copy{font-size:.75rem;color:var(--text-muted);opacity:.6;grid-column:1/-1;grid-row:2;}
+
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+
+    /* RESPONSIVE */
+    @media(max-width:1100px){
+      .works-grid{grid-template-columns:repeat(3,1fr);}
+    }
+    @media(max-width:768px){
+      nav{padding:1rem 1.5rem;}
+      .page-header{padding:8rem 1.5rem 3rem;}
+      .filter-bar{padding:0 1.5rem 2.5rem;}
+      .works-grid{grid-template-columns:repeat(2,1fr);padding:0 1.5rem 5rem;}
+      .works-cta{padding:4rem 1.5rem;}
+      .works-cta-inner{grid-template-columns:1fr;gap:3rem;}
+      .works-cta-right{border-left:none;padding-left:0;border-top:1px solid var(--border);padding-top:3rem;}
+      footer{grid-template-columns:1fr;grid-template-rows:auto;padding:2rem 1.5rem;}
+      .footer-brand,.footer-nav,.footer-socials,.footer-copy{grid-column:1;grid-row:auto;}
+    }
+    @media(max-width:600px){
+      .nav-links{display:none;}
+      .nav-hamburger{display:flex;}
+      .page-header{padding:7rem 1.25rem 2.5rem;}
+      .filter-bar{padding:0 1.25rem 2rem;}
+      .works-grid{grid-template-columns:repeat(2,1fr);padding:0 1.25rem 4rem;gap:1px;}
+      .work-info{padding:1rem 1rem 1.25rem;}
+      .work-title{font-size:1rem;}
+      footer{padding:2rem 1.25rem;}
+      .footer-nav{gap:1rem;}
+    }
+    @media(max-width:400px){
+      .works-grid{grid-template-columns:1fr;}
+    }
+    @media(hover:none){
+      .card-arrow{opacity:1;transform:translate(0,0);}
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <a class="nav-brand" href="index.html" aria-label="Fluxe home">
+      <span class="brand-fluxe">FLUXE</span>
+      <span class="brand-by">by Gerald de Jong</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="works.html" class="active">Works</a></li>
+      <li><a href="lab.html">Lab</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <a href="index.html" onclick="closeDrawer()">Home</a>
+    <a href="about.html" onclick="closeDrawer()">About</a>
+    <a href="works.html" onclick="closeDrawer()">Works</a>
+    <a href="lab.html" onclick="closeDrawer()">Lab</a>
+    <a href="contact.html" onclick="closeDrawer()">Contact</a>
+  </div>
+
+  <main id="main">
+
+    <header class="page-header reveal">
+      <span class="page-eyebrow">Catalogue</span>
+      <h1 class="page-title">The Works</h1>
+      <p class="page-foreword">Every piece here began as code. A physics engine, a simulation, a digital structure tested to its limits before it became real. What you see in this catalogue is not a collection of finished objects — it's a record of questions asked in steel and cable, each one building on the last.</p>
+      <p class="page-meta">32 pieces — 2020 to present</p>
+    </header>
+
+    <div class="filter-bar" role="group" aria-label="Filter works by year">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="2024">2024</button>
+      <button class="filter-btn" data-filter="2023">2023</button>
+      <button class="filter-btn" data-filter="2022">2022</button>
+      <button class="filter-btn" data-filter="2021">2021</button>
+      <button class="filter-btn" data-filter="2020">2020</button>
+    </div>
+
+    <div class="works-grid" id="worksGrid">
+
+      <!-- 2024 -->
+      <a class="work-card reveal" href="works/bouncy-wooden-sphere.html" data-year="2024" aria-label="Bouncy Wooden Sphere, 2024">
+        <div class="work-thumb">
+          <!-- <img src="img/bouncy-wooden-sphere.jpg" alt="Bouncy Wooden Sphere"> -->
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Bouncy Wooden Sphere</h2>
+          <p class="work-subtitle">what you can do with a discarded bed</p>
+          <p class="work-year">2024</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/twisted-torque.html" data-year="2024" aria-label="Twisted Torque, 2024">
+        <div class="work-thumb">
+          <!-- <img src="img/twisted-torque.jpg" alt="Twisted Torque"> -->
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><path d="M12 3l7 4v10l-7 4-7-4V7z"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="5" y1="7" x2="19" y2="17"/><line x1="19" y1="7" x2="5" y2="17"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Twisted Torque</h2>
+          <p class="work-subtitle">tied into a permanent twist</p>
+          <p class="work-year">2024</p>
+        </div>
+      </a>
+
+      <!-- 2023 -->
+      <a class="work-card reveal" href="works/easy-30-push-sphere.html" data-year="2023" aria-label="Easy 30-Push Sphere, 2023">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="3" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="21"/><line x1="3" y1="12" x2="8" y2="12"/><line x1="16" y1="12" x2="21" y2="12"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Easy 30-Push Sphere</h2>
+          <p class="work-subtitle">one simple element</p>
+          <p class="work-year">2023</p>
+        </div>
+      </a>
+
+      <!-- 2022 -->
+      <a class="work-card reveal" href="works/glass-and-led.html" data-year="2022" aria-label="Glass and LED, 2022">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><polygon points="12 2 22 20 2 20"/><line x1="12" y1="8" x2="12" y2="14"/><line x1="8" y1="14" x2="16" y2="14"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Glass and LED</h2>
+          <p class="work-subtitle">going big and colorful</p>
+          <p class="work-year">2022</p>
+          <!-- Example permanent location tag — add only when applicable -->
+          <!-- <p class="work-location"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Permanently at: TBC</p> -->
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/fascia.html" data-year="2022" aria-label="Fascia, 2022">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><path d="M3 12 Q8 4 12 12 Q16 20 21 12"/><path d="M3 8 Q8 16 12 8 Q16 0 21 8"/><path d="M3 16 Q8 8 12 16 Q16 24 21 16"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Fascia</h2>
+          <p class="work-subtitle">dancing with tensegrity</p>
+          <p class="work-year">2022</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/mitosis.html" data-year="2022" aria-label="Mitosis, 2022">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Mitosis</h2>
+          <p class="work-subtitle">the four-three-two tensegrity</p>
+          <p class="work-year">2022</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/push-bolts-for-the-people.html" data-year="2022" aria-label="Push Bolts for the People, 2022">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><line x1="12" y1="2" x2="12" y2="22"/><line x1="5" y1="8" x2="19" y2="8"/><line x1="5" y1="16" x2="19" y2="16"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Push Bolts for the People</h2>
+          <p class="work-subtitle">finalizing design and getting it out there</p>
+          <p class="work-year">2022</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/head-to-head-push-bolt.html" data-year="2022" aria-label="Head to Head Push Bolt, 2022">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="8" x2="12" y2="12"/><line x1="4" y1="16" x2="12" y2="12"/><line x1="20" y1="8" x2="12" y2="12"/><line x1="20" y1="16" x2="12" y2="12"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Head to Head Push Bolt</h2>
+          <p class="work-subtitle">M5 and M6 bolts symbiosis</p>
+          <p class="work-year">2022</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/hiding-knots.html" data-year="2022" aria-label="Hiding Knots, 2022">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><path d="M5 12 Q9 5 12 12 Q15 19 19 12"/><circle cx="12" cy="12" r="2"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Hiding Knots</h2>
+          <p class="work-subtitle">bump up the aesthetics</p>
+          <p class="work-year">2022</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/innovation-with-3d-printer.html" data-year="2022" aria-label="Innovation with 3D Printer, 2022">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="1"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="9" y1="9" x2="9" y2="19"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Innovation with 3D Printer</h2>
+          <p class="work-subtitle">the push bolt</p>
+          <p class="work-year">2022</p>
+        </div>
+      </a>
+
+      <!-- 2021 -->
+      <a class="work-card reveal" href="works/headless-hug.html" data-year="2021" aria-label="Headless Hug, 2021">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><path d="M12 21C12 21 4 16 4 10a8 8 0 0 1 16 0c0 6-8 11-8 11z"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Headless Hug</h2>
+          <p class="work-subtitle">breaking a rule for the sake of symmetry</p>
+          <p class="work-year">2021</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/rebuilding-the-halo.html" data-year="2021" aria-label="Rebuilding the Halo, 2021">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><ellipse cx="12" cy="10" rx="8" ry="3"/><path d="M4 10c0 5 16 5 16 0"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Rebuilding the Halo</h2>
+          <p class="work-subtitle">finally got it right</p>
+          <p class="work-year">2021</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/convergence.html" data-year="2021" aria-label="Convergence, 2021">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><line x1="4" y1="4" x2="12" y2="12"/><line x1="20" y1="4" x2="12" y2="12"/><line x1="12" y1="20" x2="12" y2="12"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Convergence</h2>
+          <p class="work-subtitle">growing and reconnecting</p>
+          <p class="work-year">2021</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/120-strut-brass-bubble.html" data-year="2021" aria-label="120-Strut Brass Bubble, 2021">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="2"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">120-Strut Brass Bubble</h2>
+          <p class="work-subtitle">taking the next step up in complexity</p>
+          <p class="work-year">2021</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/30-strut-brass-bubble.html" data-year="2021" aria-label="30-Strut Brass Bubble, 2021">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">30-Strut Brass Bubble</h2>
+          <p class="work-subtitle">bouncing spherical tensegrity</p>
+          <p class="work-year">2021</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/bow-tie-tensegrity.html" data-year="2021" aria-label="Bow Tie Tensegrity, 2021">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><polygon points="4 8 12 12 4 16"/><polygon points="20 8 12 12 20 16"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Bow Tie Tensegrity</h2>
+          <p class="work-subtitle">better bend resistance</p>
+          <p class="work-year">2021</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/six-twist-essential.html" data-year="2021" aria-label="Six Twist Essential, 2021">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><path d="M12 3l4 7h-8z"/><path d="M12 21l-4-7h8z"/><path d="M3 12l7-4v8z"/><path d="M21 12l-7 4V8z"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Six Twist Essential</h2>
+          <p class="work-subtitle">what if more hands could see?</p>
+          <p class="work-year">2021</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/minimal-tensegrity.html" data-year="2021" aria-label="Minimal Tensegrity, 2021">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Minimal Tensegrity</h2>
+          <p class="work-subtitle">no more tension lines than absolutely necessary</p>
+          <p class="work-year">2021</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/degrees-of-freedom.html" data-year="2021" aria-label="Degrees of Freedom, 2021">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="5.6" y1="5.6" x2="18.4" y2="18.4"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Degrees of Freedom</h2>
+          <p class="work-subtitle">first adjustable hybrid tensegrity</p>
+          <p class="work-year">2021</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/fractal-experiment.html" data-year="2021" aria-label="Fractal Experiment, 2021">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><polygon points="12 3 21 20 3 20"/><polygon points="12 8 17 18 7 18"/><polygon points="12 13 15 18 9 18"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Fractal Experiment</h2>
+          <p class="work-subtitle">a tensegrity of tensegrities</p>
+          <p class="work-year">2021</p>
+        </div>
+      </a>
+
+      <!-- 2020 -->
+      <a class="work-card reveal" href="works/axial-tension.html" data-year="2020" aria-label="Axial Tension, 2020">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><line x1="12" y1="2" x2="12" y2="22"/><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Axial Tension</h2>
+          <p class="work-subtitle">pretensing what is already pretenst</p>
+          <p class="work-year">2020</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/halo-by-crane-part-2.html" data-year="2020" aria-label="Halo by Crane Part 2, 2020">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><ellipse cx="12" cy="12" rx="9" ry="4"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Halo by Crane — Part 2</h2>
+          <p class="work-subtitle">the strengthening</p>
+          <p class="work-year">2020</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/halo-by-crane-part-1.html" data-year="2020" aria-label="Halo by Crane Part 1, 2020">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><ellipse cx="12" cy="14" rx="9" ry="4"/><line x1="12" y1="2" x2="12" y2="10"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Halo by Crane — Part 1</h2>
+          <p class="work-subtitle">assembly complete but strength lacking</p>
+          <p class="work-year">2020</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/brass-and-tulips.html" data-year="2020" aria-label="Brass and Tulips, 2020">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><path d="M8 10 Q12 2 16 10"/><path d="M6 14 Q12 6 18 14"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Brass and Tulips</h2>
+          <p class="work-subtitle">a tight and strong tensegrity tower</p>
+          <p class="work-year">2020</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/prefab-tension-tower.html" data-year="2020" aria-label="Prefab Tension Tower, 2020">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><rect x="9" y="2" width="6" height="20"/><line x1="6" y1="6" x2="18" y2="6"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="6" y1="18" x2="18" y2="18"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Prefab Tension Tower</h2>
+          <p class="work-subtitle">the tower of eight twists</p>
+          <p class="work-year">2020</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/elastic-bubble.html" data-year="2020" aria-label="Elastic Bubble, 2020">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 9 Q12 5 16 9 Q20 13 16 17 Q12 21 8 17 Q4 13 8 9"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Elastic Bubble</h2>
+          <p class="work-subtitle">building with elastic ease</p>
+          <p class="work-year">2020</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/the-twist-sisters.html" data-year="2020" aria-label="The Twist Sisters, 2020">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><path d="M7 20 Q7 12 12 12 Q17 12 17 4"/><path d="M17 20 Q17 12 12 12 Q7 12 7 4"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">The Twist Sisters</h2>
+          <p class="work-subtitle">left-handed and right-handed</p>
+          <p class="work-year">2020</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/radial-tension.html" data-year="2020" aria-label="Radial Tension, 2020">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="12" y1="15" x2="12" y2="22"/><line x1="2" y1="12" x2="9" y2="12"/><line x1="15" y1="12" x2="22" y2="12"/><line x1="4.9" y1="4.9" x2="9.2" y2="9.2"/><line x1="14.8" y1="14.8" x2="19.1" y2="19.1"/><line x1="19.1" y1="4.9" x2="14.8" y2="9.2"/><line x1="9.2" y1="14.8" x2="4.9" y2="19.1"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Radial Tension</h2>
+          <p class="work-subtitle">pulling towards the middle</p>
+          <p class="work-year">2020</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/diamond-of-tension.html" data-year="2020" aria-label="Diamond of Tension, 2020">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><polygon points="12 3 21 12 12 21 3 12"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Diamond of Tension</h2>
+          <p class="work-subtitle">four pulls for every push</p>
+          <p class="work-year">2020</p>
+        </div>
+      </a>
+
+      <a class="work-card reveal" href="works/prefab-tension.html" data-year="2020" aria-label="Prefab Tension, 2020">
+        <div class="work-thumb">
+          <div class="thumb-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true"><rect x="4" y="4" width="16" height="16"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="12" y1="4" x2="12" y2="20"/></svg></div>
+        </div>
+        <span class="card-arrow" aria-hidden="true">↗</span>
+        <div class="work-info">
+          <h2 class="work-title">Prefab Tension</h2>
+          <p class="work-subtitle">separating compression from tension</p>
+          <p class="work-year">2020</p>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- BOTTOM CTA -->
+    <div class="works-cta">
+      <div class="works-cta-inner">
+        <div class="works-cta-left reveal">
+          <h2 class="cta-headline">The next one could be yours.</h2>
+          <p class="cta-sub">Every build starts with a conversation.</p>
+          <a href="contact.html" class="btn btn--accent">Get in touch &rarr;</a>
+        </div>
+        <div class="works-cta-right reveal">
+          <p class="cta-lab-text">Want to see where the next build begins before it's real?</p>
+          <a href="lab.html" class="btn btn--ghost">Explore the lab &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-brand">FLUXE</div>
+    <ul class="footer-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="works.html">Works</a></li>
+      <li><a href="lab.html">Lab</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="footer-socials">
+      <a class="footer-social-link" href="#" target="_blank" rel="noopener" aria-label="Fluxe on Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a class="footer-social-link" href="#" target="_blank" rel="noopener" aria-label="Fluxe on YouTube">
+        <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+      </a>
+      <a class="footer-social-link" href="mailto:info@fluxe.nl" aria-label="Email Gerald de Jong">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Gerald de Jong &mdash; Fluxe</p>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('navDrawer');
+    hamburger.addEventListener('click', () => {
+      const isOpen = drawer.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+    // Year filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.work-card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          const show = filter === 'all' || card.dataset.year === filter;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, (i % 4) * 60);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -4,6 +4,10 @@ date: 2021-01-18
 description: "first adjustable hybrid tensegrity"
 categories: construction
 tags: [tensegrity]
+redirect_from:
+  - /construction/2021/01/18/degrees-of-freedom.html
+  - /construction/2021/01/18/degrees-of-freedom
+featured_image: /images/2021-01/dof-precursor-1.jpg
 ---
 
 ## A New Twist

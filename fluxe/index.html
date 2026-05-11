@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fluxe — Gerald de Jong</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Syncopate:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── DESIGN TOKENS ─── */
+    :root {
+      /* Backgrounds */
+      --bg-base:       #07111e;   /* darkest */
+      --bg-surface:    #0d1a2b;
+      --bg-raised:     #112236;
+
+      /* Text — all pass WCAG AA on bg-base/surface */
+      --text-primary:  #f0f4f8;   /* ~15:1 on bg-base */
+      --text-secondary:#c5d4e0;   /* ~9:1  */
+      --text-muted:    #8ba5bc;   /* ~4.6:1 */
+
+      /* Accent */
+      --accent:        #5bafd6;   /* ~4.7:1 on bg-base — AA compliant */
+      --accent-dim:    #2e5f7a;
+
+      /* Borders */
+      --border:        #1e3548;
+      --border-light:  #2a4a62;
+
+      /* Fonts */
+      --font-display:  'Syncopate', sans-serif;
+      --font-serif:    'Cormorant Garamond', serif;
+      --font-body:     'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--bg-base);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-weight: 400;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+
+    /* ─── SKIP LINK (accessibility) ─── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--accent);
+      color: var(--bg-base);
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-radius: 0 0 4px 4px;
+      z-index: 9999;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 3rem;
+      background: rgba(7, 17, 30, 0.92);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-brand {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      line-height: 1.1;
+    }
+    .nav-brand .brand-fluxe {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--text-primary);
+    }
+    .nav-brand .brand-by {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-top: 0.15rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: color 0.25s, border-color 0.25s;
+    }
+    .nav-links a:hover,
+    .nav-links a:focus {
+      color: var(--text-primary);
+      border-bottom-color: var(--accent);
+      outline: none;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      /* Replace this URL with the actual Wildeburg sculpture photo */
+      background: 
+        linear-gradient(to bottom,
+          rgba(7,17,30,0.5) 0%,
+          rgba(7,17,30,0.15) 45%,
+          rgba(7,17,30,0.75) 80%,
+          var(--bg-base) 100%
+        ),
+        url('YOUR_HERO_IMAGE.jpg') center / cover no-repeat;
+      filter: saturate(0.5) brightness(0.7);
+      /* Blue tint to match Wildeburg photo feel */
+      animation: slowZoom 20s ease-in-out infinite alternate;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 35, 65, 0.4);
+    }
+
+    @keyframes slowZoom {
+      from { transform: scale(1.03); }
+      to   { transform: scale(1.0);  }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 1.5rem;
+      animation: fadeUp 1.2s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.3s ease both;
+    }
+
+    .hero-name {
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 12vw, 9rem);
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--text-primary);
+      line-height: 1;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.5s ease both;
+    }
+
+    .hero-by {
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--text-secondary);
+      margin-top: 0.6rem;
+      letter-spacing: 0.05em;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.7s ease both;
+    }
+
+    .hero-tags {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.95s ease both;
+    }
+
+    .hero-tag {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border: 1px solid var(--border-light);
+      padding: 0.35rem 0.85rem;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      opacity: 0;
+      animation: fadeUp 0.9s 1.3s ease both;
+    }
+    .hero-scroll span {
+      font-size: 0.65rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .scroll-bar {
+      width: 1px;
+      height: 36px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+      animation: scrollPulse 2.2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.4; }
+      50%       { opacity: 1;   }
+    }
+
+    /* ─── SECTION SHELL ─── */
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 6rem 3rem;
+    }
+
+    .section--full {
+      max-width: 100%;
+      padding: 6rem 3rem;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.25;
+      margin-bottom: 2rem;
+    }
+
+    .section-title em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--text-secondary);
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0 3rem;
+    }
+
+    /* ─── STORY STRIP ─── */
+    .story-bg {
+      background: var(--bg-surface);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .story-left {}
+
+    .story-right p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+    }
+
+    .story-right p.lead {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--text-primary);
+      line-height: 1.75;
+    }
+
+    .story-right p strong {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    /* Tensegrity explainer box */
+    .tensegrity-box {
+      margin-top: 2.5rem;
+      border-left: 3px solid var(--accent-dim);
+      padding: 1.5rem 1.75rem;
+      background: var(--bg-raised);
+    }
+
+    .tensegrity-box h3 {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .tensegrity-box p {
+      font-size: 0.95rem !important;
+      line-height: 1.8 !important;
+      color: var(--text-secondary) !important;
+      margin-bottom: 0.75rem !important;
+    }
+
+    .tensegrity-box p:last-child { margin-bottom: 0 !important; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.75rem 1.75rem;
+      border: 1px solid var(--border-light);
+      color: var(--text-secondary);
+      transition: all 0.25s ease;
+      margin-top: 1.5rem;
+    }
+    .btn:hover, .btn:focus {
+      background: var(--accent-dim);
+      border-color: var(--accent);
+      color: var(--text-primary);
+      outline: none;
+    }
+    .btn--accent {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--bg-base);
+    }
+    .btn--accent:hover, .btn--accent:focus {
+      background: #72c0e3;
+      border-color: #72c0e3;
+      color: var(--bg-base);
+    }
+
+    /* ─── EVENTS ─── */
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .event-card {
+      display: block;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      padding: 2rem 1.75rem;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.25s, background 0.25s;
+    }
+    .event-card:hover,
+    .event-card:focus {
+      border-color: var(--accent);
+      background: var(--bg-raised);
+      outline: none;
+    }
+    .event-card:hover .event-arrow,
+    .event-card:focus .event-arrow {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    .event-num {
+      font-family: var(--font-display);
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+
+    .event-name {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .event-detail {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .event-detail .highlight {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .event-badge {
+      display: inline-block;
+      margin-top: 1.25rem;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent-dim);
+      padding: 0.3rem 0.7rem;
+    }
+
+    .event-arrow {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      font-size: 1rem;
+      color: var(--accent);
+      opacity: 0;
+      transform: translate(-4px, 4px);
+      transition: all 0.25s ease;
+      aria-hidden: true;
+    }
+
+    /* ─── WORKS ─── */
+    .works-bg {
+      background: var(--bg-surface);
+    }
+
+    .works-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .work-card {
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.25s;
+    }
+    .work-card:hover,
+    .work-card:focus {
+      border-color: var(--accent);
+      outline: none;
+    }
+
+    .work-thumb {
+      aspect-ratio: 4/3;
+      background: var(--bg-base);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Placeholder tensegrity SVG per card */
+    .work-thumb svg {
+      opacity: 0.18;
+      transition: opacity 0.3s ease, transform 0.5s ease;
+    }
+    .work-card:hover .work-thumb svg {
+      opacity: 0.32;
+      transform: scale(1.05);
+    }
+
+    .work-info {
+      padding: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .work-title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.3rem;
+    }
+
+    .work-year {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .work-link-hint {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      opacity: 0;
+      transform: translateX(-4px);
+      transition: all 0.25s ease;
+    }
+    .work-card:hover .work-link-hint,
+    .work-card:focus .work-link-hint {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .works-cta-wrap {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .btn--large {
+      font-size: 1rem;
+      padding: 1rem 2.5rem;
+      letter-spacing: 0.15em;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--bg-base);
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      grid-template-rows: auto auto;
+      align-items: center;
+      gap: 1.25rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      letter-spacing: 0.2em;
+      color: var(--text-muted);
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .footer-nav {
+      list-style: none;
+      display: flex;
+      gap: 1.75rem;
+      flex-wrap: wrap;
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .footer-nav a {
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-nav a:hover,
+    .footer-nav a:focus {
+      color: var(--text-secondary);
+      outline: none;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      grid-column: 3;
+      grid-row: 1;
+    }
+
+    .footer-social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border-light);
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: border-color 0.25s, color 0.25s, background 0.25s;
+    }
+    .footer-social-link:hover,
+    .footer-social-link:focus {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(91,175,214,0.08);
+      outline: none;
+    }
+    .footer-social-link svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    .footer-copy {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      opacity: 0.6;
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+
+    /* ─── MOBILE NAV ─── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 300;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-secondary);
+      transition: all 0.3s ease;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav-drawer {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(7,17,30,0.98);
+      z-index: 250;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .nav-drawer.open { display: flex; }
+    .nav-drawer a {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+    .nav-drawer a:hover { color: var(--accent); }
+
+    /* ─── SCROLL REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 960px) {
+      nav { padding: 1rem 1.5rem; }
+      .story-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .events-grid { grid-template-columns: repeat(2, 1fr); }
+      .works-grid  { grid-template-columns: repeat(2, 1fr); }
+      .section { padding: 4rem 1.5rem; }
+      .section--full { padding: 4rem 1.5rem; }
+      hr.divider { margin: 0 1.5rem; }
+      .works-header { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 600px) {
+      /* Nav — show hamburger, hide links */
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+
+      /* Hero */
+      .hero-name { font-size: clamp(3.2rem, 18vw, 5rem); }
+      .hero-tags { gap: 0.35rem; }
+      .hero-tag  { font-size: 0.65rem; padding: 0.3rem 0.65rem; }
+
+      /* Sections */
+      .section { padding: 3rem 1.25rem; }
+      .section--full { padding: 3rem 1.25rem; }
+      hr.divider { margin: 0 1.25rem; }
+
+      /* Story */
+      .story-grid { gap: 2rem; }
+      .tensegrity-box { padding: 1.25rem; }
+
+      /* Events — single column on small screens */
+      .events-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .event-card  { padding: 1.5rem 1.25rem; }
+
+      /* Works — single column */
+      .works-grid { grid-template-columns: 1fr; gap: 1rem; }
+
+      /* Footer */
+      footer { grid-template-columns: 1fr; grid-template-rows: auto; padding: 2rem 1.25rem; }
+      .footer-brand  { grid-column: 1; grid-row: auto; }
+      .footer-nav    { grid-column: 1; grid-row: auto; gap: 1rem; }
+      .footer-socials{ grid-column: 1; grid-row: auto; }
+      .footer-copy   { grid-column: 1; grid-row: auto; }
+    }
+
+    /* Touch — remove hover-only hints, always show them */
+    @media (hover: none) {
+      .work-link-hint { opacity: 1; transform: translateX(0); }
+      .event-arrow    { opacity: 1; transform: translate(0,0); }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ── NAV ── -->
+  <nav role="navigation" aria-label="Main navigation">
+    <a class="nav-brand" href="index.html" aria-label="Fluxe — home">
+      <span class="brand-fluxe">FLUXE</span>
+      <span class="brand-by">by Gerald de Jong</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="works.html">Works</a></li>
+      <li><a href="lab.html">Lab</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <a href="index.html"  onclick="closeDrawer()">Home</a>
+    <a href="about.html"  onclick="closeDrawer()">About</a>
+    <a href="works.html"  onclick="closeDrawer()">Works</a>
+    <a href="lab.html"    onclick="closeDrawer()">Lab</a>
+    <a href="#contact"    onclick="closeDrawer()">Contact</a>
+  </div>
+
+  <main id="main">
+
+    <!-- ── HERO ── -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg" role="img" aria-label="Tensegrity sculpture illuminated at night at Wildeburg festival"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Tensegrity sculpture</p>
+        <h1 class="hero-name">FLUXE</h1>
+        <p class="hero-by">by Gerald de Jong</p>
+        <div class="hero-tags" aria-label="Materials">
+          <span class="hero-tag">Steel</span>
+          <span class="hero-tag">Cable</span>
+          <span class="hero-tag">Tension</span>
+          <span class="hero-tag">Balance</span>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-bar"></div>
+      </div>
+    </section>
+
+    <!-- ── STORY ── -->
+    <div class="story-bg">
+      <div class="section section--full story-bg">
+        <div class="section-inner">
+          <div class="story-grid">
+
+            <div class="story-left reveal">
+              <span class="section-label">The story</span>
+              <h2 class="section-title">Building.<br>Breaking.<br><em>Rebuilding.</em></h2>
+              <a href="about.html" class="btn">Full story →</a>
+            </div>
+
+            <div class="story-right">
+              <p class="lead reveal">I am a software developer at heart before I was an artist. The instinct never left me, it just found new materials: steel, cable and tension.</p>
+              <p class="reveal">In the 90's, I stood in front of a Kenneth Snelson sculpture and felt something shift. I got curious. I got ambitious. The will to build something massive and inspiring became the core for me. Something that will make people stop and ask: <strong>How is that even possible?</strong></p>
+              <p class="reveal">Life intervened. Family came first. But now my children are grown, and I'm raising something new.</p>
+              <p class="reveal"><strong>This is Fluxe. An invitation. Not finished, just growing.</strong></p>
+
+              <div class="tensegrity-box reveal">
+                <h3>What is Tensegrity?</h3>
+                <p>Tensegrity (tension + integrity) is a structural principle based on only push and pull — continuous tension and floating compression. No rigid connections. No glue. No welds holding it upright. Just balance.</p>
+                <p>Invented artistically by Kenneth Snelson in the 1960s and later named by Buckminster Fuller, tensegrity appears throughout biology, as shown by Tom Flemons. It's a system where every part supports the whole through pure interplay of forces.</p>
+                <p>So I took the idea and put my own twist to it.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- ── UPCOMING EVENTS ── -->
+    <section class="section" id="events" aria-labelledby="events-heading">
+      <span class="section-label">Find the work</span>
+      <h2 class="section-title" id="events-heading">Upcoming<br><em>appearances</em></h2>
+
+      <div class="events-grid">
+
+        <a class="event-card reveal" href="#" aria-label="Wilde Weide festival — details and tickets">
+          <span class="event-num" aria-hidden="true">01</span>
+          <span class="event-arrow" aria-hidden="true">↗</span>
+          <h3 class="event-name">Wilde Weide</h3>
+          <p class="event-detail">
+            <span class="highlight">Date TBC</span><br>
+            Location TBC<br>
+            Netherlands
+          </p>
+          <span class="event-badge">Festival</span>
+        </a>
+
+        <a class="event-card reveal" href="#" aria-label="Wildeburg festival — details and tickets">
+          <span class="event-num" aria-hidden="true">02</span>
+          <span class="event-arrow" aria-hidden="true">↗</span>
+          <h3 class="event-name">Wildeburg</h3>
+          <p class="event-detail">
+            <span class="highlight">Date TBC</span><br>
+            Netherlands
+          </p>
+          <span class="event-badge">Festival</span>
+        </a>
+
+        <a class="event-card reveal" href="#" aria-label="Into the Woods festival — details and tickets">
+          <span class="event-num" aria-hidden="true">03</span>
+          <span class="event-arrow" aria-hidden="true">↗</span>
+          <h3 class="event-name">Into the Woods</h3>
+          <p class="event-detail">
+            <span class="highlight">Date TBC</span><br>
+            Location TBC<br>
+            Netherlands
+          </p>
+          <span class="event-badge">Festival</span>
+        </a>
+
+        <a class="event-card reveal" href="#" aria-label="Amsterdam Dance Event — details and tickets">
+          <span class="event-num" aria-hidden="true">04</span>
+          <span class="event-arrow" aria-hidden="true">↗</span>
+          <h3 class="event-name">Amsterdam Dance Event</h3>
+          <p class="event-detail">
+            <span class="highlight">October 2025</span><br>
+            Amsterdam, NL
+          </p>
+          <span class="event-badge">Cultural Event</span>
+        </a>
+
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ── WORKS ── -->
+    <div class="works-bg">
+      <section class="section section--full works-bg" id="works" aria-labelledby="works-heading">
+        <div class="section-inner">
+
+          <div class="works-header">
+            <div>
+              <span class="section-label">Recent work</span>
+              <h2 class="section-title" id="works-heading">The works</h2>
+            </div>
+          </div>
+
+          <div class="works-grid">
+
+            <!-- Bouncy Wooden Sphere -->
+            <a class="work-card reveal" href="works/bouncy-wooden-sphere.html" aria-label="View Bouncy Wooden Sphere — 2024">
+              <div class="work-thumb">
+                <!-- Replace with: <img src="img/bouncy-wooden-sphere.jpg" alt="Bouncy Wooden Sphere tensegrity sculpture"> -->
+                <svg width="220" height="165" viewBox="0 0 220 165" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="110" cy="82" r="60" stroke="#5bafd6" stroke-width="1"/>
+                  <circle cx="110" cy="82" r="38" stroke="#5bafd6" stroke-width="0.6"/>
+                  <line x1="50" y1="82" x2="170" y2="82" stroke="#5bafd6" stroke-width="1"/>
+                  <line x1="110" y1="22" x2="110" y2="142" stroke="#5bafd6" stroke-width="1"/>
+                  <line x1="67" y1="39" x2="153" y2="125" stroke="#8ba5bc" stroke-width="0.8"/>
+                  <line x1="153" y1="39" x2="67" y2="125" stroke="#8ba5bc" stroke-width="0.8"/>
+                  <circle cx="110" cy="82" r="4" fill="#5bafd6"/>
+                  <circle cx="50" cy="82" r="2.5" fill="#5bafd6"/>
+                  <circle cx="170" cy="82" r="2.5" fill="#5bafd6"/>
+                  <circle cx="110" cy="22" r="2.5" fill="#5bafd6"/>
+                  <circle cx="110" cy="142" r="2.5" fill="#5bafd6"/>
+                </svg>
+              </div>
+              <div class="work-info">
+                <h3 class="work-title">Bouncy Wooden Sphere</h3>
+                <p class="work-year">2024</p>
+                <p class="work-link-hint">View project →</p>
+              </div>
+            </a>
+
+            <!-- Twisted Torque -->
+            <a class="work-card reveal" href="works/twisted-torque.html" aria-label="View Twisted Torque — 2024">
+              <div class="work-thumb">
+                <!-- Replace with: <img src="img/twisted-torque.jpg" alt="Twisted Torque tensegrity sculpture"> -->
+                <svg width="220" height="165" viewBox="0 0 220 165" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <line x1="110" y1="15" x2="175" y2="60" stroke="#5bafd6" stroke-width="1"/>
+                  <line x1="175" y1="60" x2="155" y2="145" stroke="#5bafd6" stroke-width="1"/>
+                  <line x1="155" y1="145" x2="65" y2="145" stroke="#5bafd6" stroke-width="1"/>
+                  <line x1="65" y1="145" x2="45" y2="60" stroke="#5bafd6" stroke-width="1"/>
+                  <line x1="45" y1="60" x2="110" y2="15" stroke="#5bafd6" stroke-width="1"/>
+                  <line x1="110" y1="15" x2="65" y2="145" stroke="#8ba5bc" stroke-width="0.6"/>
+                  <line x1="175" y1="60" x2="65" y2="145" stroke="#8ba5bc" stroke-width="0.6"/>
+                  <line x1="45" y1="60" x2="155" y2="145" stroke="#8ba5bc" stroke-width="0.6"/>
+                  <circle cx="110" cy="15" r="3" fill="#5bafd6"/>
+                  <circle cx="175" cy="60" r="3" fill="#5bafd6"/>
+                  <circle cx="155" cy="145" r="3" fill="#5bafd6"/>
+                  <circle cx="65" cy="145" r="3" fill="#5bafd6"/>
+                  <circle cx="45" cy="60" r="3" fill="#5bafd6"/>
+                </svg>
+              </div>
+              <div class="work-info">
+                <h3 class="work-title">Twisted Torque</h3>
+                <p class="work-year">2024</p>
+                <p class="work-link-hint">View project →</p>
+              </div>
+            </a>
+
+            <!-- Glass and LED -->
+            <a class="work-card reveal" href="works/glass-and-led.html" aria-label="View Glass and LED — 2022">
+              <div class="work-thumb">
+                <!-- Replace with: <img src="img/glass-and-led.jpg" alt="Glass and LED tensegrity sculpture"> -->
+                <svg width="220" height="165" viewBox="0 0 220 165" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <polygon points="110,15 190,130 30,130" stroke="#5bafd6" stroke-width="1" fill="none"/>
+                  <polygon points="110,50 165,130 55,130" stroke="#8ba5bc" stroke-width="0.7" fill="none"/>
+                  <line x1="110" y1="15" x2="110" y2="130" stroke="#5bafd6" stroke-width="0.8"/>
+                  <line x1="30" y1="130" x2="165" y2="130" stroke="#8ba5bc" stroke-width="0.6"/>
+                  <line x1="190" y1="130" x2="55" y2="130" stroke="#8ba5bc" stroke-width="0.6"/>
+                  <circle cx="110" cy="15" r="3.5" fill="#5bafd6"/>
+                  <circle cx="190" cy="130" r="3" fill="#5bafd6"/>
+                  <circle cx="30" cy="130" r="3" fill="#5bafd6"/>
+                  <circle cx="110" cy="130" r="2.5" fill="#8ba5bc"/>
+                </svg>
+              </div>
+              <div class="work-info">
+                <h3 class="work-title">Glass and LED</h3>
+                <p class="work-year">2022</p>
+                <p class="work-link-hint">View project →</p>
+              </div>
+            </a>
+
+          </div>
+
+          <div class="works-cta-wrap reveal">
+            <a href="works.html" class="btn btn--accent btn--large">View all works →</a>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ── CONTACT NUDGE ── -->
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <div style="max-width: 640px;">
+        <span class="section-label">Get in touch</span>
+        <h2 class="section-title" id="contact-heading">Curious about tensegrity<br><em>or the code behind it?</em></h2>
+        <p style="font-size:1.05rem; color: var(--text-secondary); line-height: 1.85; margin-bottom: 0.5rem;">
+          Whether you're interested in acquiring a sculpture, want to learn more about the process, or have questions about the structural or coding principles behind the work — reach out. Every conversation about these structures is a good one.
+        </p>
+        <a href="mailto:info@fluxe.nl" class="btn btn--accent">Send a message →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-brand">FLUXE</div>
+
+    <ul class="footer-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="works.html">Works</a></li>
+      <li><a href="lab.html">Lab</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="footer-socials">
+
+      <!-- Instagram -->
+      <a class="footer-social-link" href="#" target="_blank" rel="noopener" aria-label="Fluxe on Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+      </a>
+
+      <!-- YouTube -->
+      <a class="footer-social-link" href="#" target="_blank" rel="noopener" aria-label="Fluxe on YouTube">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
+        </svg>
+      </a>
+
+      <!-- Email -->
+      <a class="footer-social-link" href="mailto:info@fluxe.nl" aria-label="Email Gerald de Jong">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </a>
+
+    </div>
+
+    <p class="footer-copy">© 2025 Gerald de Jong — Fluxe</p>
+  </footer>
+
+  <script>
+    // Mobile nav drawer
+    const hamburger = document.getElementById('hamburger');
+    const drawer    = document.getElementById('navDrawer');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = drawer.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    // Close drawer on Escape
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // Stagger siblings slightly
+          const siblings = [...entry.target.parentElement.querySelectorAll('.reveal')];
+          const idx = siblings.indexOf(entry.target);
+          entry.target.style.transitionDelay = (idx * 0.08) + 's';
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

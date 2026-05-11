@@ -4,6 +4,10 @@ date: 2021-05-26
 description: "bouncing spherical tensegrity"
 categories: construction
 tags: [tensegrity]
+redirect_from:
+  - /construction/2021/05/26/brass-bubble-30.html
+  - /construction/2021/05/26/brass-bubble-30
+featured_image: /images/2021-05/bubble-element.jpg
 ---
 
 ## Sphere with a Twist

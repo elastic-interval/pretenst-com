@@ -1,0 +1,89 @@
+---
+layout: default
+title: Works — Fluxe by Gerald de Jong
+description: A catalogue of tensegrity sculptures, builds and experiments by Gerald de Jong.
+permalink: /works/
+---
+
+<header class="page-header reveal">
+  <span class="page-eyebrow">Catalogue</span>
+  <h1 class="page-title">The Works</h1>
+  <p class="page-foreword">Every piece here began as code. A physics engine, a simulation, a digital structure tested to its limits before it became real. What you see in this catalogue is not a collection of finished objects &mdash; it's a record of questions asked in steel and cable, each one building on the last.</p>
+  {% assign first_year = site.posts | last %}
+  <p class="page-meta">{{ site.posts | size }} pieces &mdash; {{ first_year.date | date: '%Y' }} to present</p>
+</header>
+
+{% assign year_list = "" | split: "" %}
+{% for post in site.posts %}
+  {% assign y = post.date | date: '%Y' %}
+  {% unless year_list contains y %}
+    {% assign year_list = year_list | push: y %}
+  {% endunless %}
+{% endfor %}
+
+<div class="filter-bar" role="group" aria-label="Filter works by year">
+  <button class="filter-btn active" data-filter="all">All</button>
+  {% for y in year_list %}
+  <button class="filter-btn" data-filter="{{ y }}">{{ y }}</button>
+  {% endfor %}
+</div>
+
+<div class="works-grid" id="worksGrid">
+  {% for post in site.posts %}
+  <a class="work-card reveal" href="{{ post.url | relative_url }}" data-year="{{ post.date | date: '%Y' }}" aria-label="{{ post.title | escape }}, {{ post.date | date: '%Y' }}">
+    <div class="work-thumb">
+      {% if post.featured_image %}
+        <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy" />
+      {% else %}
+        <div class="thumb-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="12" y1="3" x2="12" y2="21"/>
+            <line x1="5.6" y1="5.6" x2="18.4" y2="18.4"/>
+            <line x1="18.4" y1="5.6" x2="5.6" y2="18.4"/>
+          </svg>
+        </div>
+      {% endif %}
+    </div>
+    <span class="card-arrow" aria-hidden="true">&#8599;</span>
+    <div class="work-info">
+      <h2 class="work-title">{{ post.title }}</h2>
+      {% if post.description %}<p class="work-subtitle">{{ post.description }}</p>{% endif %}
+      <p class="work-year">{{ post.date | date: '%Y' }}</p>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+<div class="works-cta">
+  <div class="works-cta-inner">
+    <div class="works-cta-left reveal">
+      <h2 class="cta-headline">The next one could be yours.</h2>
+      <p class="cta-sub">Every build starts with a conversation.</p>
+      <a href="{{ '/contact/' | relative_url }}" class="btn btn--accent">Get in touch &rarr;</a>
+    </div>
+    <div class="works-cta-right reveal">
+      <p class="cta-lab-text">Want to see where the next build begins before it's real?</p>
+      <a href="{{ '/lab/' | relative_url }}" class="btn btn--ghost">Explore the lab &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards      = document.querySelectorAll('#worksGrid .work-card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          const show = filter === 'all' || card.dataset.year === filter;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    });
+  })();
+</script>

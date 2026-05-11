@@ -4,6 +4,10 @@ date: 2020-10-12
 description: "a tight and strong tensegrity tower"
 categories: construction
 tags: [tensegrity]
+redirect_from:
+  - /construction/2020/10/12/brass-and-tulips.html
+  - /construction/2020/10/12/brass-and-tulips
+featured_image: /images/2020-09/brass-0.jpg
 ---
 
 ## Turn up the Tension

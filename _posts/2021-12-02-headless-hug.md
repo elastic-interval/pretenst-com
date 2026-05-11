@@ -4,6 +4,10 @@ date: 2021-12-02
 description: "breaking a rule for the sake of symmetry"
 categories: construction
 tags: [tensegrity]
+redirect_from:
+  - /construction/2021/12/02/headless-hug.html
+  - /construction/2021/12/02/headless-hug
+featured_image: /images/2021-12/headless-tensegrity-mirror.jpg
 ---
 
 ## Breaking a rule

@@ -1,0 +1,87 @@
+---
+layout: default
+title: Contact — Fluxe by Gerald de Jong
+description: Get in touch with Gerald de Jong about commissions, collaborations, workshops, or just curiosity.
+permalink: /contact/
+---
+
+<div class="cta-hero reveal">
+  <span class="page-eyebrow">Get in touch</span>
+  <h1 class="page-title page-title--serif">Most things start<br>with a question.</h1>
+  <p class="page-opener">If you have one &mdash; about a build, a collaboration, a workshop, or just how any of this works &mdash; send it.</p>
+  <a class="cta-email-address" href="mailto:{{ site.email }}">{{ site.email }}</a>
+  <div class="cta-action">
+    <a class="btn-cta" href="mailto:{{ site.email }}">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-mail">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5"/>
+      </svg>
+      Start the conversation
+    </a>
+    <p class="cta-hint">Opens your email app</p>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="conversations">
+  <span class="section-label">What I'm open to</span>
+  <p class="conversations-intro">There's no agenda needed. Whether you have a specific project in mind or you're simply curious &mdash; a message is a good place to start.</p>
+
+  <ul class="conversation-list reveal" aria-label="Types of conversations">
+    <li class="conversation-item">
+      <span class="conversation-bullet" aria-hidden="true"></span>
+      <div>
+        <p class="conversation-title">Commissions</p>
+        <p class="conversation-desc">If you have a space &mdash; a building, a public square, a festival ground &mdash; and want something in it that makes people stop and ask how it's possible.</p>
+      </div>
+    </li>
+    <li class="conversation-item">
+      <span class="conversation-bullet" aria-hidden="true"></span>
+      <div>
+        <p class="conversation-title">Collaborations</p>
+        <p class="conversation-desc">If your work &mdash; in art, architecture, engineering, performance or something else entirely &mdash; could use an unexpected structural element, let's explore it.</p>
+      </div>
+    </li>
+    <li class="conversation-item">
+      <span class="conversation-bullet" aria-hidden="true"></span>
+      <div>
+        <p class="conversation-title">Workshops &amp; education</p>
+        <p class="conversation-desc">If you want to understand tensegrity by actually building it &mdash; with a class, a team, or a group of curious people.</p>
+      </div>
+    </li>
+    <li class="conversation-item">
+      <span class="conversation-bullet" aria-hidden="true"></span>
+      <div>
+        <p class="conversation-title">Just curious</p>
+        <p class="conversation-desc">About the code, the process, the physics, or tensegrity in general. No project required. Every conversation about these structures is a good one.</p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="contact-strip reveal">
+  <div class="contact-strip-inner">
+
+    <div class="contact-channel">
+      <span class="channel-label">Email</span>
+      <a class="channel-link" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </div>
+
+    {% if site.instagram_url %}
+    <div class="contact-channel">
+      <span class="channel-label">Instagram</span>
+      <a class="channel-link" href="{{ site.instagram_url }}" target="_blank" rel="noopener">@fluxe</a>
+      <span class="channel-handle">Latest work &amp; builds</span>
+    </div>
+    {% endif %}
+
+    {% if site.youtube_url %}
+    <div class="contact-channel">
+      <span class="channel-label">YouTube</span>
+      <a class="channel-link" href="{{ site.youtube_url }}" target="_blank" rel="noopener">Fluxe</a>
+      <span class="channel-handle">Process videos &amp; documentation</span>
+    </div>
+    {% endif %}
+
+  </div>
+</div>

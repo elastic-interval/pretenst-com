@@ -4,6 +4,10 @@ date: 2022-08-04
 description: "finalizing design and getting it out there"
 categories: construction
 tags: [tensegrity, 3D-Printing]
+redirect_from:
+  - /construction/2022/08/04/push-bolts-for-people.html
+  - /construction/2022/08/04/push-bolts-for-people
+featured_image: /images/2022-08/push-bolt-2.png
 ---
 
 ## Final design

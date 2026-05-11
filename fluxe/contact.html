@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Fluxe by Gerald de Jong</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Syncopate:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-base:#07111e; --bg-surface:#0d1a2b; --bg-raised:#112236;
+      --text-primary:#f0f4f8; --text-secondary:#c5d4e0; --text-muted:#8ba5bc;
+      --accent:#5bafd6; --accent-dim:#2e5f7a;
+      --border:#1e3548; --border-light:#2a4a62;
+      --font-display:'Syncopate',sans-serif;
+      --font-serif:'Cormorant Garamond',serif;
+      --font-body:'DM Sans',sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;font-size:16px;}
+    body{background:var(--bg-base);color:var(--text-primary);font-family:var(--font-body);font-weight:400;line-height:1.7;overflow-x:hidden;}
+    a{color:inherit;}
+
+    .skip-link{position:absolute;top:-100%;left:1rem;background:var(--accent);color:var(--bg-base);padding:.5rem 1rem;font-size:.9rem;font-weight:500;border-radius:0 0 4px 4px;z-index:9999;text-decoration:none;}
+    .skip-link:focus{top:0;}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 3rem;background:rgba(7,17,30,.92);border-bottom:1px solid var(--border);backdrop-filter:blur(8px);}
+    .nav-brand{display:flex;flex-direction:column;text-decoration:none;line-height:1.1;}
+    .brand-fluxe{font-family:var(--font-display);font-size:1.25rem;font-weight:700;letter-spacing:.18em;color:var(--text-primary);}
+    .brand-by{font-size:.7rem;font-weight:400;letter-spacing:.2em;color:var(--text-muted);text-transform:uppercase;margin-top:.15rem;}
+    .nav-links{display:flex;gap:2rem;list-style:none;}
+    .nav-links a{font-size:.875rem;letter-spacing:.08em;color:var(--text-secondary);text-decoration:none;padding:.25rem 0;border-bottom:2px solid transparent;transition:color .25s,border-color .25s;}
+    .nav-links a:hover,.nav-links a:focus{color:var(--text-primary);border-bottom-color:var(--accent);outline:none;}
+    .nav-links a.active{color:var(--text-primary);border-bottom-color:var(--accent);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.5rem;}
+    .nav-hamburger span{display:block;width:24px;height:2px;background:var(--text-secondary);transition:all .3s ease;}
+    .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .nav-hamburger.open span:nth-child(2){opacity:0;}
+    .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .nav-drawer{display:none;position:fixed;inset:0;background:rgba(7,17,30,.98);z-index:250;flex-direction:column;align-items:center;justify-content:center;gap:2rem;}
+    .nav-drawer.open{display:flex;}
+    .nav-drawer a{font-family:var(--font-serif);font-size:2rem;font-weight:600;color:var(--text-primary);text-decoration:none;transition:color .2s;}
+    .nav-drawer a:hover{color:var(--accent);}
+
+    /* ── HERO CTA ── */
+    .cta-hero{
+      padding:10rem 3rem 7rem;
+      text-align:center;
+      max-width:800px;
+      margin:0 auto;
+    }
+    .page-eyebrow{display:block;font-size:.72rem;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;}
+    .page-title{
+      font-family:var(--font-serif);
+      font-size:clamp(2.8rem,6vw,5rem);
+      font-weight:600;
+      color:var(--text-primary);
+      line-height:1.15;
+      margin-bottom:1.25rem;
+    }
+    .page-opener{
+      font-size:1.05rem;
+      color:var(--text-secondary);
+      line-height:1.85;
+      max-width:480px;
+      margin:0 auto 2.5rem;
+    }
+    .btn-cta{
+      display:inline-flex;
+      align-items:center;
+      gap:.75rem;
+      font-family:var(--font-body);
+      font-size:1rem;
+      font-weight:500;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      text-decoration:none;
+      padding:1.1rem 2.75rem;
+      background:var(--accent);
+      border:1px solid var(--accent);
+      color:var(--bg-base);
+      transition:all .25s ease;
+    }
+    .btn-cta:hover,.btn-cta:focus{background:#72c0e3;border-color:#72c0e3;outline:none;}
+    .icon-mail{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;flex-shrink:0;}
+    .cta-email-address{
+      display:block;
+      font-family:var(--font-serif);
+      font-size:clamp(1.3rem,3vw,1.8rem);
+      font-weight:400;
+      color:var(--text-secondary);
+      text-decoration:none;
+      margin-bottom:1.75rem;
+      transition:color .25s;
+      letter-spacing:.02em;
+    }
+    .cta-email-address:hover,.cta-email-address:focus{color:var(--accent);outline:none;}
+    .cta-action{display:flex;flex-direction:column;align-items:center;gap:.6rem;}
+    .cta-hint{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);opacity:.7;}
+
+    /* ── DIVIDER ── */
+    hr.divider{border:none;border-top:1px solid var(--border);margin:0 3rem;}
+
+    /* ── CONVERSATIONS ── */
+    .conversations{
+      max-width:800px;
+      margin:0 auto;
+      padding:6rem 3rem;
+    }
+    .section-label{display:block;font-size:.72rem;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:var(--accent);margin-bottom:1.75rem;}
+    .conversations-intro{font-size:1rem;line-height:1.85;color:var(--text-secondary);margin-bottom:2.5rem;}
+
+    .conversation-list{list-style:none;display:flex;flex-direction:column;gap:1.75rem;}
+    .conversation-item{display:flex;gap:1rem;align-items:flex-start;}
+    .conversation-bullet{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:.6rem;}
+    .conversation-title{font-size:.95rem;font-weight:500;color:var(--text-primary);margin-bottom:.25rem;letter-spacing:.02em;}
+    .conversation-desc{font-size:.92rem;line-height:1.8;color:var(--text-secondary);}
+
+    /* ── CONTACT DETAILS STRIP ── */
+    .contact-strip{
+      background:var(--bg-surface);
+      border-top:1px solid var(--border);
+      padding:4rem 3rem;
+    }
+    .contact-strip-inner{
+      max-width:800px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:2rem;
+    }
+    .contact-channel{display:flex;flex-direction:column;gap:.4rem;}
+    .channel-label{font-size:.68rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.35rem;}
+    .channel-link{
+      font-family:var(--font-serif);
+      font-size:1.15rem;
+      font-weight:400;
+      color:var(--text-primary);
+      text-decoration:none;
+      transition:color .25s;
+      line-height:1.3;
+    }
+    .channel-link:hover,.channel-link:focus{color:var(--accent);outline:none;}
+    .channel-handle{font-size:.82rem;color:var(--text-muted);margin-top:.1rem;}
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--border);background:var(--bg-base);padding:3rem;display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:auto auto;align-items:center;gap:1.25rem 2rem;}
+    .footer-brand{font-family:var(--font-display);font-size:1rem;letter-spacing:.2em;color:var(--text-muted);grid-column:1;grid-row:1;}
+    .footer-nav{list-style:none;display:flex;gap:1.75rem;flex-wrap:wrap;grid-column:2;grid-row:1;}
+    .footer-nav a{font-size:.82rem;letter-spacing:.1em;color:var(--text-muted);text-decoration:none;transition:color .2s;}
+    .footer-nav a:hover,.footer-nav a:focus{color:var(--text-secondary);outline:none;}
+    .footer-socials{display:flex;gap:1.25rem;align-items:center;grid-column:3;grid-row:1;}
+    .footer-social-link{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--border-light);color:var(--text-muted);text-decoration:none;transition:border-color .25s,color .25s,background .25s;}
+    .footer-social-link:hover,.footer-social-link:focus{border-color:var(--accent);color:var(--accent);background:rgba(91,175,214,.08);outline:none;}
+    .footer-social-link svg{width:20px;height:20px;fill:currentColor;}
+    .footer-copy{font-size:.75rem;color:var(--text-muted);opacity:.6;grid-column:1/-1;grid-row:2;}
+
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      nav{padding:1rem 1.5rem;}
+      .cta-hero{padding:8rem 1.5rem 5rem;}
+      .conversations{padding:4rem 1.5rem;}
+      .contact-strip{padding:3rem 1.5rem;}
+      .contact-strip-inner{grid-template-columns:1fr;gap:2rem;}
+      hr.divider{margin:0 1.5rem;}
+    }
+    @media(max-width:600px){
+      .nav-links{display:none;}
+      .nav-hamburger{display:flex;}
+      .cta-hero{padding:7rem 1.25rem 4rem;}
+      .page-title{font-size:clamp(2.2rem,8vw,3rem);}
+      .conversations{padding:3.5rem 1.25rem;}
+      .contact-strip{padding:2.5rem 1.25rem;}
+      hr.divider{margin:0 1.25rem;}
+      footer{grid-template-columns:1fr;padding:2rem 1.25rem;}
+      .footer-brand,.footer-nav,.footer-socials,.footer-copy{grid-column:1;grid-row:auto;}
+      .footer-nav{gap:1rem;}
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <a class="nav-brand" href="index.html" aria-label="Fluxe home">
+      <span class="brand-fluxe">FLUXE</span>
+      <span class="brand-by">by Gerald de Jong</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="works.html">Works</a></li>
+      <li><a href="lab.html">Lab</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <a href="index.html" onclick="closeDrawer()">Home</a>
+    <a href="about.html" onclick="closeDrawer()">About</a>
+    <a href="works.html" onclick="closeDrawer()">Works</a>
+    <a href="lab.html" onclick="closeDrawer()">Lab</a>
+    <a href="contact.html" onclick="closeDrawer()">Contact</a>
+  </div>
+
+  <main id="main">
+
+    <!-- HERO CTA -->
+    <div class="cta-hero reveal">
+      <span class="page-eyebrow">Get in touch</span>
+      <h1 class="page-title">Most things start<br>with a question.</h1>
+      <p class="page-opener">If you have one — about a build, a collaboration, a workshop, or just how any of this works — send it.</p>
+      <a class="cta-email-address" href="mailto:info@fluxe.nl">info@fluxe.nl</a>
+      <div class="cta-action">
+        <a class="btn-cta" href="mailto:info@fluxe.nl">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-mail"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5"/></svg>
+          Start the conversation
+        </a>
+        <p class="cta-hint">Opens your email app</p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- CONVERSATIONS -->
+    <div class="conversations">
+      <span class="section-label">What I'm open to</span>
+      <p class="conversations-intro">There's no agenda needed. Whether you have a specific project in mind or you're simply curious — a message is a good place to start.</p>
+
+      <ul class="conversation-list reveal" aria-label="Types of conversations">
+
+        <li class="conversation-item">
+          <span class="conversation-bullet" aria-hidden="true"></span>
+          <div>
+            <p class="conversation-title">Commissions</p>
+            <p class="conversation-desc">If you have a space — a building, a public square, a festival ground — and want something in it that makes people stop and ask how it's possible.</p>
+          </div>
+        </li>
+
+        <li class="conversation-item">
+          <span class="conversation-bullet" aria-hidden="true"></span>
+          <div>
+            <p class="conversation-title">Collaborations</p>
+            <p class="conversation-desc">If your work — in art, architecture, engineering, performance or something else entirely — could use an unexpected structural element, let's explore it.</p>
+          </div>
+        </li>
+
+        <li class="conversation-item">
+          <span class="conversation-bullet" aria-hidden="true"></span>
+          <div>
+            <p class="conversation-title">Workshops &amp; education</p>
+            <p class="conversation-desc">If you want to understand tensegrity by actually building it — with a class, a team, or a group of curious people.</p>
+          </div>
+        </li>
+
+        <li class="conversation-item">
+          <span class="conversation-bullet" aria-hidden="true"></span>
+          <div>
+            <p class="conversation-title">Just curious</p>
+            <p class="conversation-desc">About the code, the process, the physics, or tensegrity in general. No project required. Every conversation about these structures is a good one.</p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- CONTACT DETAILS STRIP -->
+    <div class="contact-strip reveal">
+      <div class="contact-strip-inner">
+
+        <div class="contact-channel">
+          <span class="channel-label">Email</span>
+          <a class="channel-link" href="mailto:info@fluxe.nl">info@fluxe.nl</a>
+        </div>
+
+        <div class="contact-channel">
+          <span class="channel-label">Instagram</span>
+          <a class="channel-link" href="#" target="_blank" rel="noopener">@fluxe</a>
+          <span class="channel-handle">Latest work &amp; builds</span>
+        </div>
+
+        <div class="contact-channel">
+          <span class="channel-label">YouTube</span>
+          <a class="channel-link" href="#" target="_blank" rel="noopener">Fluxe</a>
+          <span class="channel-handle">Process videos &amp; documentation</span>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-brand">FLUXE</div>
+    <ul class="footer-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="works.html">Works</a></li>
+      <li><a href="lab.html">Lab</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="footer-socials">
+      <a class="footer-social-link" href="#" target="_blank" rel="noopener" aria-label="Fluxe on Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a class="footer-social-link" href="#" target="_blank" rel="noopener" aria-label="Fluxe on YouTube">
+        <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+      </a>
+      <a class="footer-social-link" href="mailto:info@fluxe.nl" aria-label="Email Gerald de Jong">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Gerald de Jong &mdash; Fluxe</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('navDrawer');
+    hamburger.addEventListener('click', () => {
+      const isOpen = drawer.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -4,6 +4,10 @@ date: 2021-03-29
 description: "what if more hands could see?!"
 categories: construction
 tags: [tensegrity]
+redirect_from:
+  - /construction/2021/03/24/six-twist-essential.html
+  - /construction/2021/03/24/six-twist-essential
+featured_image: /images/2021-03/tension-hex.jpg
 ---
 
 # The Perception Gap
