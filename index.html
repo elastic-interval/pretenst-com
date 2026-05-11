@@ -128,29 +128,33 @@ description: Tensegrity sculpture by Gerald de Jong. Steel, cable, tension, bala
       </div>
 
       <div class="home-works-grid">
-        {% for post in site.posts limit:3 %}
-        <a class="work-card reveal" href="{{ post.url | relative_url }}" aria-label="View {{ post.title | escape }}, {{ post.date | date: '%Y' }}">
-          <div class="work-thumb">
-            {% if post.featured_image %}
-              <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy" />
-            {% else %}
-              <div class="thumb-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true">
-                  <circle cx="12" cy="12" r="9"/>
-                  <line x1="3" y1="12" x2="21" y2="12"/>
-                  <line x1="12" y1="3" x2="12" y2="21"/>
-                  <line x1="5.6" y1="5.6" x2="18.4" y2="18.4"/>
-                  <line x1="18.4" y1="5.6" x2="5.6" y2="18.4"/>
-                </svg>
-              </div>
-            {% endif %}
-          </div>
-          <div class="work-info">
-            <h3 class="work-title">{{ post.title }}</h3>
-            <p class="work-year">{{ post.date | date: '%Y' }}</p>
-            <p class="work-link-hint">View project &rarr;</p>
-          </div>
-        </a>
+        {% assign featured_slugs = "glass|fascia|rebuild-halo" | split: "|" %}
+        {% for slug in featured_slugs %}
+          {% assign post = site.posts | where: "slug", slug | first %}
+          {% if post %}
+          <a class="work-card reveal" href="{{ post.url | relative_url }}" aria-label="View {{ post.title | escape }}, {{ post.date | date: '%Y' }}">
+            <div class="work-thumb">
+              {% if post.featured_image %}
+                <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy" />
+              {% else %}
+                <div class="thumb-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#5bafd6" stroke-width="1" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9"/>
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="12" y1="3" x2="12" y2="21"/>
+                    <line x1="5.6" y1="5.6" x2="18.4" y2="18.4"/>
+                    <line x1="18.4" y1="5.6" x2="5.6" y2="18.4"/>
+                  </svg>
+                </div>
+              {% endif %}
+            </div>
+            <div class="work-info">
+              <h3 class="work-title">{{ post.title }}</h3>
+              <p class="work-year">{{ post.date | date: '%Y' }}</p>
+              <p class="work-link-hint">View project &rarr;</p>
+            </div>
+          </a>
+          {% endif %}
         {% endfor %}
       </div>
 
