@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pretenst has moved — now Fluxe, at fluxe.art</title>
+  <meta name="description" content="Pretenst.com has a new home. The tensegrity sculpture of Gerald de Jong now lives at fluxe.art." />
+  <link rel="canonical" href="https://fluxe.art/" />
+  <meta property="og:title" content="Pretenst has moved" />
+  <meta property="og:description" content="The tensegrity work of Gerald de Jong now lives at fluxe.art." />
+  <meta property="og:image" content="https://pretenst.com/images/home/open-claw.jpg" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Syncopate:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --night:   #04060e;
+      --night-2: #0a0f1e;
+      --ink:     #e8e6df;
+      --dim:     #8b8fa3;
+      --green:   #46d98a;
+      --rose:    #e0526e;
+      --violet:  #7d7bf0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      background: var(--night);
+      color: var(--ink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* faint aurora echoing the sculpture's LEDs */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(38% 30% at 22% 72%, rgba(70, 217, 138, 0.07), transparent 70%),
+        radial-gradient(30% 26% at 50% 82%, rgba(224, 82, 110, 0.06), transparent 70%),
+        radial-gradient(38% 30% at 78% 70%, rgba(125, 123, 240, 0.08), transparent 70%);
+    }
+
+    main {
+      position: relative;
+      margin: auto;
+      max-width: 40rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-family: "Syncopate", sans-serif;
+      font-size: 0.66rem;
+      letter-spacing: 0.55em;
+      text-indent: 0.55em;
+      text-transform: uppercase;
+      color: var(--dim);
+    }
+
+    h1 {
+      margin-top: 1.4rem;
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(2.4rem, 7vw, 3.8rem);
+      line-height: 1.08;
+      letter-spacing: 0.01em;
+    }
+
+    .claw {
+      margin: 2.6rem 0 2.4rem;
+      width: min(30rem, 88vw);
+      position: relative;
+    }
+
+    .claw img {
+      width: 100%;
+      display: block;
+      border-radius: 0.4rem;
+      /* fade the photo's edges into the night background */
+      -webkit-mask-image: radial-gradient(120% 100% at 50% 45%, #000 55%, transparent 98%);
+              mask-image: radial-gradient(120% 100% at 50% 45%, #000 55%, transparent 98%);
+    }
+
+    .lede {
+      font-size: clamp(1.15rem, 3vw, 1.35rem);
+      line-height: 1.55;
+      color: var(--dim);
+      max-width: 30rem;
+    }
+
+    .lede strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .cta {
+      margin-top: 2.4rem;
+      display: inline-block;
+      font-family: "Syncopate", sans-serif;
+      font-weight: 700;
+      font-size: clamp(1rem, 3.4vw, 1.35rem);
+      letter-spacing: 0.32em;
+      text-indent: 0.32em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink);
+      padding: 1.1rem 2.4rem;
+      border: 1px solid rgba(232, 230, 223, 0.25);
+      border-radius: 999px;
+      transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+    }
+
+    .cta:hover, .cta:focus-visible {
+      border-color: rgba(70, 217, 138, 0.7);
+      box-shadow:
+        0 0 32px rgba(70, 217, 138, 0.18),
+        0 0 90px rgba(125, 123, 240, 0.14);
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .aside {
+      margin-top: 3.2rem;
+      font-size: 1.02rem;
+      color: var(--dim);
+    }
+
+    .aside a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 0.22em;
+      text-decoration-color: rgba(232, 230, 223, 0.35);
+      transition: text-decoration-color 0.25s ease;
+    }
+
+    .aside a:hover { text-decoration-color: var(--green); }
+
+    /* staggered arrival */
+    .rise {
+      opacity: 0;
+      transform: translateY(14px);
+      animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .rise:nth-child(1) { animation-delay: 0.05s; }
+    .rise:nth-child(2) { animation-delay: 0.18s; }
+    .rise:nth-child(3) { animation-delay: 0.34s; }
+    .rise:nth-child(4) { animation-delay: 0.52s; }
+    .rise:nth-child(5) { animation-delay: 0.66s; }
+    .rise:nth-child(6) { animation-delay: 0.82s; }
+
+    @keyframes rise {
+      to { opacity: 1; transform: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rise { animation: none; opacity: 1; transform: none; }
+      .cta, .cta:hover { transition: none; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow rise">Pretenst &middot; 2016&ndash;2026</p>
+    <h1 class="rise">Pretenst has<br />a new home.</h1>
+
+    <div class="claw rise">
+      <img src="/images/home/open-claw.jpg"
+           alt="The Open Claw — a tensegrity arch of steel tubes and cable, glowing green, red and violet against the night sky." />
+    </div>
+
+    <p class="lede rise">
+      The sculptures, the stories, and everything pretenst became
+      now live on as <strong>Fluxe</strong> &mdash; the tensegrity
+      art of Gerald de Jong.
+    </p>
+
+    <a class="cta rise" href="https://fluxe.art">fluxe.art&nbsp;&rarr;</a>
+
+    <p class="aside rise">
+      Looking for the design app? It still lives here: <a href="/app/">pretenst.com/app</a>
+    </p>
+  </main>
+</body>
+</html>
